@@ -17,6 +17,7 @@ L'EG est une **page web de demande de devis personnalisée**, déployée à l'UR
 Le but : déclencher un appel commercial avec le prospect en lui livrant une **transformation tangible** avant la vente (vs un audit ou une promesse).
 
 **Métriques de succès V1 :**
+
 - 🎯 **Conversion EG → call** : ≥ 20 % des prospects à qui un EG est envoyé acceptent un appel
 - 🎯 **Conversion call → client Pack Paysagistes** : ≥ 15 %
 - 🎯 **Temps de production par EG** (après boilerplate) : ≤ 1h30
@@ -28,6 +29,7 @@ Le but : déclencher un appel commercial avec le prospect en lui livrant une **t
 ### Problème
 
 Les freelances en Suisse romande qui font de la prospection cold envoient majoritairement deux types de "cadeaux" pour décrocher un call :
+
 1. Des **audits gratuits** (PDF impersonnels, lus 1 fois sur 4)
 2. Des **appels découverte** (refusés à 90 %)
 
@@ -38,6 +40,7 @@ Côté paysagiste prospect spécifiquement, leur vraie douleur n'est pas "ma fic
 ### Solution
 
 Une page web de demande de devis personnalisée, livrée en cold avant tout engagement, qui :
+
 - Affiche le **nom, les couleurs, les photos et les services réels** du paysagiste prospect
 - Propose un **quiz interactif multi-étapes** qui qualifie le client final (type de prestation, surface, urgence, zone)
 - Envoie le lead **directement par email au paysagiste**
@@ -46,14 +49,16 @@ Une page web de demande de devis personnalisée, livrée en cold avant tout enga
 ### Utilisateur cible (3 acteurs)
 
 #### 👨 Acteur 1 — Le paysagiste prospect (cible commerciale)
+
 - **Profil** : homme, 40-55 ans, paysagiste solo ou avec 1-2 employés, Genève / Vaud / parfois Valais et Fribourg
 - **Présence digitale actuelle** : GMB peu/pas optimisée, site web absent ou daté (souvent fait par un cousin il y a 8 ans), réseaux sociaux irréguliers
 - **Source actuelle de leads** : 80 % bouche-à-oreille, 20 % recherche locale Google
-- **Anxiété principale** : *"Comment je remplis mon planning d'hiver ? Comment je sais que j'aurai assez de chantiers en mars ?"*
+- **Anxiété principale** : _"Comment je remplis mon planning d'hiver ? Comment je sais que j'aurai assez de chantiers en mars ?"_
 - **Compétences digitales** : faibles à moyennes
 - **Tactiques actuelles infructueuses** : tracts, encarts pages jaunes, parfois Google Ads mal calibré
 
 #### 👤 Acteur 2 — Le client final du paysagiste (utilisateur réel du quiz)
+
 - **Profil** : propriétaire d'une maison ou d'un appartement avec jardin/terrasse en Suisse romande
 - **Contexte** : cherche un paysagiste pour une prestation ponctuelle ou récurrente
 - **Frustrations** : ne sait pas estimer un budget, ne veut pas un appel commercial avant d'avoir une fourchette, hésite entre plusieurs prestataires
@@ -61,6 +66,7 @@ Une page web de demande de devis personnalisée, livrée en cold avant tout enga
 - **Device dominant** : 60-70 % mobile, 30-40 % desktop
 
 #### 🛠️ Acteur 3 — Jonathan / Jon Labs (admin invisible)
+
 - **Besoin** : créer un nouveau prospect en 5-10 min une fois les assets collectés
 - **Volume cible V1** : capacité à gérer 20-30 EG en parallèle sans dette technique
 - **Compétences** : développeur (a Claude Code), pas de friction technique
@@ -68,12 +74,14 @@ Une page web de demande de devis personnalisée, livrée en cold avant tout enga
 ### Succès
 
 **V1.0 sera un succès si :**
+
 - ✅ 5 paysagistes prospects ont reçu un EG dans le mois suivant le déploiement
 - ✅ 1 prospect au minimum accepte un call sur les 5 premiers EG (taux de 20 %)
 - ✅ Le temps de production d'un EG (collecte + config + déploiement) tombe à ≤ 1h30 dès le 3ème prospect
 - ✅ Au moins 1 lead réel est généré sur les pages déployées (preuve d'efficacité du tunnel)
 
 **Indicateur d'échec à surveiller :**
+
 - ⚠️ Si après 10 EG envoyés, taux de réponse < 10 % → revoir le mail cold ou le ciblage avant de remettre en cause la page
 - ⚠️ Si temps de production > 2h après 5 prospects → automatiser la collecte d'assets
 
@@ -116,12 +124,12 @@ Une page web de demande de devis personnalisée, livrée en cold avant tout enga
 
 ### 🔮 LATER — Roadmap après V1.0
 
-| Version | Contenu | Effort estimé | Trigger de lancement |
-|---|---|---|---|
-| **V1.1 — Multi-métiers** | Étendre config schema avec `industry`, étapes optionnelles selon métier, templates pour électriciens / plombiers / artisans bâtiment | +4-6h | Quand 1er prospect d'un autre métier accepte un EG |
-| **V1.2 — Tracking conversion** | Backend SvelteKit + DB Turso + tracking événements quiz + dashboard admin Jon Labs simple | +8-12h | Quand 5+ pages live en production simultanément |
-| **V1.3 — Argument commercial chiffré** | Section "preuve" dans le pitch commercial avec données réelles agrégées sur 3+ mois | 0h dev | Quand 3 mois de data sur 10+ pages |
-| **V2.0 — Page devis SaaS** | Dashboard self-service où le paysagiste configure sa propre page, tarification mensuelle | +40-60h | Si V1.x convertit ≥ 20 % en clients Pack |
+| Version                                | Contenu                                                                                                                              | Effort estimé | Trigger de lancement                               |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------- | -------------------------------------------------- |
+| **V1.1 — Multi-métiers**               | Étendre config schema avec `industry`, étapes optionnelles selon métier, templates pour électriciens / plombiers / artisans bâtiment | +4-6h         | Quand 1er prospect d'un autre métier accepte un EG |
+| **V1.2 — Tracking conversion**         | Backend SvelteKit + DB Turso + tracking événements quiz + dashboard admin Jon Labs simple                                            | +8-12h        | Quand 5+ pages live en production simultanément    |
+| **V1.3 — Argument commercial chiffré** | Section "preuve" dans le pitch commercial avec données réelles agrégées sur 3+ mois                                                  | 0h dev        | Quand 3 mois de data sur 10+ pages                 |
+| **V2.0 — Page devis SaaS**             | Dashboard self-service où le paysagiste configure sa propre page, tarification mensuelle                                             | +40-60h       | Si V1.x convertit ≥ 20 % en clients Pack           |
 
 ---
 
@@ -134,6 +142,7 @@ Une page web de demande de devis personnalisée, livrée en cold avant tout enga
 **Afin de** évaluer si Jon Labs comprend mon métier et peut me livrer quelque chose d'utile
 
 **Flow détaillé :**
+
 1. Le prospect reçoit un cold email/appel de Jonathan mentionnant le lien `jonlabs.ch/eg/[son-slug]`
 2. Il clique sur le lien depuis son téléphone ou son PC
 3. La page se charge en moins de 2 secondes (SSR + assets optimisés)
@@ -143,6 +152,7 @@ Une page web de demande de devis personnalisée, livrée en cold avant tout enga
 7. Il comprend la valeur en moins de 60 secondes
 
 **Critères d'acceptation :**
+
 - [ ] La page charge en < 2s en 4G mobile (Lighthouse score ≥ 85)
 - [ ] Le nom du prospect apparaît en H1 visible dès le premier scroll
 - [ ] Au moins 1 photo personnalisée (la sienne ou fallback de qualité) est visible above the fold
@@ -151,6 +161,7 @@ Une page web de demande de devis personnalisée, livrée en cold avant tout enga
 - [ ] Les couleurs définies dans la config sont effectivement appliquées (CSS variables fonctionnelles)
 
 **Edge cases :**
+
 - Si le prospect n'a aucune photo récupérable → fallback automatique vers `/static/_fallback/jardins/`
 - Si le prospect ouvre la page hors de Suisse → la page fonctionne quand même (pas de geo-blocking)
 - Si le prospect partage le lien à un ami → l'ami voit la même page (pas de session, pas de tracking nominatif)
@@ -164,19 +175,21 @@ Une page web de demande de devis personnalisée, livrée en cold avant tout enga
 **Afin de** comparer plusieurs prestataires rapidement et discrètement
 
 **Flow détaillé :**
+
 1. Le client arrive sur la page (depuis un partage, une recherche locale, une pub future, etc.)
-2. Il voit le hero avec la promesse claire : *"Recevez un devis pour votre jardin sous 48h, sans appel."*
+2. Il voit le hero avec la promesse claire : _"Recevez un devis pour votre jardin sous 48h, sans appel."_
 3. Il clique sur **"→ Démarrer mon devis"** et le quiz se lance avec un compteur de progression
 4. **Étape 1** : il choisit le type de prestation parmi des cartes visuelles avec photos
 5. **Étape 2** : il choisit l'urgence (4 options de timing) et tape sa commune dans un champ texte
 6. **Étape 3** : il sélectionne une fourchette de surface OU clique "Je ne sais pas"
 7. **Étape 4** : il remplit nom, email, téléphone, préférence de contact (email/tel/peu importe), accepte le RGPD via case à cocher
-8. *(Si variante D)* Il peut ajouter un message libre optionnel
+8. _(Si variante D)_ Il peut ajouter un message libre optionnel
 9. Il clique **"→ Envoyer ma demande"**
 10. Loader bref (< 2s) puis redirection vers `/eg/[slug]/merci`
-11. La page de confirmation affiche : *"Merci [Prénom], [Nom paysagiste] revient vers vous sous 48h."* + numéro de téléphone du paysagiste pour les urgents
+11. La page de confirmation affiche : _"Merci [Prénom], [Nom paysagiste] revient vers vous sous 48h."_ + numéro de téléphone du paysagiste pour les urgents
 
 **Critères d'acceptation :**
+
 - [ ] Le compteur de progression s'incrémente correctement à chaque étape
 - [ ] Les boutons "← Retour" et "Suivant →" fonctionnent et conservent le state
 - [ ] Validation des champs obligatoires en étape 4 (email format, téléphone format suisse)
@@ -187,6 +200,7 @@ Une page web de demande de devis personnalisée, livrée en cold avant tout enga
 - [ ] Le client peut revenir en arrière sans perdre ses réponses (state persistant pendant la session)
 
 **Edge cases :**
+
 - Si l'utilisateur ferme la page en plein quiz → le state est perdu (pas de localStorage en V1.0, pas critique)
 - Si Resend est down → message d'erreur clair "Erreur d'envoi, contactez-nous au [téléphone]"
 - Si le mail bounce → BCC à `leads@jonlabs.ch` permet à Jonathan de récupérer la donnée manuellement
@@ -202,6 +216,7 @@ Une page web de demande de devis personnalisée, livrée en cold avant tout enga
 **Afin de** pouvoir scaler la prospection sans goulot d'étranglement technique
 
 **Flow détaillé :**
+
 1. Jonathan a fait sa reconnaissance du prospect (GMB, FB, site) et a collecté 8-12 photos + infos clés
 2. Il duplique le dossier `/static/clients/_template/` en `/static/clients/[slug]/`
 3. Il remplace les photos placeholders par celles du prospect (ou fallbacks)
@@ -214,12 +229,14 @@ Une page web de demande de devis personnalisée, livrée en cold avant tout enga
 10. Il envoie son cold mail avec le lien
 
 **Critères d'acceptation :**
+
 - [ ] Un fichier `config.json.template` documenté est disponible dans `/static/clients/_template/`
 - [ ] Tous les champs de la config sont validés au build (TypeScript types stricts)
 - [ ] Une erreur de config (fichier manquant, JSON invalide) affiche une erreur claire en dev, et tombe en 404 en prod
 - [ ] L'arborescence des fichiers est documentée dans le `README.md` du repo
 
 **Edge cases :**
+
 - Si Jonathan oublie un champ obligatoire → erreur de build Vercel, déploiement bloqué
 - Si une photo fait > 1MB → optimisation automatique au build (via `@sveltejs/enhanced-img` ou équivalent)
 - Si le slug existe déjà → erreur de validation au build
@@ -240,103 +257,103 @@ Localisation : `/static/clients/[slug]/config.json`
 export type QuizVariant = 'B' | 'C' | 'D';
 
 export interface ProspectConfig {
-  // Métadonnées
-  slug: string;                          // ex: "dupont"
-  industry: 'paysagiste';                // 🔮 Préparé pour V1.1 multi-métiers
-  createdAt: string;                     // ISO date
+	// Métadonnées
+	slug: string; // ex: "dupont"
+	industry: 'paysagiste'; // 🔮 Préparé pour V1.1 multi-métiers
+	createdAt: string; // ISO date
 
-  // Identité business
-  business: {
-    name: string;                        // "Paysages Dupont"
-    ownerFirstName: string;              // "Marc"
-    ownerLastName: string;               // "Dupont"
-    tagline: string;                     // courte phrase de positionnement
-    phone: string;                       // format E.164 : "+41220000000"
-    email: string;                       // email pro
-    logoUrl: string | null;              // chemin relatif ou null
-    googleReviewUrl: string | null;
-    facebookUrl: string | null;
-    instagramUrl: string | null;
-  };
+	// Identité business
+	business: {
+		name: string; // "Paysages Dupont"
+		ownerFirstName: string; // "Marc"
+		ownerLastName: string; // "Dupont"
+		tagline: string; // courte phrase de positionnement
+		phone: string; // format E.164 : "+41220000000"
+		email: string; // email pro
+		logoUrl: string | null; // chemin relatif ou null
+		googleReviewUrl: string | null;
+		facebookUrl: string | null;
+		instagramUrl: string | null;
+	};
 
-  // Crédibilité
-  credibility: {
-    yearsExperience: number;             // 12
-    chantiersCount: number | null;       // 340 ou null si inconnu
-    googleRating: number | null;         // 4.8 ou null
-    googleReviewsCount: number | null;   // 47 ou null
-    zones: string[];                     // ["Carouge", "Genève", "Veyrier"]
-    radiusKm: number;                    // 15
-  };
+	// Crédibilité
+	credibility: {
+		yearsExperience: number; // 12
+		chantiersCount: number | null; // 340 ou null si inconnu
+		googleRating: number | null; // 4.8 ou null
+		googleReviewsCount: number | null; // 47 ou null
+		zones: string[]; // ["Carouge", "Genève", "Veyrier"]
+		radiusKm: number; // 15
+	};
 
-  // Branding visuel
-  branding: {
-    primaryColor: string;                // "#2D5016"
-    secondaryColor: string;              // "#F4F1EA"
-    accentColor: string;                 // "#D4A574"
-    fontFamily: 'Inter' | 'Source Serif' | 'Playfair Display'; // limité aux fonts précompilées
-  };
+	// Branding visuel
+	branding: {
+		primaryColor: string; // "#2D5016"
+		secondaryColor: string; // "#F4F1EA"
+		accentColor: string; // "#D4A574"
+		fontFamily: 'Inter' | 'Source Serif' | 'Playfair Display'; // limité aux fonts précompilées
+	};
 
-  // Visuels
-  heroImage: string;                     // chemin relatif
+	// Visuels
+	heroImage: string; // chemin relatif
 
-  // Quiz
-  quizVariant: QuizVariant;
+	// Quiz
+	quizVariant: QuizVariant;
 
-  // Services (étape 1 du quiz)
-  services: ProspectService[];
+	// Services (étape 1 du quiz)
+	services: ProspectService[];
 
-  // Galerie inspiration (variante C uniquement)
-  inspirationGallery?: InspirationItem[];
+	// Galerie inspiration (variante C uniquement)
+	inspirationGallery?: InspirationItem[];
 
-  // Réalisations (section showcase)
-  realizations: Realization[];
+	// Réalisations (section showcase)
+	realizations: Realization[];
 
-  // Témoignages
-  testimonials: Testimonial[];
+	// Témoignages
+	testimonials: Testimonial[];
 
-  // FAQ
-  faq: FAQItem[];
+	// FAQ
+	faq: FAQItem[];
 
-  // Soumission de lead
-  leadDelivery: {
-    recipientEmail: string;              // email du paysagiste
-    ccEmails: string[];                  // ["leads@jonlabs.ch"]
-    subjectPrefix: string;               // "[DEVIS PAYSAGES DUPONT]"
-  };
+	// Soumission de lead
+	leadDelivery: {
+		recipientEmail: string; // email du paysagiste
+		ccEmails: string[]; // ["leads@jonlabs.ch"]
+		subjectPrefix: string; // "[DEVIS PAYSAGES DUPONT]"
+	};
 }
 
 export interface ProspectService {
-  id: string;                            // "entretien", "taille", "creation", etc.
-  label: string;
-  description: string;
-  icon: string;                          // emoji ou code SVG inline
-  image: string | null;                  // photo de cette prestation
-  active: boolean;                       // permet de masquer sans supprimer
+	id: string; // "entretien", "taille", "creation", etc.
+	label: string;
+	description: string;
+	icon: string; // emoji ou code SVG inline
+	image: string | null; // photo de cette prestation
+	active: boolean; // permet de masquer sans supprimer
 }
 
 export interface InspirationItem {
-  id: string;
-  image: string;
-  label: string;
+	id: string;
+	image: string;
+	label: string;
 }
 
 export interface Realization {
-  before: string | null;                 // null si pas de avant/après
-  after: string;
-  caption: string;
+	before: string | null; // null si pas de avant/après
+	after: string;
+	caption: string;
 }
 
 export interface Testimonial {
-  name: string;
-  location: string;
-  text: string;
-  rating: 1 | 2 | 3 | 4 | 5;
+	name: string;
+	location: string;
+	text: string;
+	rating: 1 | 2 | 3 | 4 | 5;
 }
 
 export interface FAQItem {
-  question: string;
-  answer: string;
+	question: string;
+	answer: string;
 }
 ```
 
@@ -345,33 +362,33 @@ export interface FAQItem {
 ```typescript
 // POST /api/submit
 export interface LeadSubmission {
-  slug: string;                          // identifie le prospect
-  variant: QuizVariant;
-  answers: {
-    serviceId: string;                   // étape 1
-    serviceLabel: string;                // pour affichage dans l'email
+	slug: string; // identifie le prospect
+	variant: QuizVariant;
+	answers: {
+		serviceId: string; // étape 1
+		serviceLabel: string; // pour affichage dans l'email
 
-    inspirationIds?: string[];           // variante C uniquement
+		inspirationIds?: string[]; // variante C uniquement
 
-    timing: 'urgent' | 'few_weeks' | 'this_season' | 'planning';
-    timingLabel: string;
-    commune: string;
+		timing: 'urgent' | 'few_weeks' | 'this_season' | 'planning';
+		timingLabel: string;
+		commune: string;
 
-    surface: 'less_100' | '100_300' | '300_800' | 'more_800' | 'unknown';
-    surfaceLabel: string;
+		surface: 'less_100' | '100_300' | '300_800' | 'more_800' | 'unknown';
+		surfaceLabel: string;
 
-    contact: {
-      firstName: string;
-      lastName: string | null;
-      email: string;
-      phone: string;
-      preferredContact: 'email' | 'phone' | 'any';
-    };
+		contact: {
+			firstName: string;
+			lastName: string | null;
+			email: string;
+			phone: string;
+			preferredContact: 'email' | 'phone' | 'any';
+		};
 
-    freeText?: string;                   // variante D uniquement
-  };
-  consentGdpr: boolean;                  // doit être true
-  submittedAt: string;                   // ISO date
+		freeText?: string; // variante D uniquement
+	};
+	consentGdpr: boolean; // doit être true
+	submittedAt: string; // ISO date
 }
 ```
 
@@ -409,17 +426,17 @@ export interface LeadSubmission {
 
 ### Choix retenu
 
-| Couche | Techno | Justification |
-|---|---|---|
-| **Framework** | SvelteKit (Svelte 5 + runes) | State du quiz multi-étapes propre avec `$state`, routes dynamiques natives, SSR |
-| **Styling** | Tailwind CSS v4 | Configuration de design tokens via CSS variables, parfait pour theming dynamique par prospect |
-| **Typographie** | Variable fonts Google (Inter, Source Serif, Playfair) | Pré-chargées, choisies par config |
-| **Email** | Resend | 3000 mails/mois gratuit, API simple, support `Reply-To` |
-| **Hébergement** | Vercel | Adapter SvelteKit officiel, déploiement Git auto, gratuit pour ce volume |
-| **Analytics** | Plausible (déjà sur jonlabs.ch) | Privacy-friendly, pas de bandeau cookies nécessaire |
-| **Repo** | GitHub privé | Versioning des configs prospects |
-| **Domaine** | jonlabs.ch (chemin `/eg/[slug]`) | Pas de sous-domaine, pas de DNS à gérer |
-| **Image optim** | `@sveltejs/enhanced-img` | Resize + WebP automatique au build |
+| Couche          | Techno                                                | Justification                                                                                 |
+| --------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **Framework**   | SvelteKit (Svelte 5 + runes)                          | State du quiz multi-étapes propre avec `$state`, routes dynamiques natives, SSR               |
+| **Styling**     | Tailwind CSS v4                                       | Configuration de design tokens via CSS variables, parfait pour theming dynamique par prospect |
+| **Typographie** | Variable fonts Google (Inter, Source Serif, Playfair) | Pré-chargées, choisies par config                                                             |
+| **Email**       | Resend                                                | 3000 mails/mois gratuit, API simple, support `Reply-To`                                       |
+| **Hébergement** | Vercel                                                | Adapter SvelteKit officiel, déploiement Git auto, gratuit pour ce volume                      |
+| **Analytics**   | Plausible (déjà sur jonlabs.ch)                       | Privacy-friendly, pas de bandeau cookies nécessaire                                           |
+| **Repo**        | GitHub privé                                          | Versioning des configs prospects                                                              |
+| **Domaine**     | jonlabs.ch (chemin `/eg/[slug]`)                      | Pas de sous-domaine, pas de DNS à gérer                                                       |
+| **Image optim** | `@sveltejs/enhanced-img`                              | Resize + WebP automatique au build                                                            |
 
 ### Stack non-retenue (avec raisons)
 
@@ -528,7 +545,7 @@ jonlabs-eg-devis/
 2. **RGPD** : case à cocher obligatoire avant soumission ("J'accepte d'être recontacté pour ce devis"). Pas de page mentions légales en V1.0 (à ajouter en V1.2 si volume > 50 leads/mois).
 3. **Reply-To** : toujours configuré sur l'email du client final pour que le paysagiste réponde directement au prospect.
 4. **BCC silencieux** : `leads@jonlabs.ch` reçoit toutes les soumissions en copie (sans que le paysagiste ne le voie dans les headers).
-5. **Branding Jon Labs** : 1 seule mention discrète en bas de page : *"Page créée par Jon Labs — jonlabs.ch"*
+5. **Branding Jon Labs** : 1 seule mention discrète en bas de page : _"Page créée par Jon Labs — jonlabs.ch"_
 6. **Pas de tracking nominatif** : Plausible ne stocke pas d'IP ni de cookies.
 7. **Anti-spam** : honeypot CSS — champ texte caché en `display:none` nommé `website` ou `phone_alt`. Si rempli côté serveur → soumission rejetée silencieusement (HTTP 200 mais pas d'envoi email). Pas de reCAPTCHA pour rester léger et sans tiers.
 8. **Rétention emails** : suppression manuelle des emails reçus sur `leads@jonlabs.ch` après 7 jours (hygiène RGPD légère, pas de DB en V1.0 donc rien d'autre à purger).
@@ -540,6 +557,7 @@ jonlabs-eg-devis/
 ### Style visuel
 
 **Direction artistique** : chaleureux / artisan
+
 - Polices : **Source Serif** ou **Playfair Display** pour les titres, **Inter** pour le corps
 - Palette de fond par défaut : beiges (`#F4F1EA`, `#FAF7EE`), blancs cassés
 - Palette d'accents par défaut : verts naturels (`#2D5016`, `#5C7C3F`), terracotta (`#D4A574`)
@@ -549,6 +567,7 @@ jonlabs-eg-devis/
 ### Approche responsive
 
 **Responsive équilibré dès la V1**, avec :
+
 - Breakpoints Tailwind standard (`sm`, `md`, `lg`, `xl`)
 - Mobile : navigation simplifiée, quiz en plein écran, photos optimisées
 - Desktop : layouts à 2-3 colonnes, gallery grid 3x2, plus d'espace blanc
@@ -560,16 +579,16 @@ jonlabs-eg-devis/
 
 ### Composants clés et leur comportement
 
-| Composant | Comportement |
-|---|---|
-| **Header** | Sticky au scroll, fond blanc translucide avec backdrop-blur, logo + téléphone visible |
-| **Hero** | Pleine largeur, photo héros avec overlay sombre 30%, CTA principal visible above the fold |
-| **Reassurance** | 3 colonnes desktop, 1 colonne mobile, icônes simples |
-| **Quiz** | State persistant entre étapes, animation slide entre étapes, progress bar |
-| **Realizations** | Galerie 3x2 desktop, 2x3 mobile, lightbox au clic |
-| **Testimonials** | 3 colonnes desktop, carrousel mobile |
-| **FAQ** | Accordion fermé par défaut, animation smooth |
-| **Footer** | Minimaliste, 1 ligne mention Jon Labs |
+| Composant        | Comportement                                                                              |
+| ---------------- | ----------------------------------------------------------------------------------------- |
+| **Header**       | Sticky au scroll, fond blanc translucide avec backdrop-blur, logo + téléphone visible     |
+| **Hero**         | Pleine largeur, photo héros avec overlay sombre 30%, CTA principal visible above the fold |
+| **Reassurance**  | 3 colonnes desktop, 1 colonne mobile, icônes simples                                      |
+| **Quiz**         | State persistant entre étapes, animation slide entre étapes, progress bar                 |
+| **Realizations** | Galerie 3x2 desktop, 2x3 mobile, lightbox au clic                                         |
+| **Testimonials** | 3 colonnes desktop, carrousel mobile                                                      |
+| **FAQ**          | Accordion fermé par défaut, animation smooth                                              |
+| **Footer**       | Minimaliste, 1 ligne mention Jon Labs                                                     |
 
 ### Accessibilité (priorité V1)
 
@@ -648,16 +667,16 @@ jonlabs-eg-devis/
 
 ## 9. Risques & Mitigations
 
-| Risque | Impact | Probabilité | Mitigation |
-|---|---|---|---|
-| **Resend bloque l'envoi** (DKIM mal configuré) | Critique | Moyen | Test exhaustif avant 1er prospect, monitoring sur leads@jonlabs.ch |
-| **Photos prospect non récupérables** | Moyen | Élevé | Banque fallback de qualité prête dès le boilerplate |
-| **Prospect ne clique pas sur le lien** | Critique | Moyen | Mail cold travaillé en parallèle, A/B testé |
-| **Conflit de couleurs prospect / lisibilité** | Faible | Moyen | Validation manuelle des couleurs par Jonathan avant déploiement |
-| **Soumission de spam** | Faible | Élevé | Honeypot CSS + rate limit Vercel + validation Zod |
-| **Lead arrive en spam chez le paysagiste** | Critique | Moyen | Domaine vérifié Resend, From address pro, BCC permet récupération |
-| **Coûts Vercel/Resend dépassés** | Faible | Faible | Free tier suffisant jusqu'à 50+ pages actives |
-| **Perte de motivation Jonathan** | Critique | Moyen | Phasage strict, ne pas dépasser V1.0 avant 5 EG envoyés |
+| Risque                                         | Impact   | Probabilité | Mitigation                                                         |
+| ---------------------------------------------- | -------- | ----------- | ------------------------------------------------------------------ |
+| **Resend bloque l'envoi** (DKIM mal configuré) | Critique | Moyen       | Test exhaustif avant 1er prospect, monitoring sur leads@jonlabs.ch |
+| **Photos prospect non récupérables**           | Moyen    | Élevé       | Banque fallback de qualité prête dès le boilerplate                |
+| **Prospect ne clique pas sur le lien**         | Critique | Moyen       | Mail cold travaillé en parallèle, A/B testé                        |
+| **Conflit de couleurs prospect / lisibilité**  | Faible   | Moyen       | Validation manuelle des couleurs par Jonathan avant déploiement    |
+| **Soumission de spam**                         | Faible   | Élevé       | Honeypot CSS + rate limit Vercel + validation Zod                  |
+| **Lead arrive en spam chez le paysagiste**     | Critique | Moyen       | Domaine vérifié Resend, From address pro, BCC permet récupération  |
+| **Coûts Vercel/Resend dépassés**               | Faible   | Faible      | Free tier suffisant jusqu'à 50+ pages actives                      |
+| **Perte de motivation Jonathan**               | Critique | Moyen       | Phasage strict, ne pas dépasser V1.0 avant 5 EG envoyés            |
 
 ---
 
@@ -687,4 +706,4 @@ jonlabs-eg-devis/
 
 ---
 
-*Fin du PRD. Prêt pour Claude Code.*
+_Fin du PRD. Prêt pour Claude Code._

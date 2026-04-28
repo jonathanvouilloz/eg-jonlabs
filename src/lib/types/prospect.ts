@@ -1,3 +1,5 @@
+import type { PricingCategory } from './quote';
+
 export type QuizVariant = 'B' | 'C' | 'D';
 
 export interface ProspectConfig {
@@ -58,6 +60,7 @@ export interface ProspectService {
 	icon: string;
 	image: string | null;
 	active: boolean;
+	pricingCategory?: PricingCategory;
 }
 
 export interface InspirationItem {

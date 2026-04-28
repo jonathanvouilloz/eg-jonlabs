@@ -26,11 +26,11 @@ Quiz interactif multi-étapes au coeur de la page devis. Gère 3 variantes (B, C
 
 ## Variantes
 
-| Variante | Étapes |
-|----------|--------|
-| B | Service → Quand+Où → Surface → Contact |
-| C | Service → Inspiration → Quand+Où → Surface → Contact |
-| D | Service → Quand+Où → Surface → Contact + champ libre |
+| Variante | Étapes                                               |
+| -------- | ---------------------------------------------------- |
+| B        | Service → Quand+Où → Surface → Contact               |
+| C        | Service → Inspiration → Quand+Où → Surface → Contact |
+| D        | Service → Quand+Où → Surface → Contact + champ libre |
 
 ## Décisions techniques
 

@@ -3,13 +3,28 @@ import { z } from 'zod';
 const hexColor = z.string().regex(/^#[0-9A-Fa-f]{6}$/);
 const e164Phone = z.string().regex(/^\+\d{10,15}$/);
 
+const pricingCategorySchema = z.enum([
+	'tonte',
+	'creation_jardin',
+	'amenagement_complet',
+	'taille_haies',
+	'elagage',
+	'terrasse_dalle',
+	'terrasse_bois',
+	'gazon_rouleau',
+	'entretien_annuel',
+	'plantation',
+	'horaire_simple'
+]);
+
 const prospectServiceSchema = z.object({
 	id: z.string(),
 	label: z.string(),
 	description: z.string(),
 	icon: z.string(),
 	image: z.string().nullable(),
-	active: z.boolean()
+	active: z.boolean(),
+	pricingCategory: pricingCategorySchema.optional()
 });
 
 const inspirationItemSchema = z.object({

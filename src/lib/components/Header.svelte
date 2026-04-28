@@ -5,17 +5,22 @@
 	let { config }: { config: ProspectConfig } = $props();
 </script>
 
-<header class="fixed top-0 z-50 w-full bg-transparent">
+<header
+	class="fixed top-0 z-50 w-full border-b border-white/10 bg-black/25 shadow-sm backdrop-blur-md backdrop-saturate-150"
+>
 	<div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
 		<div class="flex items-center gap-3">
 			{#if config.business.logoUrl}
 				<img
 					src={config.business.logoUrl}
 					alt={config.business.name}
-					class="h-10 w-auto object-contain"
+					class="h-10 w-auto object-contain drop-shadow-sm"
 				/>
 			{:else}
-				<span class="text-lg font-semibold text-white" style="font-family: var(--font-heading)">
+				<span
+					class="text-lg font-semibold text-white drop-shadow-md"
+					style="font-family: var(--font-heading)"
+				>
 					{config.business.name}
 				</span>
 			{/if}
@@ -23,7 +28,7 @@
 
 		<a
 			href="tel:{config.business.phone}"
-			class="flex items-center gap-2 bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/30"
+			class="flex cursor-pointer items-center gap-2 bg-white/20 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white/30"
 			aria-label="Appeler {config.business.name}"
 		>
 			<svg

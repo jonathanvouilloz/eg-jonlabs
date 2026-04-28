@@ -14,18 +14,23 @@
 	<!-- Fallback si pas d'image -->
 	<div class="absolute inset-0 -z-10 bg-gradient-to-br from-primary to-primary-light"></div>
 
-	<div class="relative z-10 mx-auto max-w-3xl px-4 text-center text-white">
-		<h1 class="whitespace-nowrap text-5xl italic leading-tight text-white/90 md:text-6xl lg:text-7xl" style="font-family: var(--font-heading)">
+	<div
+		class="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center px-4 text-center text-white"
+	>
+		<h1
+			class="text-balance text-5xl italic leading-[1.05] text-white drop-shadow-lg md:text-6xl lg:text-7xl"
+			style="font-family: var(--font-heading); text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);"
+		>
 			Votre jardin mérite un expert
 		</h1>
 
-		<p class="mt-6 text-lg text-white/70 md:text-xl">
+		<p class="mt-6 text-lg text-white/85 drop-shadow md:text-xl">
 			{config.business.tagline}
 		</p>
 
 		<a
 			href="#devis"
-			class="mt-8 inline-flex items-center gap-2 bg-white/20 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/30"
+			class="mt-8 inline-flex cursor-pointer items-center gap-2 bg-white/20 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/30"
 		>
 			<span>Démarrer mon devis gratuit</span>
 			<svg

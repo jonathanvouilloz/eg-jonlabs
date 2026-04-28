@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 
 @theme {
-	--color-primary: var(--theme-primary, #2D5016);
-	--color-primary-light: var(--theme-primary-light, #5C7C3F);
-	--color-secondary: var(--theme-secondary, #F4F1EA);
-	--color-accent: var(--theme-accent, #D4A574);
-	--color-bg: var(--theme-bg, #FAF7EE);
-	--color-text: #1A1A1A;
-	--color-text-muted: #6B6B6B;
+	--color-primary: var(--theme-primary, #2d5016);
+	--color-primary-light: var(--theme-primary-light, #5c7c3f);
+	--color-secondary: var(--theme-secondary, #f4f1ea);
+	--color-accent: var(--theme-accent, #d4a574);
+	--color-bg: var(--theme-bg, #faf7ee);
+	--color-text: #1a1a1a;
+	--color-text-muted: #6b6b6b;
 	--font-heading: var(--theme-font-heading, 'Playfair Display', serif);
 	--font-body: 'Inter', sans-serif;
 }
@@ -29,5 +29,19 @@
 	h4 {
 		font-family: var(--font-heading);
 		font-weight: 400;
+		letter-spacing: -0.02em;
+	}
+
+	h1,
+	h2 {
+		letter-spacing: -0.025em;
+	}
+
+	button:not(:disabled),
+	[role='button']:not([aria-disabled='true']),
+	summary,
+	label:has(input[type='checkbox']),
+	label:has(input[type='radio']) {
+		cursor: pointer;
 	}
 }

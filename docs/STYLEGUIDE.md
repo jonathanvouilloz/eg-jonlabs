@@ -7,25 +7,25 @@
 
 ## Palette par défaut
 
-| Rôle | Couleur | Hex |
-|------|---------|-----|
-| Fond principal | Beige chaud | `#F4F1EA` |
-| Fond secondaire | Beige clair | `#FAF7EE` |
-| Accent primaire | Vert naturel | `#2D5016` |
-| Accent secondaire | Vert sauge | `#5C7C3F` |
-| Accent tertiaire | Terracotta | `#D4A574` |
-| Texte principal | Noir doux | `#1A1A1A` |
-| Texte secondaire | Gris chaud | `#6B6B6B` |
+| Rôle              | Couleur      | Hex       |
+| ----------------- | ------------ | --------- |
+| Fond principal    | Beige chaud  | `#F4F1EA` |
+| Fond secondaire   | Beige clair  | `#FAF7EE` |
+| Accent primaire   | Vert naturel | `#2D5016` |
+| Accent secondaire | Vert sauge   | `#5C7C3F` |
+| Accent tertiaire  | Terracotta   | `#D4A574` |
+| Texte principal   | Noir doux    | `#1A1A1A` |
+| Texte secondaire  | Gris chaud   | `#6B6B6B` |
 
 > Les couleurs du prospect surchargent cette palette via CSS variables.
 
 ## Typographie
 
-| Usage | Font | Poids |
-|-------|------|-------|
-| Titres (H1-H3) | Source Serif / Playfair Display | 600-700 |
-| Corps de texte | Inter | 400-500 |
-| Boutons / labels | Inter | 500-600 |
+| Usage            | Font                            | Poids   |
+| ---------------- | ------------------------------- | ------- |
+| Titres (H1-H3)   | Source Serif / Playfair Display | 600-700 |
+| Corps de texte   | Inter                           | 400-500 |
+| Boutons / labels | Inter                           | 500-600 |
 
 Font choisie par prospect via `branding.fontFamily` dans la config.
 

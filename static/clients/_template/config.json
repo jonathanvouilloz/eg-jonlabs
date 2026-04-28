@@ -45,7 +45,8 @@
 			"description": "DESCRIPTION_SERVICE",
 			"icon": "EMOJI",
 			"image": null,
-			"active": true
+			"active": true,
+			"pricingCategory": "horaire_simple"
 		}
 	],
 

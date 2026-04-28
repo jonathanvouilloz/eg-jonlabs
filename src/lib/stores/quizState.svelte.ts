@@ -1,5 +1,8 @@
-import type { QuizVariant, ProspectService, InspirationItem } from '$types/prospect';
+import type { QuizVariant, ProspectService } from '$types/prospect';
 import type { LeadSubmission } from '$types/lead';
+import type { QuoteResult } from '$types/quote';
+
+export type SubmissionStatus = 'idle' | 'submitting' | 'sent' | 'error';
 
 export type StepKey = 'service' | 'inspiration' | 'whenWhere' | 'surface' | 'contact';
 
@@ -72,7 +75,7 @@ function canProceedForStep(step: StepKey, answers: QuizAnswers): boolean {
 	}
 }
 
-export function createQuizState(variant: QuizVariant, services: ProspectService[]) {
+export function createQuizState(variant: QuizVariant, _services: ProspectService[]) {
 	let currentStep = $state(0);
 	let direction = $state<1 | -1>(1);
 	let answers = $state<QuizAnswers>({
@@ -95,8 +98,9 @@ export function createQuizState(variant: QuizVariant, services: ProspectService[
 		honeypot: '',
 		consentGdpr: false
 	});
-	let isSubmitting = $state(false);
+	let submissionStatus = $state<SubmissionStatus>('idle');
 	let submitError = $state<string | null>(null);
+	let quote = $state<QuoteResult | null>(null);
 
 	const steps = getSteps(variant);
 	const totalSteps = steps.length;
@@ -106,6 +110,8 @@ export function createQuizState(variant: QuizVariant, services: ProspectService[
 	const isFirstStep = $derived(currentStep === 0);
 	const isLastStep = $derived(currentStep === totalSteps - 1);
 	const canProceed = $derived(canProceedForStep(steps[currentStep], answers));
+	const isSubmitting = $derived(submissionStatus === 'submitting');
+	const isSent = $derived(submissionStatus === 'sent');
 
 	function nextStep() {
 		if (currentStep < totalSteps - 1) {
@@ -144,8 +150,9 @@ export function createQuizState(variant: QuizVariant, services: ProspectService[
 			honeypot: '',
 			consentGdpr: false
 		};
-		isSubmitting = false;
+		submissionStatus = 'idle';
 		submitError = null;
+		quote = null;
 	}
 
 	function setAnswer<K extends keyof QuizAnswers>(key: K, value: QuizAnswers[K]) {
@@ -205,9 +212,7 @@ export function createQuizState(variant: QuizVariant, services: ProspectService[
 					phone: normalizePhone(answers.contact.phone.trim()),
 					preferredContact: answers.contact.preferredContact
 				},
-				...(variant === 'D' && answers.freeText.trim()
-					? { freeText: answers.freeText.trim() }
-					: {})
+				...(variant === 'D' && answers.freeText.trim() ? { freeText: answers.freeText.trim() } : {})
 			},
 			consentGdpr: answers.consentGdpr,
 			submittedAt: new Date().toISOString()
@@ -227,14 +232,26 @@ export function createQuizState(variant: QuizVariant, services: ProspectService[
 		get isSubmitting() {
 			return isSubmitting;
 		},
-		set isSubmitting(v: boolean) {
-			isSubmitting = v;
+		get isSent() {
+			return isSent;
+		},
+		get submissionStatus() {
+			return submissionStatus;
+		},
+		set submissionStatus(v: SubmissionStatus) {
+			submissionStatus = v;
 		},
 		get submitError() {
 			return submitError;
 		},
 		set submitError(v: string | null) {
 			submitError = v;
+		},
+		get quote() {
+			return quote;
+		},
+		set quote(v: QuoteResult | null) {
+			quote = v;
 		},
 		get steps() {
 			return steps;

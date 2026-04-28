@@ -41,6 +41,7 @@ npm run format       # Prettier
 ## Conventions de commits
 
 Format Conventional Commits :
+
 - `feat(scope): description` — nouvelle fonctionnalité
 - `fix(scope): description` — correction de bug
 - `docs: description` — documentation

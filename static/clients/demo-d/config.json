@@ -1,0 +1,108 @@
+{
+	"slug": "demo-d",
+	"industry": "paysagiste",
+	"createdAt": "2026-04-28",
+
+	"business": {
+		"name": "Vert & Pierre",
+		"ownerFirstName": "Sophie",
+		"ownerLastName": "Maurer",
+		"tagline": "Spécialiste de l'aménagement extérieur à Nyon",
+		"phone": "+41229005678",
+		"email": "contact@vert-pierre.ch",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+
+	"credibility": {
+		"yearsExperience": 8,
+		"chantiersCount": 145,
+		"googleRating": 4.7,
+		"googleReviewsCount": 22,
+		"zones": ["Nyon", "Gland", "Rolle", "Coppet", "Versoix"],
+		"radiusKm": 18,
+		"latitude": 46.3833,
+		"longitude": 6.2342
+	},
+
+	"branding": {
+		"primaryColor": "#3B4A2F",
+		"secondaryColor": "#F8F4EC",
+		"accentColor": "#B8865A",
+		"fontFamily": "Raleway"
+	},
+
+	"heroImage": "https://images.unsplash.com/photo-1495908333425-29a1e0918c5f?q=80&w=1600&auto=format&fit=crop",
+	"quizVariant": "D",
+
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien annuel",
+			"description": "Contrat d'entretien régulier toute l'année",
+			"icon": "🌿",
+			"image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=600&auto=format&fit=crop",
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		},
+		{
+			"id": "elagage",
+			"label": "Élagage / abattage",
+			"description": "Taille de grands arbres, abattage en zone difficile",
+			"icon": "🪓",
+			"image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=600&auto=format&fit=crop",
+			"active": true,
+			"pricingCategory": "elagage"
+		},
+		{
+			"id": "tonte",
+			"label": "Tonte de pelouse",
+			"description": "Tonte régulière, ponctuelle ou contrat",
+			"icon": "🌾",
+			"image": "https://images.unsplash.com/photo-1591383496652-db773e57b1d0?q=80&w=600&auto=format&fit=crop",
+			"active": true,
+			"pricingCategory": "tonte"
+		}
+	],
+
+	"realizations": [
+		{
+			"before": null,
+			"after": "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1200&auto=format&fit=crop",
+			"caption": "Entretien d'une grande propriété à Gland"
+		},
+		{
+			"before": null,
+			"after": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop",
+			"caption": "Élagage sécurisé d'un platane à Nyon"
+		}
+	],
+
+	"testimonials": [
+		{
+			"name": "Christian L.",
+			"location": "Nyon",
+			"text": "Sophie est très réactive et sérieuse. Tonte impeccable depuis 2 ans.",
+			"rating": 5
+		}
+	],
+
+	"faq": [
+		{
+			"question": "Avez-vous une assurance pour les travaux en hauteur ?",
+			"answer": "Oui, nous sommes assurés pour les interventions en hauteur jusqu'à 25 m, avec personnel certifié."
+		},
+		{
+			"question": "Acceptez-vous les contrats annuels ?",
+			"answer": "Oui, c'est même notre cœur d'activité — environ 20 % de remise vs interventions ponctuelles."
+		}
+	],
+
+	"leadDelivery": {
+		"recipientEmail": "contact@vert-pierre.ch",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS VERT & PIERRE]"
+	}
+}

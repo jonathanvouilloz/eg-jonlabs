@@ -1,0 +1,142 @@
+{
+	"slug": "demo-c",
+	"industry": "paysagiste",
+	"createdAt": "2026-04-28",
+
+	"business": {
+		"name": "Paysages de Genève",
+		"ownerFirstName": "Lucas",
+		"ownerLastName": "Berthoud",
+		"tagline": "Architecte paysagiste à Genève depuis 12 ans",
+		"phone": "+41229001234",
+		"email": "contact@paysages-geneve.ch",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+
+	"credibility": {
+		"yearsExperience": 12,
+		"chantiersCount": 220,
+		"googleRating": 4.9,
+		"googleReviewsCount": 38,
+		"zones": ["Genève", "Carouge", "Lancy", "Vernier", "Meyrin", "Versoix"],
+		"radiusKm": 15,
+		"latitude": 46.2044,
+		"longitude": 6.1432
+	},
+
+	"branding": {
+		"primaryColor": "#1F3A1F",
+		"secondaryColor": "#F1F4EE",
+		"accentColor": "#C7956D",
+		"fontFamily": "Source Serif"
+	},
+
+	"heroImage": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1600&auto=format&fit=crop",
+	"quizVariant": "C",
+
+	"services": [
+		{
+			"id": "creation",
+			"label": "Création de jardin",
+			"description": "Conception sur mesure avec plans 3D",
+			"icon": "🌳",
+			"image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=600&auto=format&fit=crop",
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "terrasse",
+			"label": "Terrasse bois",
+			"description": "Pose de terrasses en bois exotique ou composite",
+			"icon": "🪵",
+			"image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
+			"active": true,
+			"pricingCategory": "terrasse_bois"
+		},
+		{
+			"id": "gazon",
+			"label": "Gazon en rouleau",
+			"description": "Pose rapide de gazon en rouleau premium",
+			"icon": "🌱",
+			"image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=600&auto=format&fit=crop",
+			"active": true,
+			"pricingCategory": "gazon_rouleau"
+		}
+	],
+
+	"inspirationGallery": [
+		{
+			"id": "minimaliste",
+			"image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=600&auto=format&fit=crop",
+			"label": "Style minimaliste"
+		},
+		{
+			"id": "japonais",
+			"image": "https://images.unsplash.com/photo-1591383496652-db773e57b1d0?q=80&w=600&auto=format&fit=crop",
+			"label": "Inspiration japonaise"
+		},
+		{
+			"id": "mediterraneen",
+			"image": "https://images.unsplash.com/photo-1495908333425-29a1e0918c5f?q=80&w=600&auto=format&fit=crop",
+			"label": "Méditerranéen"
+		},
+		{
+			"id": "anglais",
+			"image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=600&auto=format&fit=crop",
+			"label": "Jardin anglais"
+		}
+	],
+
+	"realizations": [
+		{
+			"before": null,
+			"after": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+			"caption": "Terrasse bois exotique à Cologny"
+		},
+		{
+			"before": null,
+			"after": "https://images.unsplash.com/photo-1591383496652-db773e57b1d0?q=80&w=1200&auto=format&fit=crop",
+			"caption": "Création complète à Vandœuvres"
+		},
+		{
+			"before": null,
+			"after": "https://images.unsplash.com/photo-1495908333425-29a1e0918c5f?q=80&w=1200&auto=format&fit=crop",
+			"caption": "Restauration classique à Genève"
+		}
+	],
+
+	"testimonials": [
+		{
+			"name": "Marie R.",
+			"location": "Cologny",
+			"text": "Lucas a su capter exactement ce qu'on imaginait. Travail méticuleux, plans 3D très utiles.",
+			"rating": 5
+		},
+		{
+			"name": "Jean-Pierre B.",
+			"location": "Carouge",
+			"text": "Excellente écoute, devis respecté. La terrasse est magnifique.",
+			"rating": 5
+		}
+	],
+
+	"faq": [
+		{
+			"question": "Faites-vous des plans 3D du projet ?",
+			"answer": "Oui, pour toute création > 50 m², nous fournissons un plan 3D dans le devis."
+		},
+		{
+			"question": "Quel est le délai pour une terrasse bois ?",
+			"answer": "Comptez 4 à 8 semaines entre signature et fin de pose, selon la saison."
+		}
+	],
+
+	"leadDelivery": {
+		"recipientEmail": "contact@paysages-geneve.ch",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS PAYSAGES GENÈVE]"
+	}
+}

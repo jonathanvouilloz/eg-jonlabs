@@ -51,7 +51,7 @@ export const COMMUNES_SUISSE_ROMANDE: string[] = [
 	'Vallorbe',
 	'Leysin',
 	'Villars-sur-Ollon',
-	'Château-d\'Œx',
+	"Château-d'Œx",
 	'Blonay - Saint-Légier',
 
 	// Genève
@@ -112,7 +112,7 @@ export const COMMUNES_SUISSE_ROMANDE: string[] = [
 	'Grimisuat',
 	'Vouvry',
 	'Troistorrents',
-	'Val-d\'Illiez',
+	"Val-d'Illiez",
 	'Champéry',
 
 	// Neuchâtel
@@ -171,5 +171,5 @@ export const COMMUNES_SUISSE_ROMANDE: string[] = [
 	'Tramelan',
 	'Reconvilier',
 	'Court',
-	'Tavannes',
+	'Tavannes'
 ];

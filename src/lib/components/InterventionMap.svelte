@@ -2,7 +2,10 @@
 	import { onMount } from 'svelte';
 	import type { ProspectConfig } from '$types/prospect';
 
-	let { credibility, businessName }: { credibility: ProspectConfig['credibility']; businessName: string } = $props();
+	let {
+		credibility,
+		businessName
+	}: { credibility: ProspectConfig['credibility']; businessName: string } = $props();
 
 	let mapContainer: HTMLDivElement;
 
@@ -37,7 +40,8 @@
 		mapInstance = map;
 
 		L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+			attribution:
+				'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
 			subdomains: 'abcd',
 			maxZoom: 19
 		}).addTo(map);
@@ -57,7 +61,8 @@
 				iconSize: [32, 32],
 				iconAnchor: [16, 32]
 			})
-		}).addTo(map)
+		})
+			.addTo(map)
 			.bindPopup(`Siège de ${businessName}`)
 			.openPopup();
 	}
@@ -80,7 +85,7 @@
 
 	<div class="mx-auto max-w-4xl">
 		<div class="flex flex-wrap justify-center gap-2">
-			{#each credibility.zones as zone}
+			{#each credibility.zones as zone (zone)}
 				<span class="border border-gray-200 bg-white px-3 py-1 text-sm text-text-muted">
 					{zone}
 				</span>
