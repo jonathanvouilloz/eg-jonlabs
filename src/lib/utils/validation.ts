@@ -1,0 +1,88 @@
+import { z } from 'zod';
+
+const hexColor = z.string().regex(/^#[0-9A-Fa-f]{6}$/);
+const e164Phone = z.string().regex(/^\+\d{10,15}$/);
+
+const prospectServiceSchema = z.object({
+	id: z.string(),
+	label: z.string(),
+	description: z.string(),
+	icon: z.string(),
+	image: z.string().nullable(),
+	active: z.boolean()
+});
+
+const inspirationItemSchema = z.object({
+	id: z.string(),
+	image: z.string(),
+	label: z.string()
+});
+
+const realizationSchema = z.object({
+	before: z.string().nullable(),
+	after: z.string(),
+	caption: z.string()
+});
+
+const testimonialSchema = z.object({
+	name: z.string(),
+	location: z.string(),
+	text: z.string(),
+	rating: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)])
+});
+
+const faqItemSchema = z.object({
+	question: z.string(),
+	answer: z.string()
+});
+
+export const prospectConfigSchema = z.object({
+	slug: z.string(),
+	industry: z.enum(['paysagiste']),
+	createdAt: z.string(),
+
+	business: z.object({
+		name: z.string(),
+		ownerFirstName: z.string(),
+		ownerLastName: z.string(),
+		tagline: z.string(),
+		phone: e164Phone,
+		email: z.string().email(),
+		logoUrl: z.string().nullable(),
+		googleReviewUrl: z.string().nullable(),
+		facebookUrl: z.string().nullable(),
+		instagramUrl: z.string().nullable()
+	}),
+
+	credibility: z.object({
+		yearsExperience: z.number().int().positive(),
+		chantiersCount: z.number().int().positive().nullable(),
+		googleRating: z.number().min(0).max(5).nullable(),
+		googleReviewsCount: z.number().int().nonnegative().nullable(),
+		zones: z.array(z.string()).min(1),
+		radiusKm: z.number().positive(),
+		latitude: z.number().min(-90).max(90),
+		longitude: z.number().min(-180).max(180)
+	}),
+
+	branding: z.object({
+		primaryColor: hexColor,
+		secondaryColor: hexColor,
+		accentColor: hexColor,
+		fontFamily: z.enum(['Inter', 'Source Serif', 'Playfair Display', 'Raleway'])
+	}),
+
+	heroImage: z.string(),
+	quizVariant: z.enum(['B', 'C', 'D']),
+	services: z.array(prospectServiceSchema).min(1),
+	inspirationGallery: z.array(inspirationItemSchema).optional(),
+	realizations: z.array(realizationSchema),
+	testimonials: z.array(testimonialSchema),
+	faq: z.array(faqItemSchema),
+
+	leadDelivery: z.object({
+		recipientEmail: z.string().email(),
+		ccEmails: z.array(z.string().email()),
+		subjectPrefix: z.string()
+	})
+});

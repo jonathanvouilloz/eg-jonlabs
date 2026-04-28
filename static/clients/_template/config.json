@@ -1,0 +1,61 @@
+{
+	"_instructions": "Dupliquer ce dossier, renommer avec le slug du prospect, remplir tous les champs ci-dessous",
+	"slug": "SLUG_DU_PROSPECT",
+	"industry": "paysagiste",
+	"createdAt": "YYYY-MM-DD",
+
+	"business": {
+		"name": "NOM_ENTREPRISE",
+		"ownerFirstName": "PRENOM",
+		"ownerLastName": "NOM",
+		"tagline": "PHRASE_POSITIONNEMENT",
+		"phone": "+41XXXXXXXXX",
+		"email": "EMAIL_PRO",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+
+	"credibility": {
+		"yearsExperience": 0,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": null,
+		"zones": ["ZONE_1", "ZONE_2"],
+		"radiusKm": 15,
+		"latitude": 0,
+		"longitude": 0
+	},
+
+	"branding": {
+		"primaryColor": "#2D5016",
+		"secondaryColor": "#F4F1EA",
+		"accentColor": "#D4A574",
+		"fontFamily": "Source Serif"
+	},
+
+	"heroImage": "/clients/SLUG/hero.jpg",
+	"quizVariant": "B",
+
+	"services": [
+		{
+			"id": "SERVICE_ID",
+			"label": "NOM_SERVICE",
+			"description": "DESCRIPTION_SERVICE",
+			"icon": "EMOJI",
+			"image": null,
+			"active": true
+		}
+	],
+
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+
+	"leadDelivery": {
+		"recipientEmail": "EMAIL_PROSPECT",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS NOM_ENTREPRISE]"
+	}
+}
