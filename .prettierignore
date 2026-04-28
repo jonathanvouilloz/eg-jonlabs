@@ -1,0 +1,15 @@
+# Generated
+.svelte-kit
+.vercel
+build
+dist
+node_modules
+.husky/_
+
+# Lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Static
+static/clients/*/realisation-*.jpg
