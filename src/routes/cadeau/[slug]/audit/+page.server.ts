@@ -1,9 +1,16 @@
 import { error } from '@sveltejs/kit';
-import { readFile } from 'node:fs/promises';
-import { join } from 'node:path';
 import { marked } from 'marked';
 
 export const prerender = false;
+
+// Vite bundles the markdown files into the server function. Works on Vercel
+// (readFileSync of /static/ doesn't, since static/ is served by the CDN, not
+// available in the serverless function filesystem).
+const auditMarkdowns = import.meta.glob('/static/clients/*/audit/audit.md', {
+	eager: true,
+	query: '?raw',
+	import: 'default'
+}) as Record<string, string>;
 
 function decodeEntities(s: string): string {
 	return s
@@ -25,11 +32,9 @@ function slugify(text: string): string {
 }
 
 export const load = async ({ params }: { params: { slug: string } }) => {
-	const mdPath = join(process.cwd(), 'static', 'clients', params.slug, 'audit', 'audit.md');
-	let raw: string;
-	try {
-		raw = await readFile(mdPath, 'utf-8');
-	} catch {
+	const key = `/static/clients/${params.slug}/audit/audit.md`;
+	const raw = auditMarkdowns[key];
+	if (!raw) {
 		throw error(404, 'Rapport non disponible');
 	}
 
