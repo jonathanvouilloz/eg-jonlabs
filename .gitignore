@@ -8,6 +8,12 @@ node_modules
 /.svelte-kit
 /build
 
+# paysagiste-audit workspace (local)
+.audits/
+
+# Claude Code local settings
+.claude/
+
 # OS
 .DS_Store
 Thumbs.db

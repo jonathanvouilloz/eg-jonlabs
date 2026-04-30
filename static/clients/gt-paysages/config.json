@@ -1,0 +1,144 @@
+{
+	"slug": "gt-paysages",
+	"industry": "paysagiste",
+	"createdAt": "2026-04-30",
+	"business": {
+		"name": "GT Paysages Sàrl",
+		"ownerFirstName": "",
+		"ownerLastName": "",
+		"tagline": "Paysagiste à Genève",
+		"phone": "+41788580404",
+		"email": "leads@jonlabs.ch",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": 10,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Genève"],
+		"radiusKm": 20,
+		"latitude": 46.2374947,
+		"longitude": 6.124529
+	},
+	"branding": {
+		"primaryColor": "#2D5016",
+		"secondaryColor": "#F4F1EA",
+		"accentColor": "#D4A574",
+		"fontFamily": "Playfair Display"
+	},
+	"heroImage": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop",
+	"quizVariant": "C",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien de jardin",
+			"description": "Tonte, taille de haies, désherbage, soins des massifs.",
+			"icon": "🌿",
+			"image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=600&auto=format&fit=crop",
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		},
+		{
+			"id": "taille",
+			"label": "Taille & élagage",
+			"description": "Taille d'arbres, arbustes et haies.",
+			"icon": "✂️",
+			"image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=600&auto=format&fit=crop",
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation",
+			"label": "Création de jardin",
+			"description": "Conception et réalisation de jardins sur mesure.",
+			"icon": "🌳",
+			"image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=600&auto=format&fit=crop",
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "amenagement",
+			"label": "Aménagement extérieur",
+			"description": "Terrasses, clôtures, murets, pavage.",
+			"icon": "🏗️",
+			"image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
+			"active": true,
+			"pricingCategory": "amenagement_complet"
+		}
+	],
+	"realizations": [
+		{
+			"before": null,
+			"after": "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1200&auto=format&fit=crop",
+			"caption": "Création d'un jardin paysager"
+		},
+		{
+			"before": null,
+			"after": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+			"caption": "Aménagement terrasse bois"
+		},
+		{
+			"before": null,
+			"after": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop",
+			"caption": "Taille et entretien — propriété"
+		},
+		{
+			"before": null,
+			"after": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=1200&auto=format&fit=crop",
+			"caption": "Allée pavée et plantations"
+		},
+		{
+			"before": null,
+			"after": "https://images.unsplash.com/photo-1591383496652-db773e57b1d0?q=80&w=1200&auto=format&fit=crop",
+			"caption": "Création complète"
+		},
+		{
+			"before": null,
+			"after": "https://images.unsplash.com/photo-1495908333425-29a1e0918c5f?q=80&w=1200&auto=format&fit=crop",
+			"caption": "Restauration d'un vieux jardin"
+		}
+	],
+	"testimonials": [
+		{
+			"name": "Sophie M.",
+			"location": "Genève",
+			"text": "Travail soigné et dans les délais. Notre jardin a vraiment changé.",
+			"rating": 5
+		},
+		{
+			"name": "Pierre L.",
+			"location": "Genève",
+			"text": "Très professionnel, à l'écoute. Le résultat dépasse nos attentes.",
+			"rating": 5
+		},
+		{
+			"name": "Catherine R.",
+			"location": "Genève",
+			"text": "Entretien régulier impeccable depuis plusieurs années. Fiable et ponctuel.",
+			"rating": 4
+		}
+	],
+	"faq": [
+		{
+			"question": "Combien coûte un entretien de jardin ?",
+			"answer": "Le tarif dépend de la surface et des prestations. Comptez entre CHF 60 et 90 de l'heure. Un devis précis vous sera envoyé après visite."
+		},
+		{
+			"question": "Dans quels délais intervenez-vous ?",
+			"answer": "En général sous 1 à 2 semaines. Pour les urgences (arbre tombé, dégâts de tempête), nous intervenons sous 48h."
+		},
+		{
+			"question": "Intervenez-vous dans ma commune ?",
+			"answer": "Nous couvrons Genève et un rayon de 20 km. Contactez-nous pour confirmer pour votre adresse."
+		}
+	],
+	"leadDelivery": {
+		"recipientEmail": "leads@jonlabs.ch",
+		"ccEmails": [],
+		"subjectPrefix": "[DEVIS GT PAYSAGES SÀRL]"
+	}
+}
