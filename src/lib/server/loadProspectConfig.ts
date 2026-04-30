@@ -1,5 +1,3 @@
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
 import { prospectConfigSchema } from '$utils/validation';
 import type { ProspectConfig } from '$types/prospect';
 
@@ -14,27 +12,23 @@ export interface LoadError {
 	detail?: string;
 }
 
-export function loadProspectConfig(slug: string): LoadResult | LoadError {
-	const configPath = resolve('static', 'clients', slug, 'config.json');
+// Vite bundles these JSONs into the server function — works on Vercel (readFileSync doesn't).
+const clientConfigs = import.meta.glob('/static/clients/*/config.json', { eager: true });
 
-	let raw: string;
-	try {
-		raw = readFileSync(configPath, 'utf-8');
-	} catch {
+export function loadProspectConfig(slug: string): LoadResult | LoadError {
+	const key = `/static/clients/${slug}/config.json`;
+	const module = clientConfigs[key] as { default?: unknown } | undefined;
+
+	if (!module) {
 		return { ok: false, reason: 'not_found' };
 	}
 
-	let json: unknown;
-	try {
-		json = JSON.parse(raw);
-	} catch (err) {
-		return { ok: false, reason: 'invalid_json', detail: String(err) };
-	}
+	const json = module.default ?? module;
 
 	const parsed = prospectConfigSchema.safeParse(json);
 	if (!parsed.success) {
 		return { ok: false, reason: 'invalid_schema', detail: parsed.error.message };
 	}
 
-	return { ok: true, config: parsed.data };
+	return { ok: true, config: parsed.data as ProspectConfig };
 }
