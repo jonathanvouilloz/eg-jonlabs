@@ -89,7 +89,7 @@
 </script>
 
 <section id="devis" class="px-6 py-20 md:px-12">
-	<div class="mx-auto max-w-2xl">
+	<div class="mx-auto max-w-4xl">
 		{#if quiz.isSent && quiz.quote}
 			<div in:fly={{ y: 24, duration: 500, easing: expoOut }}>
 				<QuoteResult {config} answers={quiz.answers} quote={quiz.quote} onReset={quiz.reset} />
