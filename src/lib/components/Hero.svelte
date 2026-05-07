@@ -23,8 +23,8 @@
 		</p>
 
 		<h1
-			class="max-w-[14ch] text-[clamp(3rem,8vw,6.5rem)] font-normal italic leading-[1.02] text-white"
-			style="font-variation-settings: 'opsz' 72; text-shadow: 0 2px 32px oklch(0% 0 0 / 0.3);"
+			class="max-w-[14ch] text-[clamp(3rem,8vw,6.5rem)] leading-[1.02] text-white"
+			style="text-shadow: 0 2px 32px oklch(0% 0 0 / 0.3);"
 		>
 			Votre jardin mérite un expert
 		</h1>

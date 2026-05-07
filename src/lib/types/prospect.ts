@@ -14,6 +14,8 @@ export interface ProspectConfig {
 		tagline: string;
 		phone: string;
 		email: string;
+		address?: string | null;
+		googleProfileUrl?: string | null;
 		logoUrl: string | null;
 		googleReviewUrl: string | null;
 		facebookUrl: string | null;
@@ -35,7 +37,13 @@ export interface ProspectConfig {
 		primaryColor: string;
 		secondaryColor: string;
 		accentColor: string;
-		fontFamily: 'Inter' | 'Source Serif' | 'Playfair Display' | 'Raleway' | 'Bodoni Moda';
+		fontFamily:
+			| 'Inter'
+			| 'Source Serif'
+			| 'Playfair Display'
+			| 'Raleway'
+			| 'Bodoni Moda'
+			| 'Plus Jakarta Sans';
 	};
 
 	heroImage: string;

@@ -9,7 +9,7 @@
 		<div class="flex flex-col gap-2">
 			<p
 				class="text-[clamp(2.5rem,5vw,3.5rem)] font-normal leading-none text-accent"
-				style="font-family: var(--font-heading); font-variation-settings: 'opsz' 48;"
+				style="font-family: var(--font-heading);"
 			>
 				{credibility.yearsExperience}
 			</p>
@@ -20,7 +20,7 @@
 			<div class="flex flex-col gap-2">
 				<p
 					class="text-[clamp(2.5rem,5vw,3.5rem)] font-normal leading-none text-accent"
-					style="font-family: var(--font-heading); font-variation-settings: 'opsz' 48;"
+					style="font-family: var(--font-heading);"
 				>
 					{credibility.googleRating}<span class="text-2xl text-white/40">/5</span>
 				</p>
@@ -32,7 +32,7 @@
 			<div class="flex flex-col gap-2">
 				<p
 					class="text-[clamp(2.5rem,5vw,3.5rem)] font-normal leading-none text-accent"
-					style="font-family: var(--font-heading); font-variation-settings: 'opsz' 48;"
+					style="font-family: var(--font-heading);"
 				>
 					{credibility.chantiersCount}+
 				</p>
@@ -45,7 +45,7 @@
 		<div class="flex flex-col gap-2">
 			<p
 				class="text-[clamp(2.5rem,5vw,3.5rem)] font-normal leading-none text-accent"
-				style="font-family: var(--font-heading); font-variation-settings: 'opsz' 48;"
+				style="font-family: var(--font-heading);"
 			>
 				{credibility.radiusKm}
 			</p>

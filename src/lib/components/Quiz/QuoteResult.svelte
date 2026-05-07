@@ -115,7 +115,7 @@
 			</p>
 			<p
 				class="mt-3 text-[clamp(3rem,10vw,5rem)] font-normal leading-none text-primary"
-				style="font-family: var(--font-heading); font-variation-settings: 'opsz' 72;"
+				style="font-family: var(--font-heading);"
 			>
 				{formatChf(quote.median)}
 			</p>

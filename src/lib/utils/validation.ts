@@ -63,6 +63,8 @@ export const prospectConfigSchema = z.object({
 		tagline: z.string(),
 		phone: e164Phone,
 		email: z.string().email(),
+		address: z.string().nullable().optional(),
+		googleProfileUrl: z.string().nullable().optional(),
 		logoUrl: z.string().nullable(),
 		googleReviewUrl: z.string().nullable(),
 		facebookUrl: z.string().nullable(),
@@ -84,7 +86,14 @@ export const prospectConfigSchema = z.object({
 		primaryColor: hexColor,
 		secondaryColor: hexColor,
 		accentColor: hexColor,
-		fontFamily: z.enum(['Inter', 'Source Serif', 'Playfair Display', 'Raleway', 'Bodoni Moda'])
+		fontFamily: z.enum([
+			'Inter',
+			'Source Serif',
+			'Playfair Display',
+			'Raleway',
+			'Bodoni Moda',
+			'Plus Jakarta Sans'
+		])
 	}),
 
 	heroImage: z.string(),

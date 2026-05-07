@@ -1,11 +1,12 @@
 import type { ProspectConfig } from '$types/prospect';
 
 const FONT_MAP: Record<ProspectConfig['branding']['fontFamily'], string> = {
-	Inter: "'Barlow', sans-serif",
-	'Source Serif': "'Source Serif 4', serif",
-	'Playfair Display': "'Playfair Display', serif",
-	Raleway: "'Raleway', sans-serif",
-	'Bodoni Moda': "'Bodoni Moda', serif"
+	Inter: "'Plus Jakarta Sans', sans-serif",
+	'Source Serif': "'Plus Jakarta Sans', sans-serif",
+	'Playfair Display': "'Plus Jakarta Sans', sans-serif",
+	Raleway: "'Plus Jakarta Sans', sans-serif",
+	'Bodoni Moda': "'Plus Jakarta Sans', sans-serif",
+	'Plus Jakarta Sans': "'Plus Jakarta Sans', sans-serif"
 };
 
 export function generateThemeStyle(branding: ProspectConfig['branding']): string {

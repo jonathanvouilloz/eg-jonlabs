@@ -10,8 +10,8 @@
 	--color-bg: var(--theme-bg, oklch(97% 0.01 80));
 	--color-text: oklch(18% 0.008 145);
 	--color-text-muted: oklch(52% 0.008 145);
-	--font-heading: var(--theme-font-heading, 'Bodoni Moda', serif);
-	--font-body: 'Barlow', sans-serif;
+	--font-heading: var(--theme-font-heading, 'Plus Jakarta Sans', sans-serif);
+	--font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
 @layer base {
@@ -31,18 +31,22 @@
 	h3,
 	h4 {
 		font-family: var(--font-heading);
-		letter-spacing: -0.025em;
+		letter-spacing: -0.02em;
 	}
 
 	h1 {
-		font-weight: 400;
-		letter-spacing: -0.03em;
+		font-weight: 700;
+		letter-spacing: -0.035em;
 	}
 
-	h2,
+	h2 {
+		font-weight: 600;
+		letter-spacing: -0.025em;
+	}
+
 	h3,
 	h4 {
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	button:not(:disabled),
