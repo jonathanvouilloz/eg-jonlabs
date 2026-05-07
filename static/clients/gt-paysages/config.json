@@ -140,5 +140,29 @@
 		"recipientEmail": "leads@jonlabs.ch",
 		"ccEmails": [],
 		"subjectPrefix": "[DEVIS GT PAYSAGES SÀRL]"
-	}
+	},
+
+	"salesPage": {
+		"loomVideoId": "PLACEHOLDER_LOOM_ID",
+		"screenshotUrl": "/screenshots/gt-paysages.png",
+		"subtitleObservation": ""
+	},
+
+	"localMarket": {
+		"monthlySearches": 320,
+		"topThreeCaptureRate": 0.5
+	},
+
+	"communes": [
+		"Genève",
+		"Carouge",
+		"Vernier",
+		"Lancy",
+		"Meyrin",
+		"Chêne-Bougeries",
+		"Onex",
+		"Versoix"
+	],
+
+	"transparencyNote": true
 }
