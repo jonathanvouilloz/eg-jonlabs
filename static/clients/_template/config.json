@@ -13,6 +13,7 @@
 		"email": "EMAIL_PRO",
 		"address": "Rue, Code postal Ville",
 		"googleProfileUrl": "https://share.google/...",
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=NOM+ENTREPRISE+VILLE&output=embed",
 		"logoUrl": null,
 		"googleReviewUrl": null,
 		"facebookUrl": null,
@@ -46,6 +47,7 @@
 			"label": "NOM_SERVICE",
 			"description": "DESCRIPTION_SERVICE",
 			"icon": "EMOJI",
+			"iconName": "leaf",
 			"image": null,
 			"active": true,
 			"pricingCategory": "horaire_simple"

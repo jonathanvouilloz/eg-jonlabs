@@ -11,6 +11,7 @@
 		"email": "leads@jonlabs.ch",
 		"address": "Genève, Suisse",
 		"googleProfileUrl": "https://share.google/4RFeCGDz2qxnWpjzH",
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=GT+Paysages+S%C3%A0rl+Gen%C3%A8ve&output=embed",
 		"logoUrl": null,
 		"googleReviewUrl": null,
 		"facebookUrl": null,
@@ -40,6 +41,7 @@
 			"label": "Entretien de jardin",
 			"description": "Tonte, taille de haies, désherbage, soins des massifs.",
 			"icon": "🌿",
+			"iconName": "leaf",
 			"image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=600&auto=format&fit=crop",
 			"active": true,
 			"pricingCategory": "entretien_annuel"
@@ -49,6 +51,7 @@
 			"label": "Taille & élagage",
 			"description": "Taille d'arbres, arbustes et haies.",
 			"icon": "✂️",
+			"iconName": "scissors",
 			"image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=600&auto=format&fit=crop",
 			"active": true,
 			"pricingCategory": "taille_haies"
@@ -58,6 +61,7 @@
 			"label": "Création de jardin",
 			"description": "Conception et réalisation de jardins sur mesure.",
 			"icon": "🌳",
+			"iconName": "tree",
 			"image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=600&auto=format&fit=crop",
 			"active": true,
 			"pricingCategory": "creation_jardin"
@@ -67,6 +71,7 @@
 			"label": "Aménagement extérieur",
 			"description": "Terrasses, clôtures, murets, pavage.",
 			"icon": "🏗️",
+			"iconName": "home",
 			"image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
 			"active": true,
 			"pricingCategory": "amenagement_complet"
