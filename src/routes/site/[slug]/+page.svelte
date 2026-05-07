@@ -45,6 +45,8 @@
 			credibility={config.credibility}
 			businessName={config.business.name}
 			communes={config.communes}
+			address={config.business.address}
+			googleProfileUrl={config.business.googleProfileUrl}
 		/>
 
 		{#if config.testimonials.length > 0}

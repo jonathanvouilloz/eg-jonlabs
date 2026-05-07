@@ -11,6 +11,8 @@
 		"tagline": "PHRASE_POSITIONNEMENT",
 		"phone": "+41XXXXXXXXX",
 		"email": "EMAIL_PRO",
+		"address": "Rue, Code postal Ville",
+		"googleProfileUrl": "https://share.google/...",
 		"logoUrl": null,
 		"googleReviewUrl": null,
 		"facebookUrl": null,
@@ -32,7 +34,7 @@
 		"primaryColor": "#2D5016",
 		"secondaryColor": "#F4F1EA",
 		"accentColor": "#D4A574",
-		"fontFamily": "Source Serif"
+		"fontFamily": "Plus Jakarta Sans"
 	},
 
 	"heroImage": "/clients/SLUG/hero.jpg",

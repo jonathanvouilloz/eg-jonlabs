@@ -5,11 +5,15 @@
 	let {
 		credibility,
 		businessName,
-		communes
+		communes,
+		address,
+		googleProfileUrl
 	}: {
 		credibility: ProspectConfig['credibility'];
 		businessName: string;
 		communes?: string[];
+		address?: string | null;
+		googleProfileUrl?: string | null;
 	} = $props();
 
 	let displayCommunes = $derived(communes && communes.length > 0 ? communes : credibility.zones);
@@ -60,6 +64,14 @@
 			weight: 1.5
 		}).addTo(map);
 
+		const popupParts = [`<strong>${businessName}</strong>`];
+		if (address) popupParts.push(address);
+		if (googleProfileUrl) {
+			popupParts.push(
+				`<a href="${googleProfileUrl}" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">Voir sur Google</a>`
+			);
+		}
+
 		L.marker([credibility.latitude, credibility.longitude], {
 			icon: L.divIcon({
 				html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="color: var(--color-primary); width: 28px; height: 28px;"><path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 3.713 2.956l.114.068ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" /></svg>`,
@@ -69,7 +81,7 @@
 			})
 		})
 			.addTo(map)
-			.bindPopup(`Siège de ${businessName}`);
+			.bindPopup(popupParts.join('<br />'));
 	}
 </script>
 
@@ -82,9 +94,41 @@
 			>
 				Zone d'intervention
 			</p>
-			<h2 class="text-3xl font-normal text-white md:text-4xl">
+			<h2 class="text-3xl text-white md:text-4xl">
 				{credibility.radiusKm} km autour de {credibility.zones[0]}
 			</h2>
+			{#if address}
+				<p class="mt-3 text-sm text-white/70" style="font-family: var(--font-body);">
+					{address}
+					{#if googleProfileUrl}
+						<a
+							href={googleProfileUrl}
+							target="_blank"
+							rel="noopener"
+							class="ml-2 inline-flex items-center gap-1 border-b border-white/30 pb-px text-white/85 transition-colors hover:border-white hover:text-white"
+						>
+							Voir sur Google
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								class="h-3 w-3"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z"
+									clip-rule="evenodd"
+								/>
+								<path
+									fill-rule="evenodd"
+									d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+						</a>
+					{/if}
+				</p>
+			{/if}
 		</div>
 
 		<div class="grid gap-8 md:grid-cols-5 md:gap-10">
@@ -111,7 +155,7 @@
 					class="mt-4 text-xs leading-relaxed text-white/45"
 					style="font-family: var(--font-body);"
 				>
-					Devis gratuit dans toute la zone. Hors zone : nous contacter pour étude.
+					Devis gratuit dans toute la zone. Hors zone, nous contacter pour étude.
 				</p>
 			</div>
 		</div>
