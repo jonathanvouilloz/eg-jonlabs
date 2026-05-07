@@ -6,15 +6,15 @@
 
 <div class="annotation-content">
 	<p class="lead">
-		<strong>Comment ce site te fait monter sur Google.</strong> Le site seul ne suffit pas — il faut le
-		système autour.
+		<strong>Le site seul ne suffit pas.</strong> Il faut le système autour pour faire monter ta fiche
+		sur Google.
 	</p>
 
 	<ol class="points">
 		<li>
 			<span class="num">1</span>
 			<span class="txt"
-				>Une page par commune que tu desserts — chacune optimisée pour "paysagiste {mainCommune}".</span
+				>Une page par commune que tu desserts. Chacune optimisée pour "paysagiste {mainCommune}".</span
 			>
 		</li>
 		<li>
@@ -48,7 +48,7 @@
 	}
 
 	.lead strong {
-		color: oklch(96% 0.005 250);
+		color: #0a0a0a;
 		font-weight: 600;
 	}
 
@@ -59,15 +59,15 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.875rem;
-		padding-top: 0.75rem;
-		border-top: 1px solid oklch(100% 0 0 / 0.06);
+		padding-top: 0.875rem;
+		border-top: 1px solid #e5e5e5;
 	}
 
 	.points li {
 		display: flex;
 		gap: 0.75rem;
 		align-items: flex-start;
-		font-size: 0.8125rem;
+		font-size: 0.875rem;
 		line-height: 1.5;
 	}
 
@@ -78,15 +78,15 @@
 		width: 1.5rem;
 		height: 1.5rem;
 		border-radius: 9999px;
-		background: oklch(100% 0 0 / 0.08);
-		color: #00d9a3;
+		background: #ecfdf5;
+		color: #00b88a;
 		font-weight: 600;
 		font-size: 0.75rem;
 		flex-shrink: 0;
 	}
 
 	.txt strong {
-		color: oklch(96% 0.005 250);
+		color: #0a0a0a;
 		font-weight: 600;
 	}
 </style>

@@ -38,11 +38,8 @@
 			if (e.key === 'Escape') close();
 		};
 		document.addEventListener('keydown', onKey);
-		const previousOverflow = document.body.style.overflow;
-		document.body.style.overflow = 'hidden';
 		return () => {
 			document.removeEventListener('keydown', onKey);
-			document.body.style.overflow = previousOverflow;
 		};
 	});
 
@@ -54,84 +51,47 @@
 
 {#if !mounted}
 	<aside class="fallback" aria-label={label}>
-		<div class="meta-header">
-			<div class="meta-avatar">J</div>
-			<div class="meta-meta">
-				<span class="meta-label">{label}</span>
-				<span class="meta-sub">Jon Labs Local</span>
-			</div>
-		</div>
+		<h3 class="meta-title">{label}</h3>
 		<div class="meta-body">
 			{@render children()}
 		</div>
 	</aside>
 {:else if open}
-	<div class="backdrop" onclick={close} role="presentation">
-		<div
-			class="modal"
-			onclick={(e) => e.stopPropagation()}
-			onkeydown={(e) => e.stopPropagation()}
-			role="dialog"
-			aria-modal="true"
-			aria-label={label}
-			tabindex="-1"
-		>
-			<header class="meta-header">
-				<div class="meta-avatar">J</div>
-				<div class="meta-meta">
-					<span class="meta-label">{label}</span>
-					<span class="meta-sub">Jon Labs Local</span>
-				</div>
-				<button class="close" onclick={close} aria-label="Fermer la note" type="button">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 20 20"
-						fill="currentColor"
-						width="16"
-						height="16"
-					>
-						<path
-							d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"
-						/>
-					</svg>
-				</button>
-			</header>
-			<div class="meta-body">
-				{@render children()}
-			</div>
+	<div
+		class="meta-card"
+		role="dialog"
+		aria-modal="false"
+		aria-label={label}
+		tabindex="-1"
+		onkeydown={(e) => e.stopPropagation()}
+	>
+		<h3 class="meta-title">{label}</h3>
+		<div class="meta-body">
+			{@render children()}
 		</div>
+		<button class="close-cta" onclick={close} type="button">Fermer</button>
 	</div>
 {/if}
 
 <style>
-	.backdrop {
+	.meta-card {
 		position: fixed;
-		inset: 0;
+		right: 1.5rem;
+		top: 50%;
+		transform: translateY(-50%);
 		z-index: 100;
-		background: oklch(0% 0 0 / 0.6);
-		backdrop-filter: blur(4px);
-		-webkit-backdrop-filter: blur(4px);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 1.5rem;
-		animation: fadeIn 0.25s ease-out;
-	}
-
-	.modal {
-		position: relative;
-		width: 100%;
-		max-width: 520px;
-		max-height: 85vh;
+		width: calc(100% - 3rem);
+		max-width: 380px;
+		max-height: 82vh;
 		overflow-y: auto;
-		padding: 1.75rem 1.75rem 1.75rem;
-		background: oklch(18% 0.008 250);
-		color: oklch(96% 0.005 250);
-		border-radius: 1.25rem;
+		padding: 1.75rem 1.75rem 1.5rem;
+		background: #ffffff;
+		color: #0a0a0a;
+		border-radius: 1rem;
 		box-shadow:
-			0 24px 70px -12px oklch(0% 0 0 / 0.5),
-			0 0 0 1px oklch(100% 0 0 / 0.06);
-		animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+			0 24px 60px -12px oklch(0% 0 0 / 0.18),
+			0 0 0 1px oklch(0% 0 0 / 0.06);
+		animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 		outline: none;
 	}
 
@@ -139,110 +99,88 @@
 		position: relative;
 		margin: 2rem auto;
 		max-width: 720px;
-		padding: 1.5rem 1.75rem;
-		background: oklch(18% 0.008 250);
-		color: oklch(96% 0.005 250);
-		border-radius: 1.25rem;
+		padding: 1.75rem 1.75rem 1.5rem;
+		background: #ffffff;
+		color: #0a0a0a;
+		border: 1px solid #e5e5e5;
+		border-radius: 1rem;
 	}
 
-	.meta-header {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		padding-bottom: 1rem;
-		margin-bottom: 1.25rem;
-		border-bottom: 1px solid oklch(100% 0 0 / 0.08);
-	}
-
-	.meta-avatar {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 2.25rem;
-		height: 2.25rem;
-		border-radius: 9999px;
-		background: #00d9a3;
-		color: oklch(15% 0.005 250);
+	.meta-title {
+		font-family: 'Inter', sans-serif;
+		font-size: 1.375rem;
 		font-weight: 600;
-		font-size: 0.875rem;
-		flex-shrink: 0;
-		font-family: 'Inter', sans-serif;
-	}
-
-	.meta-meta {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		line-height: 1.2;
-	}
-
-	.meta-label {
-		font-size: 0.875rem;
-		font-weight: 600;
-		color: oklch(96% 0.005 250);
-		font-family: 'Inter', sans-serif;
-	}
-
-	.meta-sub {
-		font-size: 0.6875rem;
-		color: oklch(70% 0.005 250);
-		font-family: 'Inter', sans-serif;
-		letter-spacing: 0.04em;
-		text-transform: uppercase;
-		margin-top: 0.125rem;
-	}
-
-	.close {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 2rem;
-		height: 2rem;
-		border-radius: 9999px;
-		background: oklch(100% 0 0 / 0.06);
-		color: oklch(80% 0.005 250);
-		border: none;
-		cursor: pointer;
-		flex-shrink: 0;
-		transition:
-			background 0.15s ease,
-			color 0.15s ease;
-	}
-
-	.close:hover {
-		background: oklch(100% 0 0 / 0.12);
-		color: oklch(96% 0.005 250);
-	}
-
-	.close:focus-visible {
-		outline: 2px solid #00d9a3;
-		outline-offset: 2px;
+		color: #0a0a0a;
+		margin: 0 0 1.25rem 0;
+		line-height: 1.25;
+		letter-spacing: -0.015em;
 	}
 
 	.meta-body {
 		font-family: 'Inter', sans-serif;
 		font-size: 0.9375rem;
 		line-height: 1.55;
-		color: oklch(88% 0.005 250);
+		color: #404040;
 	}
 
-	@keyframes fadeIn {
+	.close-cta {
+		display: block;
+		width: 100%;
+		margin-top: 1.5rem;
+		padding: 0.75rem 1.25rem;
+		background: #0a0a0a;
+		color: #ffffff;
+		border: none;
+		border-radius: 0.625rem;
+		font-family: 'Inter', sans-serif;
+		font-size: 0.9375rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: background 0.15s ease;
+	}
+
+	.close-cta:hover {
+		background: #262626;
+	}
+
+	.close-cta:focus-visible {
+		outline: 2px solid #00d9a3;
+		outline-offset: 2px;
+	}
+
+	@media (max-width: 768px) {
+		.meta-card {
+			right: 0.75rem;
+			left: 0.75rem;
+			bottom: 0.75rem;
+			top: auto;
+			max-width: none;
+			width: auto;
+			max-height: 70vh;
+			transform: none;
+			animation: slideInBottom 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+		}
+	}
+
+	@keyframes slideInRight {
 		from {
 			opacity: 0;
+			transform: translateY(-50%) translateX(20px);
 		}
 		to {
 			opacity: 1;
+			transform: translateY(-50%) translateX(0);
 		}
 	}
 
-	@keyframes slideUp {
+	@keyframes slideInBottom {
 		from {
 			opacity: 0;
-			transform: translateY(16px) scale(0.98);
+			transform: translateY(20px);
 		}
 		to {
 			opacity: 1;
-			transform: translateY(0) scale(1);
+			transform: translateY(0);
 		}
 	}
 </style>

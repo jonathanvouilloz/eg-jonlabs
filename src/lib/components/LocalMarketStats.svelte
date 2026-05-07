@@ -8,8 +8,8 @@
 
 <div class="annotation-content">
 	<p class="lead">
-		Sur <strong>{mainZone}</strong>, ~<strong>{localMarket.monthlySearches}</strong>
-		personnes par mois cherchent un paysagiste sur Google.
+		Sur <strong>{mainZone}</strong>, environ
+		<strong>{localMarket.monthlySearches}</strong> personnes par mois cherchent un paysagiste sur Google.
 	</p>
 
 	<div class="kpi-grid">
@@ -44,7 +44,7 @@
 	}
 
 	.lead strong {
-		color: oklch(96% 0.005 250);
+		color: #0a0a0a;
 		font-weight: 600;
 	}
 
@@ -52,9 +52,9 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 0.75rem;
-		padding: 0.75rem 0;
-		border-top: 1px solid oklch(100% 0 0 / 0.06);
-		border-bottom: 1px solid oklch(100% 0 0 / 0.06);
+		padding: 0.875rem 0;
+		border-top: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
 	}
 
 	.kpi {
@@ -66,24 +66,24 @@
 	.kpi-value {
 		font-size: 1.375rem;
 		font-weight: 600;
-		color: oklch(96% 0.005 250);
+		color: #0a0a0a;
 		line-height: 1.1;
 	}
 
 	.kpi.accent .kpi-value {
-		color: #00d9a3;
+		color: #00b88a;
 	}
 
 	.kpi-label {
 		font-size: 0.6875rem;
-		color: oklch(65% 0.005 250);
+		color: #737373;
 		letter-spacing: 0.02em;
 	}
 
 	.aside {
 		margin: 0;
 		font-size: 0.8125rem;
-		color: oklch(75% 0.005 250);
+		color: #525252;
 		font-style: italic;
 	}
 </style>
