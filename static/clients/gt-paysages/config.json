@@ -166,5 +166,7 @@
 		"Versoix"
 	],
 
-	"transparencyNote": true
+	"heroPrefix": "à",
+
+	"heroSubline": "Création et entretien de jardin"
 }

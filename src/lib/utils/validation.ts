@@ -127,5 +127,7 @@ export const prospectConfigSchema = z.object({
 
 	communes: z.array(z.string()).optional(),
 
-	transparencyNote: z.boolean().optional()
+	heroPrefix: z.string().optional(),
+
+	heroSubline: z.string().optional()
 });

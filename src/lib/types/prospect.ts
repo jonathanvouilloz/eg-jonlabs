@@ -63,7 +63,8 @@ export interface ProspectConfig {
 	salesPage?: SalesPageConfig;
 	localMarket?: LocalMarketConfig;
 	communes?: string[];
-	transparencyNote?: boolean;
+	heroPrefix?: string;
+	heroSubline?: string;
 }
 
 export interface SalesPageConfig {

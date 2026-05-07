@@ -1,10 +1,11 @@
 <script lang="ts">
 	import type { ProspectConfig } from '$types/prospect';
 
-	let {
-		config,
-		showTransparencyNote = false
-	}: { config: ProspectConfig; showTransparencyNote?: boolean } = $props();
+	let { config }: { config: ProspectConfig } = $props();
+
+	let mainZone = $derived(config.credibility.zones[0] ?? 'votre commune');
+	let prefix = $derived(config.heroPrefix ?? 'à');
+	let subline = $derived(config.heroSubline ?? config.business.tagline);
 </script>
 
 <section
@@ -15,26 +16,21 @@
 	<div class="absolute inset-0 -z-10 bg-primary"></div>
 
 	<div class="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-12">
-		<p
-			class="mb-5 text-xs font-medium uppercase tracking-[0.18em] text-white/65"
-			style="font-family: var(--font-body);"
-		>
-			{config.business.tagline}
-		</p>
-
 		<h1
-			class="max-w-[14ch] text-[clamp(3rem,8vw,6.5rem)] leading-[1.02] text-white"
+			class="max-w-[18ch] text-[clamp(2.75rem,7.5vw,6rem)] font-semibold leading-[1.05] text-white"
 			style="text-shadow: 0 2px 32px oklch(0% 0 0 / 0.3);"
 		>
-			Votre jardin mérite un expert
+			Votre paysagiste<br />
+			<span class="italic text-accent">{prefix} {mainZone}</span><br />
+			{subline}
 		</h1>
 
 		<a
 			href="#devis"
-			class="mt-10 inline-flex cursor-pointer items-center gap-3 bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-primary transition-opacity duration-200 hover:opacity-90"
+			class="mt-10 inline-flex cursor-pointer items-center gap-3 bg-white/90 px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-primary backdrop-blur-sm transition-colors duration-200 hover:bg-white"
 			style="font-family: var(--font-body);"
 		>
-			<span>Démarrer la consultation</span>
+			<span>Obtenir un devis personnalisé</span>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 20 20"
@@ -48,15 +44,5 @@
 				/>
 			</svg>
 		</a>
-
-		{#if showTransparencyNote}
-			<p
-				class="mt-8 max-w-xl text-xs italic leading-relaxed text-white/55"
-				style="font-family: var(--font-body);"
-			>
-				Aperçu : structure et identité construites. Tes vraies photos s'intègrent en 1h une fois
-				qu'on attaque.
-			</p>
-		{/if}
 	</div>
 </section>

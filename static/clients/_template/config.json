@@ -75,5 +75,7 @@
 
 	"communes": ["COMMUNE_1", "COMMUNE_2", "COMMUNE_3"],
 
-	"transparencyNote": true
+	"heroPrefix": "à",
+
+	"heroSubline": "Création et entretien de jardin"
 }

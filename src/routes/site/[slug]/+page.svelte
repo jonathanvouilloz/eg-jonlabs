@@ -37,7 +37,7 @@
 <div style={themeStyle}>
 	<Header {config} />
 	<main id="top">
-		<Hero {config} showTransparencyNote={config.transparencyNote === true} />
+		<Hero {config} />
 
 		<Services services={config.services} />
 
