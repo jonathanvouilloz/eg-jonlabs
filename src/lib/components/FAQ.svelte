@@ -8,7 +8,7 @@
 	let { faq }: Props = $props();
 </script>
 
-<section class="px-6 py-20 md:px-12">
+<section id="faq" class="scroll-mt-28 px-6 py-20 md:px-12">
 	<div class="mx-auto max-w-2xl">
 		<div class="mb-12">
 			<p

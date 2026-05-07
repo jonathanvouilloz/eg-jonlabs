@@ -6,7 +6,7 @@
 	let activeServices = $derived(services.filter((s) => s.active));
 </script>
 
-<section class="bg-white px-6 py-20 md:px-12">
+<section id="services" class="scroll-mt-28 bg-white px-6 py-20 md:px-12">
 	<div class="mx-auto max-w-6xl">
 		<div class="mb-12">
 			<p

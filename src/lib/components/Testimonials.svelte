@@ -4,7 +4,7 @@
 	let { testimonials }: { testimonials: Testimonial[] } = $props();
 </script>
 
-<section class="px-6 py-20 md:px-12">
+<section id="temoignages" class="scroll-mt-28 px-6 py-20 md:px-12">
 	<div class="mx-auto max-w-4xl">
 		<div class="mb-12">
 			<p

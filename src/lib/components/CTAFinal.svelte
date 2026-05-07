@@ -8,7 +8,7 @@
 	let { config }: Props = $props();
 </script>
 
-<section class="bg-primary px-6 py-24 md:px-12">
+<section id="cta-final" class="scroll-mt-28 bg-primary px-6 py-24 md:px-12">
 	<div class="mx-auto max-w-2xl text-center">
 		<h2
 			class="text-3xl font-normal italic text-white md:text-4xl lg:text-5xl"
