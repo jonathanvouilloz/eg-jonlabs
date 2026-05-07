@@ -99,12 +99,6 @@
 			</div>
 		{:else}
 			<div class="mb-10">
-				<p
-					class="mb-2 text-xs font-medium uppercase tracking-[0.16em] text-text-muted"
-					style="font-family: var(--font-body);"
-				>
-					Consultation gratuite
-				</p>
 				<h2 class="text-3xl font-normal text-primary md:text-4xl">Décrivez votre projet</h2>
 			</div>
 

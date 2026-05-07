@@ -17,10 +17,10 @@
 		<div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
 			<a
 				href="#devis"
-				class="inline-flex items-center gap-2 bg-accent px-10 py-4 text-xs font-semibold uppercase tracking-[0.12em] text-primary transition-opacity duration-200 hover:opacity-90"
+				class="inline-flex items-center gap-2 bg-white/30 px-10 py-5 text-base font-semibold uppercase tracking-[0.1em] text-white backdrop-blur-md transition-colors duration-200 hover:bg-white/40"
 				style="font-family: var(--font-body);"
 			>
-				Démarrer la consultation
+				Obtenir un devis
 			</a>
 			<a
 				href="tel:{config.business.phone.replace(/\s+/g, '')}"
