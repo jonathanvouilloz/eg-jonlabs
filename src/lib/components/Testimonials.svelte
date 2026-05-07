@@ -13,7 +13,7 @@
 			>
 				Témoignages
 			</p>
-			<h2 class="text-3xl font-normal text-primary md:text-4xl">Ce que disent nos clients</h2>
+			<h2 class="text-4xl text-primary md:text-5xl">Ce que disent nos clients</h2>
 		</div>
 
 		<div class="grid gap-10 md:grid-cols-3">

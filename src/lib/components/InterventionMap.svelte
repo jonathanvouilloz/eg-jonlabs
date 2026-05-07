@@ -98,7 +98,7 @@
 			>
 				Zone d'intervention
 			</p>
-			<h2 class="text-3xl text-white md:text-4xl">
+			<h2 class="text-4xl text-white md:text-5xl">
 				{credibility.radiusKm} km autour de {credibility.zones[0]}
 			</h2>
 			{#if address}

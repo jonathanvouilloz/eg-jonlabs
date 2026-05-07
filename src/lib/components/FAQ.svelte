@@ -17,7 +17,7 @@
 			>
 				FAQ
 			</p>
-			<h2 class="text-3xl font-normal text-primary md:text-4xl">Questions fréquentes</h2>
+			<h2 class="text-4xl text-primary md:text-5xl">Questions fréquentes</h2>
 		</div>
 
 		<div>

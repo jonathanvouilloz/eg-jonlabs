@@ -44,7 +44,7 @@
 		>
 			{businessName}
 		</p>
-		<h2 class="text-3xl font-normal text-white md:text-4xl">Nos réalisations</h2>
+		<h2 class="text-4xl text-white md:text-5xl">Nos réalisations</h2>
 	</div>
 
 	<div class="px-3 md:px-4">

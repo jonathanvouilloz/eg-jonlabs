@@ -30,7 +30,7 @@
 			>
 				Services
 			</p>
-			<h2 class="max-w-2xl text-3xl font-normal text-text md:text-4xl">Ce qu'on fait pour vous</h2>
+			<h2 class="max-w-2xl text-4xl text-text md:text-5xl">Ce qu'on fait pour vous</h2>
 		</div>
 
 		<div

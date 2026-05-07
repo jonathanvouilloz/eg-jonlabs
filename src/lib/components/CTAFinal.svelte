@@ -10,7 +10,7 @@
 
 <section id="cta-final" class="scroll-mt-28 bg-primary px-6 py-24 md:px-12">
 	<div class="mx-auto max-w-2xl text-center">
-		<h2 class="text-3xl text-white md:text-4xl lg:text-5xl">
+		<h2 class="text-4xl text-white md:text-5xl lg:text-6xl">
 			Prêt à donner vie à<br />votre jardin ?
 		</h2>
 		<p class="mt-4 text-sm text-white/60" style="font-family: var(--font-body);">

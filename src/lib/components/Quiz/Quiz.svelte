@@ -99,7 +99,7 @@
 			</div>
 		{:else}
 			<div class="mb-10">
-				<h2 class="text-3xl font-normal text-primary md:text-4xl">Décrivez votre projet</h2>
+				<h2 class="text-4xl text-primary md:text-5xl">Décrivez votre projet</h2>
 			</div>
 
 			<QuizProgress current={quiz.currentStep} total={quiz.totalSteps} />
