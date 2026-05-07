@@ -31,12 +31,18 @@
 	h3,
 	h4 {
 		font-family: var(--font-heading);
-		font-weight: 400;
 		letter-spacing: -0.025em;
 	}
 
 	h1 {
+		font-weight: 400;
 		letter-spacing: -0.03em;
+	}
+
+	h2,
+	h3,
+	h4 {
+		font-weight: 500;
 	}
 
 	button:not(:disabled),

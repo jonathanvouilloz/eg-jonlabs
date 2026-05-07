@@ -20,7 +20,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
 		rel="stylesheet"
 	/>
 </svelte:head>
@@ -100,7 +100,7 @@
 		--landing-border: #e5e5e5;
 		--landing-accent: #00d9a3;
 		--landing-accent-hover: #00b88a;
-		--landing-font: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+		--landing-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 		--landing-max-width: 720px;
 	}
 
@@ -113,7 +113,7 @@
 		background-color: var(--landing-bg);
 		color: var(--landing-text);
 		line-height: 1.5;
-		font-feature-settings: 'ss01', 'ss02', 'cv11';
+		letter-spacing: 0;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}
@@ -130,21 +130,25 @@
 	}
 
 	.title {
-		font-size: clamp(1.875rem, 5vw, 2.75rem);
-		font-weight: 600;
-		line-height: 1.15;
-		letter-spacing: -0.02em;
+		font-family: var(--landing-font);
+		font-size: clamp(2rem, 5vw, 2.8125rem);
+		font-weight: 500;
+		line-height: 1.2;
+		letter-spacing: -0.025em;
 		margin-bottom: 1.5rem;
 	}
 
 	.title-accent {
-		font-weight: 700;
+		display: block;
+		font-weight: 600;
+		color: var(--landing-accent);
 	}
 
 	.subtitle {
-		font-size: 1.125rem;
+		font-size: 1.0625rem;
 		color: var(--landing-text-muted);
 		line-height: 1.6;
+		letter-spacing: 0;
 		max-width: 600px;
 	}
 
@@ -209,9 +213,9 @@
 		text-decoration: none;
 		padding: 0.875rem 1.75rem;
 		border-radius: 8px;
-		font-size: 1.0625rem;
-		font-weight: 600;
-		letter-spacing: -0.01em;
+		font-size: 1rem;
+		font-weight: 500;
+		letter-spacing: 0;
 		transition:
 			background-color 0.2s ease,
 			transform 0.1s ease;
