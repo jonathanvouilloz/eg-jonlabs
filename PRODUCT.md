@@ -2,7 +2,12 @@
 
 ## Product Purpose
 
-A personalized lead-capture page for landscaping businesses in French-speaking Switzerland, deployed as a cold prospecting gift at `jonlabs.ch/cadeau/[slug]`. Each page is configured per prospect (name, colors, photos, services) and includes a multi-step consultation quiz that sends qualified leads by email. The goal is to demonstrate Jon Labs' value before any sales conversation and drive prospect-to-call conversion (target: 20%).
+A personalized two-page system for landscaping businesses in French-speaking Switzerland, deployed as a cold prospecting gift on `eg.jonlabs.ch`. Each prospect gets:
+
+- **`/landing/[slug]`** — minimal sales page (H1, screenshot of their mocked site, CTA, generic Loom case study video) that drives clicks to their site mock.
+- **`/site/[slug]`** — full mocked landscaper website (9 sections: hero with transparency note, local market stats, services, intervention zones, testimonials, gallery, qualifying quiz, SEO education, final CTA).
+
+Each page is configured per prospect (name, colors, photos, services, communes, local market data) and includes a multi-step consultation quiz that sends qualified leads by email. The goal is to demonstrate Jon Labs' value before any sales conversation and drive prospect-to-call conversion (target: 20%).
 
 ## Register
 

@@ -1,6 +1,6 @@
 # Plan d'exécution — EG Page Devis
 
-> Dernière mise à jour : 2026-04-28
+> Dernière mise à jour : 2026-05-07
 
 ## Vue d'ensemble
 
@@ -11,7 +11,8 @@
 | 3   | [Devis instantané + PDF + Email](features/03-soumission.md)     | L          | ✅ Fait |
 | 4   | [Sections page](features/04-sections-page.md)                   | M          | ✅ Fait |
 | 5   | [Template & Premier prospect](features/05-template-prospect.md) | S          | ✅ Fait |
-| 6   | [Déploiement](features/06-deploiement.md)                       | S          | ⬜ TODO |
+| 6   | [Déploiement](features/06-deploiement.md)                       | S          | ✅ Fait |
+| 7   | Pivot landing + site mock                                       | L          | ✅ Fait |
 
 ## Pivot architectural (28 avril 2026)
 
@@ -74,24 +75,47 @@ Tous testés via curl en dev :
 - Honeypot rempli → 200 silencieux ✅
 - Surface `unknown` → quote.available=false ✅
 
-## Reste à faire — Phase 6 : Déploiement Vercel
+## Phase 6 — Déploiement Vercel (✅ fait)
 
-- [ ] Lier le projet à Vercel (CLI ou dashboard)
-- [ ] Configurer le sous-chemin `jonlabs.ch/eg/` (rewrite ou domaine dédié)
-- [ ] Renseigner les env vars sur Vercel :
-  - `RESEND_API_KEY`
-  - `RESEND_FROM_EMAIL=devis@jonlabs.ch`
-  - `INTERNAL_BCC_EMAIL=leads@jonlabs.ch`
-  - `PUBLIC_PLAUSIBLE_DOMAIN=jonlabs.ch`
-- [ ] Vérifier le domaine `jonlabs.ch` sur Resend (DKIM + SPF)
-- [ ] Test E2E en prod sur les 3 prospects demo
-- [ ] Score Lighthouse cible ≥ 85
-- [ ] Test Mail-Tester pour la délivrabilité
+- Projet lié à Vercel, déployé sur `eg.jonlabs.ch`
+- Env vars configurées (Resend, Plausible)
+- Premier prospect réel `gt-paysages` publié
 
 > Note : le build SvelteKit fonctionne (Vite OK), seule l'étape symlink de l'adapter Vercel échoue sur Windows (problème connu, pas Linux/Vercel CI). Aucune action requise.
+
+## Phase 7 — Pivot landing + site mock (7 mai 2026)
+
+EG est passé d'une page unique (formulaire de devis) à 2 artefacts par prospect :
+
+- `/landing/[slug]` — page de vente perso minimaliste : H1 + screenshot du mock + CTA + vidéo Loom générique → drive vers le mock
+- `/site/[slug]` — mock du site paysagiste complet (9 sections : Hero perso avec bandeau de transparence, "Ta zone aujourd'hui" avec chiffres marché local, Services, Carte + grille communes, Témoignages, Galerie, Quiz qualifiant, "Comment ce site te fait monter sur Google", FAQ, CTA final)
+
+Migration : `/cadeau/[slug]` → `/site/[slug]` (301), `/cadeau/[slug]/audit` → `/landing/[slug]/audit` (301) via `src/hooks.server.ts`.
+
+Composants ajoutés :
+
+- `LocalMarketStats.svelte` — 3 KPIs marché local (recherches/mois, % top 3, part actuelle)
+- `Services.svelte` — grille de cards services info-only (distincte du Quiz qui utilise `pricingCategory`)
+- `SeoEducation.svelte` — section éditoriale 4 points expliquant la mécanique SEO local (page-villes, articles, fiche Google, multiplication des recherches captées)
+
+Composants étendus :
+
+- `Hero.svelte` — prop `showTransparencyNote` (mention "Aperçu : tes vraies photos s'intègrent en 1h...")
+- `InterventionMap.svelte` — layout grid carte Leaflet + grille de communes lisibles à droite (md+) ou dessous (sm). Tape dans `config.communes` avec fallback sur `credibility.zones`.
+
+Schema config étendu (4 champs optionnels, pas de breaking change) :
+
+- `salesPage` (loomVideoId, screenshotUrl, subtitleObservation)
+- `localMarket` (monthlySearches, topThreeCaptureRate)
+- `communes` (string[])
+- `transparencyNote` (boolean)
 
 ## Améliorations potentielles (post-V1)
 
 - Photos fallback réelles dans `static/_fallback/` (pour l'instant chaque prospect utilise ses propres URLs Unsplash ou locales)
 - Test Playwright/Vitest browser sur le flow complet quiz → PDF
 - Affinage des fourchettes de prix après retours premiers paysagistes
+- Automatisation des screenshots `/site/[slug]` via Playwright (réutiliser le pipeline du skill `paysagiste-audit`)
+- Section split-screen GMB vs concurrent dans `LocalMarketStats`
+- Pages-villes individuelles cliquables (`/site/[slug]/[commune]`)
+- Plausible custom events pour mesurer le funnel landing → site → form

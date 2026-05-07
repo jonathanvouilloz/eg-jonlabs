@@ -4,20 +4,23 @@
 
 Demande au prospect (email ou appel rapide) :
 
-| Info                      | Exemple                           | Obligatoire |
-| ------------------------- | --------------------------------- | ----------- |
-| Nom de l'entreprise       | Jardins Dupont Sàrl               | ✓           |
-| Prénom / nom du gérant    | Marc Dupont                       | ✓           |
-| Phrase de positionnement  | Paysagiste à Genève depuis 12 ans | ✓           |
-| Numéro de téléphone       | +41 79 123 45 67                  | ✓           |
-| Email professionnel       | marc@jardins-dupont.ch            | ✓           |
-| Années d'expérience       | 12                                | ✓           |
-| Zones d'intervention      | Genève, Carouge, Lancy            | ✓           |
-| Rayon d'intervention (km) | 20                                | ✓           |
-| Services proposés (liste) | Entretien, Création, Élagage      | ✓           |
-| Nb de chantiers réalisés  | 230                               | optionnel   |
-| Note Google / nb avis     | 4.8 / 37 avis                     | optionnel   |
-| Logo (URL ou fichier)     | —                                 | optionnel   |
+| Info                       | Exemple                                | Obligatoire |
+| -------------------------- | -------------------------------------- | ----------- |
+| Nom de l'entreprise        | Jardins Dupont Sàrl                    | ✓           |
+| Prénom / nom du gérant     | Marc Dupont                            | ✓           |
+| Phrase de positionnement   | Paysagiste à Genève depuis 12 ans      | ✓           |
+| Numéro de téléphone        | +41 79 123 45 67                       | ✓           |
+| Email professionnel        | marc@jardins-dupont.ch                 | ✓           |
+| Années d'expérience        | 12                                     | ✓           |
+| Zones d'intervention       | Genève, Carouge, Lancy                 | ✓           |
+| Rayon d'intervention (km)  | 20                                     | ✓           |
+| Services proposés (liste)  | Entretien, Création, Élagage           | ✓           |
+| Communes desservies (5-10) | Cologny, Versoix, Vandœuvres...        | ✓           |
+| Recherches mensuelles      | 320 (DataForSEO ou estimé)             | ✓           |
+| Nb de chantiers réalisés   | 230                                    | optionnel   |
+| Note Google / nb avis      | 4.8 / 37 avis                          | optionnel   |
+| Logo (URL ou fichier)      | —                                      | optionnel   |
+| Observation perso          | "j'ai pris le vert sur ta camionnette" | optionnel   |
 
 ---
 
@@ -172,24 +175,42 @@ Si erreurs → les champs problématiques sont listés avec le message exact. Co
 
 ```bash
 npm run dev
-# Ouvre http://localhost:5173/eg/[slug]
+# Ouvre http://localhost:5173/landing/[slug] (page de vente)
+# Ouvre http://localhost:5173/site/[slug] (mock du site complet)
 ```
 
 Vérifie :
 
-- [ ] La page s'affiche (pas de 404)
+- [ ] `/landing/[slug]` s'affiche (screenshot, CTA, vidéo Loom)
+- [ ] `/site/[slug]` s'affiche (les 9 sections)
 - [ ] Les couleurs/branding sont corrects
 - [ ] Le quiz se lance avec les bons services
 - [ ] Le devis s'affiche après soumission (sans envoyer l'email en dev)
 
 ---
 
-## 6. Déployer
+## 6. Capturer le screenshot du mock (~1 min)
 
-Commit + push → Vercel déploie automatiquement. La page est live sur `jonlabs.ch/eg/[slug]`.
+Une fois `/site/[slug]` rendu correctement :
 
 ```bash
-git add static/clients/[slug]/
+# Manuel : screenshot navigateur (full page) → static/screenshots/[slug].png
+# Format recommandé : 1400×875px, PNG ou WebP
+```
+
+Renseigne le chemin dans `config.json#salesPage.screenshotUrl`.
+
+---
+
+## 7. Déployer
+
+Commit + push → Vercel déploie automatiquement. Les pages sont live sur :
+
+- `eg.jonlabs.ch/landing/[slug]`
+- `eg.jonlabs.ch/site/[slug]`
+
+```bash
+git add static/clients/[slug]/ static/screenshots/[slug].png
 git commit -m "feat(clients): ajoute prospect [slug]"
 git push
 ```
@@ -204,4 +225,5 @@ git push
 | Création dossier   | ~1 min      |
 | Remplissage config | ~6 min      |
 | Validation + test  | ~2 min      |
-| **Total**          | **~12 min** |
+| Screenshot du mock | ~1 min      |
+| **Total**          | **~13 min** |
