@@ -57,6 +57,7 @@
 		</div>
 	</aside>
 {:else if open}
+	<div class="overlay" onclick={close} role="presentation"></div>
 	<div
 		class="meta-card"
 		role="dialog"
@@ -74,14 +75,24 @@
 {/if}
 
 <style>
+	.overlay {
+		position: fixed;
+		inset: 0;
+		z-index: 99;
+		background: oklch(0% 0 0 / 0.4);
+		backdrop-filter: blur(2px);
+		-webkit-backdrop-filter: blur(2px);
+		animation: fadeIn 0.25s ease-out;
+	}
+
 	.meta-card {
 		position: fixed;
-		right: 1.5rem;
+		right: clamp(1.5rem, 12vw, 8rem);
 		top: 50%;
 		transform: translateY(-50%);
 		z-index: 100;
 		width: calc(100% - 3rem);
-		max-width: 380px;
+		max-width: 400px;
 		max-height: 82vh;
 		overflow-y: auto;
 		padding: 1.75rem 1.75rem 1.5rem;
@@ -89,7 +100,7 @@
 		color: #0a0a0a;
 		border-radius: 1rem;
 		box-shadow:
-			0 24px 60px -12px oklch(0% 0 0 / 0.18),
+			0 30px 80px -12px oklch(0% 0 0 / 0.35),
 			0 0 0 1px oklch(0% 0 0 / 0.06);
 		animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 		outline: none;
@@ -159,6 +170,15 @@
 			max-height: 70vh;
 			transform: none;
 			animation: slideInBottom 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
 		}
 	}
 
