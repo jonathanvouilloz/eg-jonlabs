@@ -1,10 +1,11 @@
 import type { ProspectConfig } from '$types/prospect';
 
 const FONT_MAP: Record<ProspectConfig['branding']['fontFamily'], string> = {
-	Inter: "'Inter', sans-serif",
+	Inter: "'Barlow', sans-serif",
 	'Source Serif': "'Source Serif 4', serif",
 	'Playfair Display': "'Playfair Display', serif",
-	Raleway: "'Raleway', sans-serif"
+	Raleway: "'Raleway', sans-serif",
+	'Bodoni Moda': "'Bodoni Moda', serif"
 };
 
 export function generateThemeStyle(branding: ProspectConfig['branding']): string {

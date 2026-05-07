@@ -15,21 +15,17 @@
 	function openAt(idx: number) {
 		lightboxIndex = idx;
 	}
-
 	function close() {
 		lightboxIndex = null;
 	}
-
 	function prev() {
 		if (lightboxIndex === null) return;
 		lightboxIndex = (lightboxIndex - 1 + realizations.length) % realizations.length;
 	}
-
 	function next() {
 		if (lightboxIndex === null) return;
 		lightboxIndex = (lightboxIndex + 1) % realizations.length;
 	}
-
 	function onKey(e: KeyboardEvent) {
 		if (!isOpen) return;
 		if (e.key === 'Escape') close();
@@ -40,31 +36,46 @@
 
 <svelte:window onkeydown={onKey} />
 
-<section class="bg-secondary px-4 py-16">
+<section class="bg-primary px-6 py-20 md:px-12">
 	<div class="mx-auto max-w-6xl">
-		<div class="mb-10 text-center">
-			<h2 class="text-3xl font-bold text-primary md:text-4xl">Nos réalisations</h2>
-			<p class="mt-2 text-text-muted">Quelques exemples de projets menés par {businessName}.</p>
+		<div class="mb-12">
+			<p
+				class="mb-2 text-xs font-medium uppercase tracking-[0.16em] text-white/50"
+				style="font-family: var(--font-body);"
+			>
+				{businessName}
+			</p>
+			<h2 class="text-3xl font-normal text-white md:text-4xl">Nos réalisations</h2>
 		</div>
 
-		<div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+		<div class="grid grid-cols-2 gap-3 md:grid-cols-3">
 			{#each realizations as r, i (i)}
 				<button
 					type="button"
 					onclick={() => openAt(i)}
-					class="group relative aspect-[4/3] overflow-hidden border border-gray-200 bg-white"
+					class="group relative overflow-hidden {i === 0
+						? 'col-span-2 aspect-[16/7] md:col-span-2'
+						: 'aspect-[4/3]'}"
 					aria-label="Voir : {r.caption}"
 				>
 					<img
 						src={r.after}
 						alt={r.caption}
 						loading="lazy"
-						class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+						class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
 					/>
 					<div
-						class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-3"
+						class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+					></div>
+					<div
+						class="absolute inset-x-0 bottom-0 translate-y-2 p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
 					>
-						<p class="text-left text-sm font-medium text-white">{r.caption}</p>
+						<p
+							class="text-xs font-medium uppercase tracking-[0.1em] text-white"
+							style="font-family: var(--font-body);"
+						>
+							{r.caption}
+						</p>
 					</div>
 				</button>
 			{/each}
@@ -74,7 +85,7 @@
 
 {#if isOpen && current}
 	<div
-		class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 px-4 py-8"
+		class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 px-4 py-8"
 		role="dialog"
 		aria-modal="true"
 		aria-label="Visionneuse"
@@ -86,7 +97,7 @@
 			type="button"
 			onclick={close}
 			aria-label="Fermer"
-			class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+			class="absolute right-6 top-6 flex h-10 w-10 items-center justify-center text-white/60 transition hover:text-white"
 		>
 			<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
@@ -105,9 +116,9 @@
 					prev();
 				}}
 				aria-label="Précédent"
-				class="absolute left-4 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+				class="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 transition hover:text-white"
 			>
-				<svg class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+				<svg class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
 					<path
 						fill-rule="evenodd"
 						d="M12.79 5.23a.75.75 0 0 1 0 1.06L8.06 11l4.73 4.73a.75.75 0 1 1-1.06 1.06l-5.25-5.25a.75.75 0 0 1 0-1.08l5.25-5.25a.75.75 0 0 1 1.06 0Z"
@@ -122,9 +133,9 @@
 					next();
 				}}
 				aria-label="Suivant"
-				class="absolute right-4 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+				class="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 transition hover:text-white"
 			>
-				<svg class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+				<svg class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
 					<path
 						fill-rule="evenodd"
 						d="M7.21 14.77a.75.75 0 0 1 0-1.06L11.94 9l-4.73-4.73a.75.75 0 1 1 1.06-1.06l5.25 5.25a.75.75 0 0 1 0 1.08l-5.25 5.25a.75.75 0 0 1-1.06 0Z"
@@ -145,7 +156,12 @@
 				alt={current.caption}
 				class="block max-h-[85vh] w-auto max-w-full object-contain"
 			/>
-			<p class="mt-3 text-center text-sm text-white/80">{current.caption}</p>
+			<p
+				class="mt-3 text-center text-xs font-medium uppercase tracking-[0.1em] text-white/60"
+				style="font-family: var(--font-body);"
+			>
+				{current.caption}
+			</p>
 		</div>
 	</div>
 {/if}

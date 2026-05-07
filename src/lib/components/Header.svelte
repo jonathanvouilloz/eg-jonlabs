@@ -5,21 +5,19 @@
 	let { config }: { config: ProspectConfig } = $props();
 </script>
 
-<header
-	class="fixed top-0 z-50 w-full border-b border-white/10 bg-black/25 shadow-sm backdrop-blur-md backdrop-saturate-150"
->
-	<div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-		<div class="flex items-center gap-3">
+<header class="fixed top-0 z-50 w-full bg-black/30 backdrop-blur-sm">
+	<div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:px-12">
+		<div class="flex items-center">
 			{#if config.business.logoUrl}
 				<img
 					src={config.business.logoUrl}
 					alt={config.business.name}
-					class="h-10 w-auto object-contain drop-shadow-sm"
+					class="h-9 w-auto object-contain"
 				/>
 			{:else}
 				<span
-					class="text-lg font-semibold text-white drop-shadow-md"
-					style="font-family: var(--font-heading)"
+					class="text-base font-normal tracking-wide text-white"
+					style="font-family: var(--font-heading);"
 				>
 					{config.business.name}
 				</span>
@@ -28,14 +26,15 @@
 
 		<a
 			href="tel:{config.business.phone}"
-			class="flex cursor-pointer items-center gap-2 bg-white/20 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white/30"
+			class="flex items-center gap-2 border border-white/30 px-4 py-2 text-xs font-medium uppercase tracking-[0.1em] text-white transition-colors duration-200 hover:bg-white/10"
+			style="font-family: var(--font-body);"
 			aria-label="Appeler {config.business.name}"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 20 20"
 				fill="currentColor"
-				class="h-4 w-4"
+				class="h-3.5 w-3.5"
 			>
 				<path
 					fill-rule="evenodd"

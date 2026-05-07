@@ -8,22 +8,28 @@
 	let { faq }: Props = $props();
 </script>
 
-<section class="px-4 py-16">
-	<div class="mx-auto max-w-3xl">
-		<div class="mb-10 text-center">
-			<h2 class="text-3xl font-bold text-primary md:text-4xl">Questions fréquentes</h2>
-			<p class="mt-2 text-text-muted">Vous avez d'autres questions ? Posez-les via le devis.</p>
+<section class="px-6 py-20 md:px-12">
+	<div class="mx-auto max-w-2xl">
+		<div class="mb-12">
+			<p
+				class="mb-2 text-xs font-medium uppercase tracking-[0.16em] text-text-muted"
+				style="font-family: var(--font-body);"
+			>
+				FAQ
+			</p>
+			<h2 class="text-3xl font-normal text-primary md:text-4xl">Questions fréquentes</h2>
 		</div>
 
-		<div class="space-y-3">
+		<div>
 			{#each faq as item, i (i)}
-				<details class="faq-item border border-gray-200 bg-white">
+				<details class="faq-item border-t border-text/10 {i === faq.length - 1 ? 'border-b' : ''}">
 					<summary
-						class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-base font-medium text-text-default transition-colors hover:bg-secondary/40"
+						class="flex cursor-pointer items-start justify-between gap-4 py-5 text-base text-text transition-colors hover:text-primary"
+						style="font-family: var(--font-body);"
 					>
-						<span>{item.question}</span>
+						<span class="font-medium leading-snug">{item.question}</span>
 						<svg
-							class="faq-chevron h-5 w-5 shrink-0 text-text-muted transition-transform"
+							class="faq-chevron mt-0.5 h-4 w-4 shrink-0 text-text-muted transition-transform duration-200"
 							viewBox="0 0 20 20"
 							fill="currentColor"
 						>
@@ -34,7 +40,10 @@
 							/>
 						</svg>
 					</summary>
-					<div class="faq-answer px-5 pb-5 pt-1 text-sm text-text-muted">
+					<div
+						class="pb-6 text-sm leading-relaxed text-text-muted"
+						style="font-family: var(--font-body); line-height: 1.6;"
+					>
 						<p>{item.answer}</p>
 					</div>
 				</details>
@@ -52,18 +61,7 @@
 		display: none;
 	}
 
-	.faq-answer {
-		animation: slideDown 0.2s ease-out;
-	}
-
-	@keyframes slideDown {
-		from {
-			opacity: 0;
-			transform: translateY(-4px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
+	.faq-item summary {
+		list-style: none;
 	}
 </style>

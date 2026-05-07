@@ -84,7 +84,7 @@ export const prospectConfigSchema = z.object({
 		primaryColor: hexColor,
 		secondaryColor: hexColor,
 		accentColor: hexColor,
-		fontFamily: z.enum(['Inter', 'Source Serif', 'Playfair Display', 'Raleway'])
+		fontFamily: z.enum(['Inter', 'Source Serif', 'Playfair Display', 'Raleway', 'Bodoni Moda'])
 	}),
 
 	heroImage: z.string(),

@@ -28,14 +28,17 @@
 	);
 
 	const explanationItems = $derived.by(() => {
-		const items: { title: string; text: string }[] = [];
+		const items: { num: number; title: string; text: string }[] = [];
+		let n = 1;
 		if (quote.surfaceUsed) {
 			items.push({
+				num: n++,
 				title: 'Surface estimée',
 				text: `Le calcul se base sur une surface médiane de ${quote.surfaceUsed} m² (votre fourchette : ${answers.surfaceLabel.toLowerCase()}). Le prix est proportionnel à la surface réelle mesurée sur place.`
 			});
 		} else {
 			items.push({
+				num: n++,
 				title: 'Forfait par taille de chantier',
 				text: `Cette prestation se calcule en forfait selon la taille du chantier (${answers.surfaceLabel.toLowerCase()}). Le prix exact dépend du nombre de prestations et de la difficulté.`
 			});
@@ -43,11 +46,13 @@
 
 		if (quote.modulator > 1) {
 			items.push({
+				num: n++,
 				title: 'Délai serré',
 				text: `Une intervention urgente représente un surcoût d'environ ${Math.round((quote.modulator - 1) * 100)} % (mobilisation rapide d'une équipe disponible).`
 			});
 		} else if (quote.modulator < 1) {
 			items.push({
+				num: n++,
 				title: 'Planification flexible',
 				text: `Vous n'êtes pas pressé : le paysagiste peut planifier l'intervention à un moment optimisé (-${Math.round((1 - quote.modulator) * 100)} % sur le tarif standard).`
 			});
@@ -55,14 +60,16 @@
 
 		if (quote.travelFee > 0) {
 			items.push({
+				num: n++,
 				title: 'Frais de déplacement',
 				text: `Pour les petits chantiers, des frais fixes de déplacement de ${formatChf(quote.travelFee)} sont inclus pour couvrir le trajet et la mise en place.`
 			});
 		}
 
 		items.push({
+			num: n,
 			title: 'Ce qui peut faire varier',
-			text: 'Accès au terrain (pente, étroitesse), matériaux choisis (essence du bois, qualité des plantes), évacuation des déchets, plus-values esthétiques. Le paysagiste affinera après visite gratuite.'
+			text: 'Accès au terrain (pente, étroitesse), matériaux choisis, évacuation des déchets, plus-values esthétiques. Le paysagiste affinera après visite gratuite.'
 		});
 
 		return items;
@@ -82,63 +89,63 @@
 	}
 </script>
 
-<div class="space-y-6">
-	<div class="text-center">
-		<p class="text-sm uppercase tracking-wider text-text-muted">Votre estimation</p>
-		<h3
-			class="mt-2 text-2xl font-semibold text-primary md:text-3xl"
-			style="font-family: 'Inter', sans-serif; letter-spacing: -0.015em;"
+<div class="space-y-8">
+	<div>
+		<p
+			class="mb-1 text-xs font-medium uppercase tracking-[0.16em] text-text-muted"
+			style="font-family: var(--font-body);"
 		>
+			Votre estimation
+		</p>
+		<h3 class="text-2xl font-normal text-primary">
 			Bonjour {answers.contact.firstName}, voici votre devis
 		</h3>
-		<p class="mt-2 text-text-muted">
+		<p class="mt-1 text-sm text-text-muted" style="font-family: var(--font-body);">
 			Estimation indicative pour {answers.serviceLabel.toLowerCase()} à {answers.commune}.
 		</p>
 	</div>
 
 	{#if quote.available}
-		<div class="border-l-4 border-accent bg-secondary p-6 md:p-8">
-			<p class="text-center text-sm uppercase tracking-wider text-text-muted">Fourchette estimée</p>
-			<p class="mt-2 text-center text-5xl font-bold text-primary md:text-6xl">
+		<div class="bg-secondary px-8 py-10 text-center">
+			<p
+				class="mb-1 text-xs font-medium uppercase tracking-[0.16em] text-text-muted"
+				style="font-family: var(--font-body);"
+			>
+				Fourchette estimée
+			</p>
+			<p
+				class="mt-3 text-[clamp(3rem,10vw,5rem)] font-normal leading-none text-primary"
+				style="font-family: var(--font-heading); font-variation-settings: 'opsz' 72;"
+			>
 				{formatChf(quote.median)}
 			</p>
-			<p class="mt-2 text-center text-text-muted">
-				Entre <strong>{formatChf(quote.min)}</strong> et <strong>{formatChf(quote.max)}</strong>
+			<p class="mt-3 text-sm text-text-muted" style="font-family: var(--font-body);">
+				Entre <strong class="text-text">{formatChf(quote.min)}</strong> et
+				<strong class="text-text">{formatChf(quote.max)}</strong>
 			</p>
 
 			{#if quote.breakdown.length > 0}
-				<dl class="mt-6 space-y-2 border-t border-gray-200 pt-4">
+				<dl class="mx-auto mt-6 max-w-xs space-y-2 border-t border-text/10 pt-4 text-left">
 					{#each quote.breakdown as line, i (i)}
 						<div class="flex items-baseline justify-between gap-4 text-sm">
-							<dt class="text-text-muted">{line.label}</dt>
-							<dd class="font-medium text-text-default">{line.value}</dd>
+							<dt class="text-text-muted" style="font-family: var(--font-body);">{line.label}</dt>
+							<dd class="font-medium text-text" style="font-family: var(--font-body);">
+								{line.value}
+							</dd>
 						</div>
 					{/each}
 				</dl>
 			{/if}
 		</div>
 
-		<details class="quote-details border border-gray-200 bg-white" bind:open={detailsOpen}>
+		<details bind:open={detailsOpen}>
 			<summary
-				class="flex items-center justify-between px-5 py-4 text-sm font-medium text-primary transition-colors hover:bg-secondary/40"
+				class="flex cursor-pointer items-center justify-between border-t border-text/10 py-4 text-sm font-medium text-text-muted transition-colors hover:text-primary"
+				style="font-family: var(--font-body);"
 			>
-				<span class="flex items-center gap-2">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 20 20"
-						fill="currentColor"
-						class="h-4 w-4"
-					>
-						<path
-							fill-rule="evenodd"
-							d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-8-3.75a.75.75 0 0 0-.75.75v3.5a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75Zm0 7.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"
-							clip-rule="evenodd"
-						/>
-					</svg>
-					Pourquoi ce prix ?
-				</span>
+				<span>Pourquoi ce prix ?</span>
 				<svg
-					class="quote-chevron h-4 w-4 transition-transform"
+					class="chevron h-4 w-4 transition-transform duration-200"
 					viewBox="0 0 20 20"
 					fill="currentColor"
 				>
@@ -149,39 +156,48 @@
 					/>
 				</svg>
 			</summary>
-			<div class="border-t border-gray-100 px-5 py-4">
-				<ul class="space-y-3">
-					{#each explanationItems as item (item.title)}
-						<li class="border-l-2 border-primary/30 pl-3 text-sm">
-							<p class="font-medium text-text-default">{item.title}</p>
-							<p class="mt-0.5 text-text-muted">{item.text}</p>
-						</li>
-					{/each}
-				</ul>
-			</div>
+			<ul class="space-y-4 pb-4 pt-2">
+				{#each explanationItems as item (item.num)}
+					<li class="flex gap-3 text-sm">
+						<span
+							class="mt-0.5 shrink-0 text-xs font-semibold text-accent"
+							style="font-family: var(--font-body);"
+						>
+							{item.num}.
+						</span>
+						<div>
+							<p class="font-medium text-text" style="font-family: var(--font-body);">
+								{item.title}
+							</p>
+							<p class="mt-0.5 text-text-muted" style="font-family: var(--font-body);">
+								{item.text}
+							</p>
+						</div>
+					</li>
+				{/each}
+			</ul>
 		</details>
 
-		<p class="text-center text-xs italic text-text-muted">
+		<p class="text-center text-xs italic text-text-muted" style="font-family: var(--font-body);">
 			{quote.disclaimer}
 		</p>
 	{:else}
-		<div class="border-l-4 border-accent bg-secondary p-6 md:p-8">
-			<p class="text-center text-text-default">
-				{quote.disclaimer}
-			</p>
+		<div class="bg-secondary px-8 py-10 text-center">
+			<p class="text-sm text-text" style="font-family: var(--font-body);">{quote.disclaimer}</p>
 		</div>
 	{/if}
 
-	<div class="grid gap-3 md:grid-cols-[1.4fr_1fr]">
+	<div class="grid gap-3 md:grid-cols-[1.5fr_1fr]">
 		<a
 			href={phoneHref}
-			class="flex items-center justify-center gap-2 bg-primary px-6 py-4 text-base font-semibold text-white shadow-md transition-all hover:opacity-90"
+			class="flex items-center justify-center gap-2 bg-primary px-6 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-white transition-opacity duration-200 hover:opacity-90"
+			style="font-family: var(--font-body);"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 20 20"
 				fill="currentColor"
-				class="h-5 w-5"
+				class="h-4 w-4"
 			>
 				<path
 					fill-rule="evenodd"
@@ -189,17 +205,18 @@
 					clip-rule="evenodd"
 				/>
 			</svg>
-			Appeler {config.business.ownerFirstName}
+			Appeler {config.business.ownerFirstName || config.business.name}
 		</a>
 
 		<button
 			type="button"
 			onclick={downloadPdf}
 			disabled={isGenerating || !quote.available}
-			class="flex items-center justify-center gap-2 border-2 border-primary px-6 py-4 text-sm font-medium transition-all
+			class="flex items-center justify-center gap-2 border border-primary px-6 py-4 text-xs font-medium uppercase tracking-[0.1em] transition-all duration-200
 				{quote.available && !isGenerating
 				? 'cursor-pointer text-primary hover:bg-primary hover:text-white'
-				: 'cursor-not-allowed border-gray-300 text-gray-400'}"
+				: 'cursor-not-allowed border-text/20 text-text-muted'}"
+			style="font-family: var(--font-body);"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -216,35 +233,40 @@
 					d="M3 14.25a.75.75 0 0 1 .75.75v.75A2.25 2.25 0 0 0 6 18h8a2.25 2.25 0 0 0 2.25-2.25V15a.75.75 0 0 1 1.5 0v.75A3.75 3.75 0 0 1 14 19.5H6a3.75 3.75 0 0 1-3.75-3.75V15a.75.75 0 0 1 .75-.75Z"
 				/>
 			</svg>
-			{isGenerating ? 'Génération…' : 'Télécharger en PDF'}
+			{isGenerating ? 'Génération…' : 'PDF'}
 		</button>
 	</div>
 
 	{#if pdfError}
-		<p class="text-center text-sm text-red-500">{pdfError}</p>
+		<p class="text-center text-sm text-red-500" style="font-family: var(--font-body);">
+			{pdfError}
+		</p>
 	{/if}
+
+	<div class="border-t border-text/10 pt-6 text-center">
+		<p class="text-sm text-text-muted" style="font-family: var(--font-body);">
+			{config.business.name} vous contacte sous
+			<strong class="text-primary">48 heures</strong> pour confirmer le devis sur place.
+		</p>
+		<p class="mt-1 text-xs text-text-muted" style="font-family: var(--font-body);">
+			Contact direct : <a href={phoneHref} class="underline underline-offset-2"
+				>{config.business.phone}</a
+			>
+		</p>
+	</div>
 
 	{#if onReset}
 		<div class="text-center">
 			<button
 				type="button"
 				onclick={onReset}
-				class="text-sm text-text-muted underline-offset-4 transition-colors hover:text-primary hover:underline"
+				class="text-xs text-text-muted underline-offset-4 transition-colors hover:text-primary hover:underline"
+				style="font-family: var(--font-body);"
 			>
 				Refaire un devis
 			</button>
 		</div>
 	{/if}
-
-	<div class="border-t border-gray-200 pt-6 text-center">
-		<p class="text-sm text-text-muted">
-			Le paysagiste vous contacte sous <strong class="text-primary">48 heures</strong> pour confirmer
-			le devis sur place.
-		</p>
-		<p class="mt-1 text-xs text-text-muted">
-			Numéro direct : <a href={phoneHref} class="underline">{config.business.phone}</a>
-		</p>
-	</div>
 </div>
 
 <div class="pdf-offscreen" aria-hidden="true">
@@ -254,22 +276,22 @@
 </div>
 
 <style>
+	details[open] .chevron {
+		transform: rotate(180deg);
+	}
+
+	details summary::-webkit-details-marker {
+		display: none;
+	}
+
+	details summary {
+		list-style: none;
+	}
+
 	.pdf-offscreen {
 		position: absolute;
 		left: -9999px;
 		top: 0;
 		pointer-events: none;
-	}
-
-	.quote-details[open] .quote-chevron {
-		transform: rotate(180deg);
-	}
-
-	.quote-details summary::-webkit-details-marker {
-		display: none;
-	}
-
-	.quote-details summary {
-		list-style: none;
 	}
 </style>

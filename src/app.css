@@ -2,15 +2,16 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-	--color-primary: var(--theme-primary, #2d5016);
-	--color-primary-light: var(--theme-primary-light, #5c7c3f);
-	--color-secondary: var(--theme-secondary, #f4f1ea);
-	--color-accent: var(--theme-accent, #d4a574);
-	--color-bg: var(--theme-bg, #faf7ee);
-	--color-text: #1a1a1a;
-	--color-text-muted: #6b6b6b;
-	--font-heading: var(--theme-font-heading, 'Playfair Display', serif);
-	--font-body: 'Inter', sans-serif;
+	--color-primary: var(--theme-primary, oklch(32% 0.09 145));
+	--color-primary-light: var(--theme-primary-light, oklch(47% 0.08 145));
+	--color-primary-dark: oklch(15% 0.05 145);
+	--color-secondary: var(--theme-secondary, oklch(95% 0.015 80));
+	--color-accent: var(--theme-accent, oklch(74% 0.08 60));
+	--color-bg: var(--theme-bg, oklch(97% 0.01 80));
+	--color-text: oklch(18% 0.008 145);
+	--color-text-muted: oklch(52% 0.008 145);
+	--font-heading: var(--theme-font-heading, 'Bodoni Moda', serif);
+	--font-body: 'Barlow', sans-serif;
 }
 
 @layer base {
@@ -22,6 +23,7 @@
 		background-color: var(--color-bg);
 		color: var(--color-text);
 		font-family: var(--font-body);
+		-webkit-font-smoothing: antialiased;
 	}
 
 	h1,
@@ -30,12 +32,11 @@
 	h4 {
 		font-family: var(--font-heading);
 		font-weight: 400;
-		letter-spacing: -0.02em;
+		letter-spacing: -0.025em;
 	}
 
-	h1,
-	h2 {
-		letter-spacing: -0.025em;
+	h1 {
+		letter-spacing: -0.03em;
 	}
 
 	button:not(:disabled),

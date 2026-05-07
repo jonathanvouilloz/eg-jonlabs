@@ -35,7 +35,7 @@ export interface ProspectConfig {
 		primaryColor: string;
 		secondaryColor: string;
 		accentColor: string;
-		fontFamily: 'Inter' | 'Source Serif' | 'Playfair Display' | 'Raleway';
+		fontFamily: 'Inter' | 'Source Serif' | 'Playfair Display' | 'Raleway' | 'Bodoni Moda';
 	};
 
 	heroImage: string;

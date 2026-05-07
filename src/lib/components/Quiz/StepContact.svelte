@@ -67,30 +67,36 @@
 		onUpdate('email', s);
 		emailFocused = false;
 	}
+
+	const inputClass =
+		'w-full border bg-bg px-4 py-3.5 text-sm text-text outline-none transition-all duration-150 focus:border-primary';
+	const labelClass = 'mb-1.5 block text-xs font-medium uppercase tracking-[0.1em] text-text-muted';
 </script>
 
 <div>
-	<h3 class="mb-4 text-xl font-semibold">Vos coordonnées</h3>
+	<h3 class="mb-6 text-xl font-normal text-text">Pour vous recontacter</h3>
 
 	<div class="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
 		<label class="block">
-			<span class="mb-1 block text-sm text-text-muted">Prénom *</span>
+			<span class={labelClass} style="font-family: var(--font-body);">Prénom *</span>
 			<input
 				type="text"
 				value={firstName}
 				oninput={(e) => onUpdate('firstName', e.currentTarget.value)}
 				placeholder="Jean"
-				class="w-full border-2 border-gray-200 bg-white px-4 py-3 text-sm outline-none transition-all duration-200 focus:border-primary"
+				class="{inputClass} border-text/15"
+				style="font-family: var(--font-body);"
 			/>
 		</label>
 		<label class="block">
-			<span class="mb-1 block text-sm text-text-muted">Nom</span>
+			<span class={labelClass} style="font-family: var(--font-body);">Nom</span>
 			<input
 				type="text"
 				value={lastName}
 				oninput={(e) => onUpdate('lastName', e.currentTarget.value)}
 				placeholder="Dupont"
-				class="w-full border-2 border-gray-200 bg-white px-4 py-3 text-sm outline-none transition-all duration-200 focus:border-primary"
+				class="{inputClass} border-text/15"
+				style="font-family: var(--font-body);"
 			/>
 		</label>
 	</div>
@@ -98,7 +104,7 @@
 	<div class="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
 		<div>
 			<label class="block">
-				<span class="mb-1 block text-sm text-text-muted">Email *</span>
+				<span class={labelClass} style="font-family: var(--font-body);">Email *</span>
 				<div class="relative">
 					<input
 						type="email"
@@ -111,16 +117,17 @@
 						}}
 						placeholder="jean@exemple.ch"
 						autocomplete="email"
-						class="w-full border-2 bg-white px-4 py-3 text-sm outline-none transition-all duration-200
-							{emailInvalid ? 'border-red-400' : 'border-gray-200 focus:border-primary'}"
+						class="{inputClass} {emailInvalid ? 'border-red-400' : 'border-text/15'}"
+						style="font-family: var(--font-body);"
 					/>
 					{#if emailFocused && emailSuggestions.length > 0}
-						<ul class="absolute z-20 mt-1 w-full border border-gray-200 bg-white shadow-lg">
+						<ul class="absolute z-20 mt-0.5 w-full border border-text/10 bg-bg shadow-md">
 							{#each emailSuggestions as s (s)}
 								<li>
 									<button
 										type="button"
-										class="w-full px-4 py-2 text-left text-sm transition-colors hover:bg-primary/10 hover:text-primary"
+										class="w-full px-4 py-2.5 text-left text-sm transition-colors hover:bg-secondary/60"
+										style="font-family: var(--font-body);"
 										onmousedown={() => pickEmailSuggestion(s)}
 									>
 										{s}
@@ -132,13 +139,15 @@
 				</div>
 			</label>
 			{#if emailInvalid}
-				<p class="mt-1 text-xs text-red-500">Veuillez entrer un email valide</p>
+				<p class="mt-1 text-xs text-red-500" style="font-family: var(--font-body);">
+					Email invalide
+				</p>
 			{/if}
 		</div>
 
 		<div>
 			<label class="block">
-				<span class="mb-1 block text-sm text-text-muted">Téléphone *</span>
+				<span class={labelClass} style="font-family: var(--font-body);">Téléphone *</span>
 				<input
 					type="tel"
 					value={phone}
@@ -147,110 +156,60 @@
 					placeholder="079 123 45 67"
 					inputmode="tel"
 					autocomplete="tel"
-					class="w-full border-2 bg-white px-4 py-3 text-sm outline-none transition-all duration-200
-						{phoneInvalid ? 'border-red-400' : 'border-gray-200 focus:border-primary'}"
+					class="{inputClass} {phoneInvalid ? 'border-red-400' : 'border-text/15'}"
+					style="font-family: var(--font-body);"
 				/>
 			</label>
 			{#if phoneInvalid}
-				<p class="mt-1 text-xs text-red-500">Numéro suisse invalide (ex : 079 123 45 67)</p>
+				<p class="mt-1 text-xs text-red-500" style="font-family: var(--font-body);">
+					Numéro suisse invalide
+				</p>
 			{/if}
 		</div>
 	</div>
 
 	<div class="mb-5">
-		<span class="mb-2 block text-sm text-text-muted">Comment préférez-vous être contacté ?</span>
-		<div class="grid grid-cols-3 gap-3">
-			<button
-				type="button"
-				class="flex flex-col items-center justify-center gap-2 border-2 px-3 py-4 text-sm transition-all duration-200
-					{preferredContact === 'phone'
-					? 'border-primary bg-primary/5 font-medium text-primary'
-					: 'border-gray-200 bg-white hover:border-primary/40'}"
-				onclick={() => onUpdate('preferredContact', 'phone')}
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="h-6 w-6"
+		<span
+			class="mb-2.5 block text-xs font-medium uppercase tracking-[0.1em] text-text-muted"
+			style="font-family: var(--font-body);"
+		>
+			Contact préféré
+		</span>
+		<div class="flex gap-2">
+			{#each [{ value: 'phone', label: 'Téléphone' }, { value: 'email', label: 'Email' }, { value: 'any', label: 'Indifférent' }] as opt (opt.value)}
+				<button
+					type="button"
+					class="flex-1 border py-2.5 text-xs font-medium uppercase tracking-[0.08em] transition-all duration-150
+						{preferredContact === opt.value
+						? 'border-primary bg-primary text-white'
+						: 'border-text/15 bg-bg text-text-muted hover:border-primary/40'}"
+					style="font-family: var(--font-body);"
+					onclick={() => onUpdate('preferredContact', opt.value)}
 				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-					/>
-				</svg>
-				<span>Téléphone</span>
-			</button>
-			<button
-				type="button"
-				class="flex flex-col items-center justify-center gap-2 border-2 px-3 py-4 text-sm transition-all duration-200
-					{preferredContact === 'email'
-					? 'border-primary bg-primary/5 font-medium text-primary'
-					: 'border-gray-200 bg-white hover:border-primary/40'}"
-				onclick={() => onUpdate('preferredContact', 'email')}
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="h-6 w-6"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
-					/>
-				</svg>
-				<span>Email</span>
-			</button>
-			<button
-				type="button"
-				class="flex flex-col items-center justify-center gap-2 border-2 px-3 py-4 text-sm transition-all duration-200
-					{preferredContact === 'any'
-					? 'border-primary bg-primary/5 font-medium text-primary'
-					: 'border-gray-200 bg-white hover:border-primary/40'}"
-				onclick={() => onUpdate('preferredContact', 'any')}
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="h-6 w-6"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M6.633 10.25c.806 1.533 2.084 2.811 3.617 3.617l1.27-.765a1.125 1.125 0 0 1 1.172.072l2.912 2.12c.396.289.546.804.353 1.25a8.993 8.993 0 0 1-3.57 3.96c-.5.276-1.115.28-1.596-.046a16.07 16.07 0 0 1-6.836-6.836c-.326-.481-.322-1.096-.046-1.596a8.993 8.993 0 0 1 3.96-3.57c.446-.193.961-.043 1.25.353l2.12 2.912a1.125 1.125 0 0 1 .072 1.172l-.765 1.27ZM15.75 3.75v3m0 0v3m0-3h3m-3 0h-3"
-					/>
-				</svg>
-				<span>Peu importe</span>
-			</button>
+					{opt.label}
+				</button>
+			{/each}
 		</div>
 	</div>
 
 	{#if variant === 'D'}
 		<div class="mb-4">
 			<label class="block">
-				<span class="mb-1 block text-sm text-text-muted">Décrivez votre projet (optionnel)</span>
+				<span class={labelClass} style="font-family: var(--font-body);">
+					Décrivez votre projet (optionnel)
+				</span>
 				<textarea
 					value={freeText}
 					oninput={(e) => onUpdate('freeText', e.currentTarget.value)}
 					placeholder="Décrivez vos besoins, vos envies…"
 					rows="3"
-					class="w-full resize-none border-2 border-gray-200 bg-white px-4 py-3 text-sm outline-none transition-all duration-200 focus:border-primary"
+					class="w-full resize-none border border-text/15 bg-bg px-4 py-3.5 text-sm text-text outline-none transition-all duration-150 focus:border-primary"
+					style="font-family: var(--font-body);"
 				></textarea>
 			</label>
 		</div>
 	{/if}
 
-	<!-- Honeypot anti-spam -->
 	<div class="absolute -left-[9999px] opacity-0" aria-hidden="true">
 		<input
 			type="text"
@@ -267,9 +226,9 @@
 			type="checkbox"
 			checked={consentGdpr}
 			onchange={(e) => onUpdate('consentGdpr', e.currentTarget.checked)}
-			class="mt-1 h-4 w-4 accent-primary"
+			class="mt-0.5 h-4 w-4 accent-primary"
 		/>
-		<span class="text-xs text-text-muted">
+		<span class="text-xs leading-relaxed text-text-muted" style="font-family: var(--font-body);">
 			J'accepte que mes données soient transmises à l'entreprise pour recevoir un devis. Aucune
 			utilisation commerciale tierce. *
 		</span>

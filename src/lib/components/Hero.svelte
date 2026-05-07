@@ -5,39 +5,38 @@
 </script>
 
 <section
-	class="relative flex min-h-[50vh] items-end pb-16 pt-16 md:min-h-[55vh]"
+	class="relative flex min-h-[92vh] flex-col justify-end pb-20 pt-32"
 	style="background-image: url('{config.heroImage}'); background-size: cover; background-position: center;"
 >
-	<!-- Gradient overlay -->
-	<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
+	<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/15"></div>
+	<div class="absolute inset-0 -z-10 bg-primary"></div>
 
-	<!-- Fallback si pas d'image -->
-	<div class="absolute inset-0 -z-10 bg-gradient-to-br from-primary to-primary-light"></div>
+	<div class="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-12">
+		<p
+			class="mb-5 text-xs font-medium uppercase tracking-[0.18em] text-white/65"
+			style="font-family: var(--font-body);"
+		>
+			{config.business.tagline}
+		</p>
 
-	<div
-		class="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center px-4 text-center text-white"
-	>
 		<h1
-			class="text-balance text-5xl italic leading-[1.05] text-white drop-shadow-lg md:text-6xl lg:text-7xl"
-			style="font-family: var(--font-heading); text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);"
+			class="max-w-[14ch] text-[clamp(3rem,8vw,6.5rem)] font-normal italic leading-[1.02] text-white"
+			style="font-variation-settings: 'opsz' 72; text-shadow: 0 2px 32px oklch(0% 0 0 / 0.3);"
 		>
 			Votre jardin mérite un expert
 		</h1>
 
-		<p class="mt-6 text-lg text-white/85 drop-shadow md:text-xl">
-			{config.business.tagline}
-		</p>
-
 		<a
 			href="#devis"
-			class="mt-8 inline-flex cursor-pointer items-center gap-2 bg-white/20 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/30"
+			class="mt-10 inline-flex cursor-pointer items-center gap-3 bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-primary transition-opacity duration-200 hover:opacity-90"
+			style="font-family: var(--font-body);"
 		>
-			<span>Démarrer mon devis gratuit</span>
+			<span>Démarrer la consultation</span>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 20 20"
 				fill="currentColor"
-				class="h-5 w-5"
+				class="h-4 w-4"
 			>
 				<path
 					fill-rule="evenodd"
