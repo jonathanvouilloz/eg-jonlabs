@@ -1,16 +1,17 @@
 <script lang="ts">
 	import Header from '$components/Header.svelte';
 	import Hero from '$components/Hero.svelte';
-	import LocalMarketStats from '$components/LocalMarketStats.svelte';
 	import Services from '$components/Services.svelte';
 	import InterventionMap from '$components/InterventionMap.svelte';
 	import Testimonials from '$components/Testimonials.svelte';
 	import Realizations from '$components/Realizations.svelte';
 	import Quiz from '$components/Quiz/Quiz.svelte';
-	import SeoEducation from '$components/SeoEducation.svelte';
 	import FAQ from '$components/FAQ.svelte';
 	import CTAFinal from '$components/CTAFinal.svelte';
 	import Footer from '$components/Footer.svelte';
+	import MetaAnnotation from '$components/MetaAnnotation.svelte';
+	import LocalMarketStats from '$components/LocalMarketStats.svelte';
+	import SeoEducation from '$components/SeoEducation.svelte';
 	import { generateThemeStyle } from '$utils/theme';
 	import type { PageData } from './$types';
 
@@ -35,12 +36,8 @@
 
 <div style={themeStyle}>
 	<Header {config} />
-	<main>
+	<main id="top">
 		<Hero {config} showTransparencyNote={config.transparencyNote === true} />
-
-		{#if config.localMarket}
-			<LocalMarketStats localMarket={config.localMarket} {mainZone} />
-		{/if}
 
 		<Services services={config.services} />
 
@@ -62,8 +59,6 @@
 			<Quiz {config} />
 		{/key}
 
-		<SeoEducation communes={communesForSeo} />
-
 		{#if config.faq.length > 0}
 			<FAQ faq={config.faq} />
 		{/if}
@@ -71,4 +66,18 @@
 		<CTAFinal {config} />
 	</main>
 	<Footer businessName={config.business.name} />
+
+	{#if config.localMarket}
+		<MetaAnnotation anchorSelector="#zones" label="Le marché local en chiffres">
+			<LocalMarketStats localMarket={config.localMarket} {mainZone} />
+		</MetaAnnotation>
+	{/if}
+
+	<MetaAnnotation
+		anchorSelector="#cta-final"
+		label="Comment ça te fait monter sur Google"
+		position="left"
+	>
+		<SeoEducation communes={communesForSeo} />
+	</MetaAnnotation>
 </div>

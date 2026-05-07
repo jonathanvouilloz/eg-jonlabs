@@ -6,72 +6,84 @@
 	let captureRatePct = $derived(Math.round(localMarket.topThreeCaptureRate * 100));
 </script>
 
-<section class="bg-secondary px-6 py-20 md:px-12">
-	<div class="mx-auto max-w-5xl">
-		<div class="mb-12">
-			<p
-				class="mb-3 text-xs font-medium uppercase tracking-[0.16em] text-text-muted"
-				style="font-family: var(--font-body);"
-			>
-				Ta zone aujourd'hui
-			</p>
-			<h2 class="max-w-3xl text-3xl font-normal text-text md:text-4xl">
-				Sur {mainZone} en ce moment, ~{localMarket.monthlySearches} personnes par mois cherchent un paysagiste
-				sur Google.
-			</h2>
-			<p
-				class="mt-4 max-w-2xl text-base leading-relaxed text-text-muted"
-				style="font-family: var(--font-body);"
-			>
-				La moitié appelle l'un des 3 affichés sur la carte Google. Ta part actuelle : 0%.
-			</p>
+<div class="annotation-content">
+	<p class="lead">
+		Sur <strong>{mainZone}</strong>, ~<strong>{localMarket.monthlySearches}</strong>
+		personnes par mois cherchent un paysagiste sur Google.
+	</p>
+
+	<div class="kpi-grid">
+		<div class="kpi">
+			<span class="kpi-value">{localMarket.monthlySearches}</span>
+			<span class="kpi-label">recherches / mois</span>
 		</div>
-
-		<div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
-			<div class="border-l-2 border-primary/30 pl-5">
-				<p
-					class="text-[clamp(2.25rem,4.5vw,3rem)] font-normal leading-none text-primary"
-					style="font-family: var(--font-heading); font-variation-settings: 'opsz' 48;"
-				>
-					{localMarket.monthlySearches}
-				</p>
-				<p
-					class="mt-2 text-sm font-medium uppercase tracking-[0.12em] text-text-muted"
-					style="font-family: var(--font-body);"
-				>
-					recherches / mois
-				</p>
-			</div>
-
-			<div class="border-l-2 border-primary/30 pl-5">
-				<p
-					class="text-[clamp(2.25rem,4.5vw,3rem)] font-normal leading-none text-primary"
-					style="font-family: var(--font-heading); font-variation-settings: 'opsz' 48;"
-				>
-					{captureRatePct}%
-				</p>
-				<p
-					class="mt-2 text-sm font-medium uppercase tracking-[0.12em] text-text-muted"
-					style="font-family: var(--font-body);"
-				>
-					captés par le top 3 Google
-				</p>
-			</div>
-
-			<div class="border-l-2 border-accent pl-5">
-				<p
-					class="text-[clamp(2.25rem,4.5vw,3rem)] font-normal leading-none text-accent"
-					style="font-family: var(--font-heading); font-variation-settings: 'opsz' 48;"
-				>
-					0%
-				</p>
-				<p
-					class="mt-2 text-sm font-medium uppercase tracking-[0.12em] text-text-muted"
-					style="font-family: var(--font-body);"
-				>
-					ta part actuelle
-				</p>
-			</div>
+		<div class="kpi">
+			<span class="kpi-value">{captureRatePct}%</span>
+			<span class="kpi-label">captés top&nbsp;3</span>
+		</div>
+		<div class="kpi accent">
+			<span class="kpi-value">0%</span>
+			<span class="kpi-label">ta part</span>
 		</div>
 	</div>
-</section>
+
+	<p class="aside">
+		La moitié appelle l'un des 3 paysagistes affichés sur la carte Google. Tu n'es pas dedans.
+	</p>
+</div>
+
+<style>
+	.annotation-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.lead {
+		margin: 0;
+	}
+
+	.lead strong {
+		color: oklch(96% 0.005 250);
+		font-weight: 600;
+	}
+
+	.kpi-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.75rem;
+		padding: 0.75rem 0;
+		border-top: 1px solid oklch(100% 0 0 / 0.06);
+		border-bottom: 1px solid oklch(100% 0 0 / 0.06);
+	}
+
+	.kpi {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.kpi-value {
+		font-size: 1.375rem;
+		font-weight: 600;
+		color: oklch(96% 0.005 250);
+		line-height: 1.1;
+	}
+
+	.kpi.accent .kpi-value {
+		color: #00d9a3;
+	}
+
+	.kpi-label {
+		font-size: 0.6875rem;
+		color: oklch(65% 0.005 250);
+		letter-spacing: 0.02em;
+	}
+
+	.aside {
+		margin: 0;
+		font-size: 0.8125rem;
+		color: oklch(75% 0.005 250);
+		font-style: italic;
+	}
+</style>
