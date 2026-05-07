@@ -10,7 +10,7 @@
 		</h1>
 		<p class="mt-4 text-text-muted">Pages de devis personnalisées pour artisans</p>
 		<a
-			href="/eg/demo"
+			href="/landing/gt-paysages"
 			class="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-white transition-colors hover:opacity-90"
 		>
 			Voir la demo
