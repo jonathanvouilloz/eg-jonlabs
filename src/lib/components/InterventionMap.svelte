@@ -4,8 +4,15 @@
 
 	let {
 		credibility,
-		businessName
-	}: { credibility: ProspectConfig['credibility']; businessName: string } = $props();
+		businessName,
+		communes
+	}: {
+		credibility: ProspectConfig['credibility'];
+		businessName: string;
+		communes?: string[];
+	} = $props();
+
+	let displayCommunes = $derived(communes && communes.length > 0 ? communes : credibility.zones);
 
 	let mapContainer: HTMLDivElement;
 	let mapInstance: { remove: () => void } | null = null;
@@ -67,7 +74,7 @@
 </script>
 
 <section class="bg-primary px-6 py-20 md:px-12">
-	<div class="mx-auto max-w-4xl">
+	<div class="mx-auto max-w-6xl">
 		<div class="mb-10">
 			<p
 				class="mb-2 text-xs font-medium uppercase tracking-[0.16em] text-white/50"
@@ -79,22 +86,34 @@
 				{credibility.radiusKm} km autour de {credibility.zones[0]}
 			</h2>
 		</div>
-	</div>
 
-	<div bind:this={mapContainer} class="h-[380px] w-full md:h-[460px]"></div>
+		<div class="grid gap-8 md:grid-cols-5 md:gap-10">
+			<div bind:this={mapContainer} class="h-[320px] w-full md:col-span-3 md:h-[440px]"></div>
 
-	{#if credibility.zones.length > 1}
-		<div class="mx-auto mt-6 max-w-4xl">
-			<div class="flex flex-wrap gap-2">
-				{#each credibility.zones as zone (zone)}
-					<span
-						class="border border-white/20 px-3 py-1 text-xs font-medium uppercase tracking-[0.08em] text-white/60"
-						style="font-family: var(--font-body);"
-					>
-						{zone}
-					</span>
-				{/each}
+			<div class="md:col-span-2">
+				<p
+					class="mb-4 text-xs font-medium uppercase tracking-[0.16em] text-white/50"
+					style="font-family: var(--font-body);"
+				>
+					Communes desservies
+				</p>
+				<div class="grid grid-cols-2 gap-2">
+					{#each displayCommunes as commune (commune)}
+						<div
+							class="border border-white/15 bg-white/5 px-3 py-2.5 text-sm text-white/85 transition-colors duration-200 hover:border-white/30 hover:bg-white/10"
+							style="font-family: var(--font-body);"
+						>
+							{commune}
+						</div>
+					{/each}
+				</div>
+				<p
+					class="mt-4 text-xs leading-relaxed text-white/45"
+					style="font-family: var(--font-body);"
+				>
+					Devis gratuit dans toute la zone. Hors zone : nous contacter pour étude.
+				</p>
 			</div>
 		</div>
-	{/if}
+	</div>
 </section>

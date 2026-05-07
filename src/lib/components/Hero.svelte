@@ -1,7 +1,10 @@
 <script lang="ts">
 	import type { ProspectConfig } from '$types/prospect';
 
-	let { config }: { config: ProspectConfig } = $props();
+	let {
+		config,
+		showTransparencyNote = false
+	}: { config: ProspectConfig; showTransparencyNote?: boolean } = $props();
 </script>
 
 <section
@@ -45,5 +48,15 @@
 				/>
 			</svg>
 		</a>
+
+		{#if showTransparencyNote}
+			<p
+				class="mt-8 max-w-xl text-xs italic leading-relaxed text-white/55"
+				style="font-family: var(--font-body);"
+			>
+				Aperçu : structure et identité construites. Tes vraies photos s'intègrent en 1h une fois
+				qu'on attaque.
+			</p>
+		{/if}
 	</div>
 </section>
