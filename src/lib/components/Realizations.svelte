@@ -36,33 +36,31 @@
 
 <svelte:window onkeydown={onKey} />
 
-<section id="realisations" class="scroll-mt-28 bg-primary px-6 py-20 md:px-12">
-	<div class="mx-auto max-w-6xl">
-		<div class="mb-12">
-			<p
-				class="mb-2 text-xs font-medium uppercase tracking-[0.16em] text-white/50"
-				style="font-family: var(--font-body);"
-			>
-				{businessName}
-			</p>
-			<h2 class="text-3xl font-normal text-white md:text-4xl">Nos réalisations</h2>
-		</div>
+<section id="realisations" class="scroll-mt-28 bg-primary py-20">
+	<div class="mx-auto mb-12 max-w-6xl px-6 md:px-12">
+		<p
+			class="mb-2 text-xs font-medium uppercase tracking-[0.16em] text-white/50"
+			style="font-family: var(--font-body);"
+		>
+			{businessName}
+		</p>
+		<h2 class="text-3xl font-normal text-white md:text-4xl">Nos réalisations</h2>
+	</div>
 
-		<div class="grid grid-cols-2 gap-3 md:grid-cols-3">
+	<div class="px-3 md:px-4">
+		<div class="columns-1 gap-3 sm:columns-2 lg:columns-3 xl:columns-4">
 			{#each realizations as r, i (i)}
 				<button
 					type="button"
 					onclick={() => openAt(i)}
-					class="group relative overflow-hidden {i === 0
-						? 'col-span-2 aspect-[16/7] md:col-span-2'
-						: 'aspect-[4/3]'}"
+					class="group relative mb-3 block w-full overflow-hidden break-inside-avoid"
 					aria-label="Voir : {r.caption}"
 				>
 					<img
 						src={r.after}
 						alt={r.caption}
 						loading="lazy"
-						class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						class="block h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
 					/>
 					<div
 						class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
