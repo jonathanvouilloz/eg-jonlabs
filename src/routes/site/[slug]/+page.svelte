@@ -47,6 +47,7 @@
 			communes={config.communes}
 			address={config.business.address}
 			googleProfileUrl={config.business.googleProfileUrl}
+			googleMapsEmbedUrl={config.business.googleMapsEmbedUrl}
 		/>
 
 		{#if config.testimonials.length > 0}

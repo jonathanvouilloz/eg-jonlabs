@@ -7,22 +7,26 @@
 		businessName,
 		communes,
 		address,
-		googleProfileUrl
+		googleProfileUrl,
+		googleMapsEmbedUrl
 	}: {
 		credibility: ProspectConfig['credibility'];
 		businessName: string;
 		communes?: string[];
 		address?: string | null;
 		googleProfileUrl?: string | null;
+		googleMapsEmbedUrl?: string | null;
 	} = $props();
 
 	let displayCommunes = $derived(communes && communes.length > 0 ? communes : credibility.zones);
+	let useEmbed = $derived(Boolean(googleMapsEmbedUrl));
 
 	let mapContainer: HTMLDivElement;
 	let mapInstance: { remove: () => void } | null = null;
 	let cssLink: HTMLLinkElement | null = null;
 
 	onMount(() => {
+		if (useEmbed) return;
 		initMap();
 		return () => {
 			mapInstance?.remove();
@@ -132,7 +136,19 @@
 		</div>
 
 		<div class="grid gap-8 md:grid-cols-5 md:gap-10">
-			<div bind:this={mapContainer} class="h-[320px] w-full md:col-span-3 md:h-[440px]"></div>
+			{#if useEmbed && googleMapsEmbedUrl}
+				<iframe
+					src={googleMapsEmbedUrl}
+					class="h-[320px] w-full md:col-span-3 md:h-[440px]"
+					style="border:0"
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+					allowfullscreen
+					title="Carte {businessName}"
+				></iframe>
+			{:else}
+				<div bind:this={mapContainer} class="h-[320px] w-full md:col-span-3 md:h-[440px]"></div>
+			{/if}
 
 			<div class="md:col-span-2">
 				<p
