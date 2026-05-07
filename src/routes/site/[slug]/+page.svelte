@@ -73,11 +73,7 @@
 		</MetaAnnotation>
 	{/if}
 
-	<MetaAnnotation
-		anchorSelector="#cta-final"
-		label="Comment ça te fait monter sur Google"
-		position="left"
-	>
+	<MetaAnnotation anchorSelector="#cta-final" label="Comment ça te fait monter sur Google">
 		<SeoEducation communes={communesForSeo} />
 	</MetaAnnotation>
 </div>
