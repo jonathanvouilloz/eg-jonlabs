@@ -26,7 +26,7 @@
 
 		<a
 			href="#devis"
-			class="mt-10 inline-flex cursor-pointer items-center gap-3 border border-white/25 bg-white/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"
+			class="mt-10 inline-flex cursor-pointer items-center gap-3 bg-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-white backdrop-blur-md transition-colors duration-200 hover:bg-white/40"
 			style="font-family: var(--font-body);"
 		>
 			<span>Obtenir un devis personnalisé</span>
