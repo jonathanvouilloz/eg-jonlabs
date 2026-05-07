@@ -51,6 +51,22 @@ export interface ProspectConfig {
 		ccEmails: string[];
 		subjectPrefix: string;
 	};
+
+	salesPage?: SalesPageConfig;
+	localMarket?: LocalMarketConfig;
+	communes?: string[];
+	transparencyNote?: boolean;
+}
+
+export interface SalesPageConfig {
+	loomVideoId: string;
+	screenshotUrl: string;
+	subtitleObservation: string;
+}
+
+export interface LocalMarketConfig {
+	monthlySearches: number;
+	topThreeCaptureRate: number;
 }
 
 export interface ProspectService {

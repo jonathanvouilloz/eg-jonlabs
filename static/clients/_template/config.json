@@ -58,5 +58,20 @@
 		"recipientEmail": "EMAIL_PROSPECT",
 		"ccEmails": ["leads@jonlabs.ch"],
 		"subjectPrefix": "[DEVIS NOM_ENTREPRISE]"
-	}
+	},
+
+	"salesPage": {
+		"loomVideoId": "LOOM_VIDEO_ID_GENERIQUE",
+		"screenshotUrl": "/screenshots/SLUG.png",
+		"subtitleObservation": ""
+	},
+
+	"localMarket": {
+		"monthlySearches": 0,
+		"topThreeCaptureRate": 0.5
+	},
+
+	"communes": ["COMMUNE_1", "COMMUNE_2", "COMMUNE_3"],
+
+	"transparencyNote": true
 }

@@ -99,5 +99,24 @@ export const prospectConfigSchema = z.object({
 		recipientEmail: z.string().email(),
 		ccEmails: z.array(z.string().email()),
 		subjectPrefix: z.string()
-	})
+	}),
+
+	salesPage: z
+		.object({
+			loomVideoId: z.string(),
+			screenshotUrl: z.string(),
+			subtitleObservation: z.string()
+		})
+		.optional(),
+
+	localMarket: z
+		.object({
+			monthlySearches: z.number().int().nonnegative(),
+			topThreeCaptureRate: z.number().min(0).max(1)
+		})
+		.optional(),
+
+	communes: z.array(z.string()).optional(),
+
+	transparencyNote: z.boolean().optional()
 });

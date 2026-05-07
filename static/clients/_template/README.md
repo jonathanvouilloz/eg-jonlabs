@@ -44,13 +44,41 @@ Les fourchettes de prix sont définies dans `src/lib/data/pricingRates.ts` (méd
 - **recipientEmail** : où le paysagiste reçoit les leads. Reply-To = email du client final, BCC = `leads@jonlabs.ch`.
 - **subjectPrefix** : ex `[DEVIS PAYSAGES DE GRANGE]` — apparaît dans l'objet de l'email.
 
+## Page de vente + mock site
+
+Depuis le pivot `landing/site`, chaque prospect a deux URLs :
+
+- `/landing/[slug]` — page de vente perso (screenshot + Loom + CTA vers le mock)
+- `/site/[slug]` — mock du site complet (9 sections : hero, marché local, services, zones, témoignages, galerie, devis, SEO, CTA)
+
+### salesPage (optionnel)
+
+- **loomVideoId** : ID Loom de la vidéo générique (la même pour tous les prospects, ex la "vidéo Léo").
+- **screenshotUrl** : chemin du screenshot du mock site, ex `/screenshots/[slug].png`. À placer dans `static/screenshots/`.
+- **subtitleObservation** : observation perso entre parenthèses, ex `(j'ai pris le vert sur ta camionnette)`. Vide si rien à dire.
+
+### localMarket (optionnel)
+
+Affiche les chiffres de marché local dans la section "Ta zone aujourd'hui" du mock.
+
+- **monthlySearches** : nombre de recherches "paysagiste" sur la commune principale (DataForSEO ou estimé).
+- **topThreeCaptureRate** : part captée par le top 3 du local pack (0-1, typiquement 0.5).
+
+### communes (optionnel)
+
+Liste des communes desservies pour la grille SEO local. Si absent, on utilise `credibility.zones`.
+
+### transparencyNote (optionnel)
+
+Si `true`, affiche le bandeau de transparence sous le hero ("Aperçu : tes vraies photos s'intègrent en 1h une fois qu'on attaque").
+
 ## Validation
 
-À la première navigation `/eg/[slug]`, la config est validée par Zod (`src/lib/utils/validation.ts`). Si invalide :
+À la première navigation `/site/[slug]`, la config est validée par Zod (`src/lib/utils/validation.ts`). Si invalide :
 
 - En dev : message d'erreur détaillé.
 - En prod : 404 "Page introuvable".
 
 ## Test
 
-Une fois la config créée, lance `npm run dev` et navigue vers `http://localhost:5173/eg/[slug]`.
+Une fois la config créée, lance `npm run dev` et navigue vers `http://localhost:5173/landing/[slug]` puis `http://localhost:5173/site/[slug]`.
