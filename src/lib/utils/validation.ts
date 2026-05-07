@@ -22,6 +22,7 @@ const prospectServiceSchema = z.object({
 	label: z.string(),
 	description: z.string(),
 	icon: z.string(),
+	iconName: z.string().optional(),
 	image: z.string().nullable(),
 	active: z.boolean(),
 	pricingCategory: pricingCategorySchema.optional()
@@ -65,6 +66,7 @@ export const prospectConfigSchema = z.object({
 		email: z.string().email(),
 		address: z.string().nullable().optional(),
 		googleProfileUrl: z.string().nullable().optional(),
+		googleMapsEmbedUrl: z.string().nullable().optional(),
 		logoUrl: z.string().nullable(),
 		googleReviewUrl: z.string().nullable(),
 		facebookUrl: z.string().nullable(),

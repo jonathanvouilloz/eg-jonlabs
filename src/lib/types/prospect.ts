@@ -16,6 +16,7 @@ export interface ProspectConfig {
 		email: string;
 		address?: string | null;
 		googleProfileUrl?: string | null;
+		googleMapsEmbedUrl?: string | null;
 		logoUrl: string | null;
 		googleReviewUrl: string | null;
 		facebookUrl: string | null;
@@ -83,6 +84,7 @@ export interface ProspectService {
 	label: string;
 	description: string;
 	icon: string;
+	iconName?: string;
 	image: string | null;
 	active: boolean;
 	pricingCategory?: PricingCategory;
