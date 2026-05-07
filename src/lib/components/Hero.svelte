@@ -17,12 +17,11 @@
 
 	<div class="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-12">
 		<h1
-			class="max-w-[18ch] text-[clamp(2.75rem,7.5vw,6rem)] font-semibold leading-[1.05] text-white"
+			class="max-w-[20ch] text-[clamp(2.75rem,7.5vw,6rem)] font-semibold leading-[1.05] text-white"
 			style="text-shadow: 0 2px 32px oklch(0% 0 0 / 0.3);"
 		>
 			Votre paysagiste<br />
-			<span class="italic text-accent">{prefix} {mainZone}</span><br />
-			{subline}
+			<span class="italic" style="color: #E8F0CA;">{prefix} {mainZone}</span> - {subline}
 		</h1>
 
 		<a
