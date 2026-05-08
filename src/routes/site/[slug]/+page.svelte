@@ -48,6 +48,8 @@
 			address={config.business.address}
 			googleProfileUrl={config.business.googleProfileUrl}
 			googleMapsEmbedUrl={config.business.googleMapsEmbedUrl}
+			phone={config.business.phone}
+			email={config.business.email}
 		/>
 
 		{#if config.testimonials.length > 0}
@@ -68,7 +70,7 @@
 
 		<CTAFinal {config} />
 	</main>
-	<Footer businessName={config.business.name} />
+	<Footer {config} />
 
 	{#if config.localMarket}
 		<MetaAnnotation anchorSelector="#zones" label="Le marché local en chiffres">

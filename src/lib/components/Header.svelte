@@ -53,17 +53,19 @@
 			<a href="#faq" class="rounded-full px-3 py-2 transition-colors hover:bg-black/5">FAQ</a>
 		</nav>
 
-		<div class="flex items-center gap-1">
+		<div class="flex items-center gap-2">
 			<a
 				href="tel:{config.business.phone}"
-				class="hidden h-10 w-10 items-center justify-center rounded-full text-text-muted transition-colors hover:bg-black/5 sm:flex"
+				class="hidden items-center gap-1.5 rounded-full px-3 py-2 text-[13px] font-medium text-text-muted transition-colors hover:bg-black/5 hover:text-text sm:inline-flex"
+				style="font-family: var(--font-body);"
 				aria-label="Appeler {config.business.name}"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 20 20"
 					fill="currentColor"
-					class="h-4 w-4"
+					class="h-3.5 w-3.5"
+					aria-hidden="true"
 				>
 					<path
 						fill-rule="evenodd"
@@ -71,6 +73,7 @@
 						clip-rule="evenodd"
 					/>
 				</svg>
+				<span>{config.business.phone}</span>
 			</a>
 			<a
 				href="#devis"

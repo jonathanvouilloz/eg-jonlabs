@@ -8,7 +8,9 @@
 		communes,
 		address,
 		googleProfileUrl,
-		googleMapsEmbedUrl
+		googleMapsEmbedUrl,
+		phone,
+		email
 	}: {
 		credibility: ProspectConfig['credibility'];
 		businessName: string;
@@ -16,6 +18,8 @@
 		address?: string | null;
 		googleProfileUrl?: string | null;
 		googleMapsEmbedUrl?: string | null;
+		phone?: string | null;
+		email?: string | null;
 	} = $props();
 
 	let displayCommunes = $derived(communes && communes.length > 0 ? communes : credibility.zones);
@@ -152,10 +156,13 @@
 
 			<div class="md:col-span-2">
 				<p
-					class="mb-4 text-xs font-medium uppercase tracking-[0.16em] text-white/50"
+					class="mb-1 text-xs font-medium uppercase tracking-[0.16em] text-white/50"
 					style="font-family: var(--font-body);"
 				>
 					Communes desservies
+				</p>
+				<p class="mb-4 text-sm text-white/75" style="font-family: var(--font-body);">
+					Vos zones d'intervention personnalisées
 				</p>
 				<div class="grid grid-cols-2 gap-2">
 					{#each displayCommunes as commune (commune)}
@@ -174,6 +181,70 @@
 					Devis gratuit dans toute la zone. Hors zone, nous contacter pour étude.
 				</p>
 			</div>
+		</div>
+
+		<!-- ── Carte contact : email + tél + adresse + CTA ── -->
+		<div
+			class="mt-10 grid gap-6 border-t border-white/15 pt-8 md:grid-cols-[1fr_auto] md:items-center md:gap-10"
+		>
+			<dl
+				class="grid grid-cols-1 gap-4 text-sm sm:grid-cols-3"
+				style="font-family: var(--font-body);"
+			>
+				{#if phone}
+					<div>
+						<dt class="mb-1 text-xs font-medium uppercase tracking-[0.16em] text-white/50">
+							Téléphone
+						</dt>
+						<dd>
+							<a href="tel:{phone}" class="text-white/90 transition-colors hover:text-white">
+								{phone}
+							</a>
+						</dd>
+					</div>
+				{/if}
+				{#if email}
+					<div>
+						<dt class="mb-1 text-xs font-medium uppercase tracking-[0.16em] text-white/50">
+							Email
+						</dt>
+						<dd class="break-all">
+							<a href="mailto:{email}" class="text-white/90 transition-colors hover:text-white">
+								{email}
+							</a>
+						</dd>
+					</div>
+				{/if}
+				{#if address}
+					<div>
+						<dt class="mb-1 text-xs font-medium uppercase tracking-[0.16em] text-white/50">
+							Adresse
+						</dt>
+						<dd class="text-white/90">{address}</dd>
+					</div>
+				{/if}
+			</dl>
+
+			<a
+				href="#devis"
+				class="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-white/90 md:justify-self-end"
+				style="font-family: var(--font-body);"
+			>
+				Obtenir un devis gratuit
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 20 20"
+					fill="currentColor"
+					class="h-3.5 w-3.5"
+					aria-hidden="true"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+						clip-rule="evenodd"
+					/>
+				</svg>
+			</a>
 		</div>
 	</div>
 </section>
