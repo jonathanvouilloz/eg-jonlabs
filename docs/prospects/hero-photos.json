@@ -1,0 +1,31 @@
+{
+	"_meta": {
+		"description": "URLs des photos Google Maps GMB pour les prospects P1 sans site",
+		"source": "Google Maps — récupérées le 2026-05-08",
+		"note": "URLs lh3.googleusercontent.com — stables tant que la fiche GMB existe. Certaines URLs (a-gezim, mej) non vérifiées visuellement — relancer le script une fois pour confirmer.",
+		"usage": "node scripts/fetch-heroes.mjs — télécharge et sauvegarde dans static/clients/[slug]/hero.jpg"
+	},
+	"photos": {
+		"gt-paysages": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHQRsvc2HAKBD3u2NbEdE40dkMbrJ6ss7zZiKTbHZHVbB0UKI59hmINtDEhb4M9IpEMlIWOinAgOJ4y5OV10Fp4bk6zTwEMvvbMgJUfteDPiWioCCBPU2X-wYPtpHJzPvkrcCJr=w1280-h720-k-no",
+		"lami-paysagiste": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNB8-40-zN-FzdfqcssIzdJcO0IUMIboGirdUgU35Bfm-NCPJ4hVDLv9pyBskYmaqjWrQ0BQD9Ao-dlswO1_kTBMYkO-CiQeJcfWYEL2sIunI2dSr9ELVPhBU865JcWf0L0Kw=w1280-h720-k-no",
+		"bs-paysagiste": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFleeoC8aErP5ZiEkQsEFPNpCA00XluV5H1HQ9hLL3DfIn95JMFf6lhvz9oYOPDwcowa3wrkKKRnSmYCvC5fiby_wVpTZYb_C4HgZngXkiIw5InFHQn59eKBaZZRt64JS4C0vURlA=w1280-h720-k-no",
+		"perspectives-paysage": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGgFB2w5PQUpf1M8fxoaG6K9EmdRw-9sKHTnvz5oau1k_3Kl4wOPJ5PHky_XbjCLs97-JoLm-ZwDfJg217qD6J1f18-0STPuJ1lntpKSQDcVsaCy30uOHE_3fnwi-5PHDDHb33F=w1280-h720-k-no",
+		"art-paysage": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFSw533WDhXNIKaptWarkp9w_F5zars3ceWg15mPd7i_64js9iA47QcQJXJbxaQ3XWpF_t15K7wOnh8807gic0-Clo-OYgjSXYu1a2_oNmLnNHgMkx3FhYqfZhP4nuLBJrJQNW6DQ=w1280-h720-k-no",
+		"mej-paysagiste": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNB8-40-zN-FzdfqcssIzdJcO0IUMIboGirdUgU35Bfm-NCPJ4hVDLv9pyBskYmaqjWrQ0BQD9Ao-dlswO1_kTBMYkO-CiQeJcfWYEL2sIunI2dSr9ELVPhBU865JcWf0L0Kw=w1280-h720-k-no",
+		"paillard-paysages": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEudLHCSYzG4ghgMDirgxrIrga9eSThjGPKVRhybnK137renNH5lZcOCOsdOhaO5APcNEgcStUTvfftD4Hm3KqWrLbIpqKuDdt8rqCvGy4xWihVW3jQbSeFL8HGNViSytRdbf-duA=w1280-h720-k-no",
+		"a-gezim-paysagiste": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH2p8E5kd5E_59G5K0P4akpIC76VADjKTIJLQaP8pAlcmF-4kBftc8HS7RZPUctxQmBPOlQGgtICb46swIGeyoW1qvw8L4R4TKyvKuEptT3IqiTnjI0Y5SSua1isSJb_oIidudF6Q=w1280-h720-k-no",
+		"berisha-jardins": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFOa4TLkaRayN5qrhSiLnbR6yUXDEf9bSzICEbPtp77iW2XCbAkAPujod1oAzhm6MMMEtqUVUkvEPOY--TjCDzOuCp7LbM5kb28tktJguF8gRlWvRw4MmwuPgZhIYYvKCD3HWhlRw=w1280-h720-k-no",
+		"art-jardins": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHHMXZV6rDpZfoPZcw94RNWnYOvfORxIP6RTW6zUH9aDMo7XkdSjNiSgZmSeS_KWggumhAy8O2EOdShpeCD1yVeqcIzhYNFF0pBC0F8XsFVKWVGTTYX_O_yokiC4vdvSYJuhDArWw=w1280-h720-k-no",
+		"duchaine-paysagiste": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEceSKCWCDuMz1eSHz6nfG3j6hPe4UCf-2OaKI9VcMZNa7n0yAd13d6M-2mbrqtwLBAs3l2RxAgb_jOZrublFdTig2jHzCgKYFi-TuK1FcDMNhWpek1ELFOFc-v_ooBcYuwj4CY=w1280-h720-k-no",
+		"vos-paysages": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_lafartADGiDJwsCm17-Ywa53yeA7PUJpXVAtdc-h6w1nhbpf80IVY8qR1gjIvTnmQagIaygtQ8pClyKXBHyZZbHxtNAn8Mb_VoQ9jOFqBy3qdoL8twlTQSV6K-e6U-DdTUeocQ=w1280-h720-k-no",
+		"pillonel-sebastien": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHmytyV90wvjQJaqcrJKAKYB8hyueXU4tOI78R1gNSvAkjoVdancpMZRCfKJh-hXLIv0uLIwZO4zwnG9ytuKLGC4yve8YlBXplXUV_4JrbxF2if8aCYJtZ2RaOsxjqalHVzrtiQ=w1280-h720-k-no",
+		"germa-paysages": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHK_0IgFFXY0m2wpfGAqOR6OsLl8HOAkVq8vn3dugXHibS4hlZeeVbTvuP0RuEmToUfDkcB4JCY_w6NnZi8oc_FHk52Ow1BpfBhR-5EAOWwzj_VeVu9aBr7CKoVOo2g542EwfnAnOd6vhoe=w1280-h720-k-no",
+		"creavert-paysages": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHgl0mVD6VpIpiOaADArUQiE-SYD6ioDzsoeyvXoAdT-k8rDuE7JSp-RwZMeVRlaqu_2V7bDBD0DdMW6rAGWFyPZw6QQixJVf1ohrFf9K0UqAvUI_ljWfa1YepFxn8veHitRZ6UBw=w1280-h720-k-no",
+		"lesprit-vert": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFzIid_JinmKA6VT9sq4f21Frlw8Iz7fSNi8W5XgOfXcd_-EyCHCQ7uZ-a_hFI9OVEI61pwceAr35H2KJQB9hu-GF4vBvSMdIVZQ6dBgez07udJ-L1OtiIPu-Ssp9amDu26FGQ9BkLSaSef=w1280-h720-k-no",
+		"paysage-dos-santos": null,
+		"manuel-cunha": null,
+		"randria-jardins": null,
+		"joris-paysage": null,
+		"arnaud-auberson-jardins": null
+	}
+}

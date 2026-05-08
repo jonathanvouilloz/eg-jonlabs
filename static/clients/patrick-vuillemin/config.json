@@ -1,0 +1,101 @@
+{
+	"slug": "patrick-vuillemin",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-08",
+	"business": {
+		"name": "Patrick Vuillemin",
+		"ownerFirstName": "",
+		"ownerLastName": "",
+		"tagline": "Paysagiste à Thônex",
+		"phone": "+41794366239",
+		"email": "vuillemin-paysagiste@bluewin.ch",
+		"address": "Thônex, Suisse",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2757.9586479200557!2d6.231747376641208!3d46.270926079252064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c68d299ccb03d%3A0xce190db691c544e2!2sPatrick%20Vuillemin%2C%20Paysagiste!5e0!3m2!1sfr!2sch!4v1778249827253!5m2!1sfr!2sch",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": 8,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Thônex"],
+		"radiusKm": 20,
+		"latitude": 46.2,
+		"longitude": 6.15
+	},
+	"branding": {
+		"primaryColor": "#1B4332",
+		"secondaryColor": "#F0F4F0",
+		"accentColor": "#52B788",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/_fallback/heroes/default.webp",
+	"quizVariant": "B",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "vuillemin-paysagiste@bluewin.ch",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS PATRICK VUILLEMIN]"
+	},
+	"localMarket": {
+		"monthlySearches": 0,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Thônex"],
+	"heroPrefix": "à",
+	"heroSubline": "création et entretien de jardin",
+	"crm": {
+		"websiteUrl": null,
+		"status": "a_contacter",
+		"tier": "S",
+		"notes": ""
+	}
+}

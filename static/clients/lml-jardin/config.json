@@ -1,0 +1,101 @@
+{
+	"slug": "lml-jardin",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-08",
+	"business": {
+		"name": "LML Jardin",
+		"ownerFirstName": "",
+		"ownerLastName": "",
+		"tagline": "Paysagiste à Chêne-Bourg",
+		"phone": "+41762050424",
+		"email": "info.lmljardin@gmail.com",
+		"address": "Chêne-Bourg, Suisse",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88387.12810913667!2d5.9844505860314205!3d46.18861338466759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c6fab3c9b266f%3A0xf1689747a7d1a0ae!2sLML%20Jardin%2C%20Ferizi!5e0!3m2!1sfr!2sch!4v1778251719872!5m2!1sfr!2sch",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": 8,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Chêne-Bourg"],
+		"radiusKm": 20,
+		"latitude": 46.2,
+		"longitude": 6.15
+	},
+	"branding": {
+		"primaryColor": "#1B4332",
+		"secondaryColor": "#F0F4F0",
+		"accentColor": "#52B788",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/_fallback/heroes/default.webp",
+	"quizVariant": "B",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "info.lmljardin@gmail.com",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS LML JARDIN]"
+	},
+	"localMarket": {
+		"monthlySearches": 0,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Chêne-Bourg"],
+	"heroPrefix": "à",
+	"heroSubline": "création et entretien de jardin",
+	"crm": {
+		"websiteUrl": null,
+		"status": "a_contacter",
+		"tier": "S",
+		"notes": ""
+	}
+}

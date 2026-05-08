@@ -131,5 +131,14 @@ export const prospectConfigSchema = z.object({
 
 	heroPrefix: z.string().optional(),
 
-	heroSubline: z.string().optional()
+	heroSubline: z.string().optional(),
+
+	crm: z
+		.object({
+			websiteUrl: z.string().nullable(),
+			status: z.enum(['a_contacter', 'contacte', 'repondu', 'signe', 'pas_interesse']),
+			tier: z.enum(['S', 'A', 'B', 'C', 'D', 'E', 'F', 'G']).nullable(),
+			notes: z.string()
+		})
+		.optional()
 });

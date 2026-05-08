@@ -1,0 +1,101 @@
+{
+	"slug": "de-gand-paysage",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-08",
+	"business": {
+		"name": "De Gand Paysage",
+		"ownerFirstName": "Thomas",
+		"ownerLastName": "De Gand",
+		"tagline": "Paysagiste à Chêne-Bourg",
+		"phone": "+41786238281",
+		"email": "info@degandpaysage.ch",
+		"address": "Chêne-Bourg, Suisse",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=De%20Gand%20Paysage%20Ch%C3%AAne-Bourg&output=embed",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": 7,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Chêne-Bourg", "Chêne-Bougeries", "Genève"],
+		"radiusKm": 20,
+		"latitude": 46.1924,
+		"longitude": 6.1987
+	},
+	"branding": {
+		"primaryColor": "#2D6A4F",
+		"secondaryColor": "#F4F8F4",
+		"accentColor": "#74C69D",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/_fallback/heroes/default.webp",
+	"quizVariant": "B",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "info@degandpaysage.ch",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS DE GAND PAYSAGE]"
+	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/de-gand-paysage.png",
+		"subtitleObservation": ""
+	},
+	"localMarket": {
+		"monthlySearches": 0,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Chêne-Bourg", "Chêne-Bougeries", "Cologny", "Vandoeuvres"],
+	"transparencyNote": true,
+	"heroPrefix": "à",
+	"heroSubline": "création et entretien de jardin"
+}

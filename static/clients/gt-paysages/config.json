@@ -9,7 +9,7 @@
 		"tagline": "Paysagiste à Genève",
 		"phone": "+41788580404",
 		"email": "leads@jonlabs.ch",
-		"address": "Genève, Suisse",
+		"address": "Rue du Pré-Jérôme 19, 1205 Genève",
 		"googleProfileUrl": "https://share.google/4RFeCGDz2qxnWpjzH",
 		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=GT+Paysages+S%C3%A0rl+Gen%C3%A8ve&output=embed",
 		"logoUrl": null,
@@ -24,8 +24,8 @@
 		"googleReviewsCount": 0,
 		"zones": ["Genève"],
 		"radiusKm": 20,
-		"latitude": 46.2374947,
-		"longitude": 6.124529
+		"latitude": 46.192803,
+		"longitude": 6.146403
 	},
 	"branding": {
 		"primaryColor": "#2D5016",
@@ -33,7 +33,7 @@
 		"accentColor": "#D4A574",
 		"fontFamily": "Plus Jakarta Sans"
 	},
-	"heroImage": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop",
+	"heroImage": "/_fallback/heroes/default.webp",
 	"quizVariant": "C",
 	"services": [
 		{
@@ -148,18 +148,15 @@
 		"ccEmails": [],
 		"subjectPrefix": "[DEVIS GT PAYSAGES SÀRL]"
 	},
-
 	"salesPage": {
-		"loomVideoId": "PLACEHOLDER_LOOM_ID",
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
 		"screenshotUrl": "/screenshots/gt-paysages.png",
 		"subtitleObservation": ""
 	},
-
 	"localMarket": {
 		"monthlySearches": 320,
 		"topThreeCaptureRate": 0.5
 	},
-
 	"communes": [
 		"Genève",
 		"Carouge",
@@ -170,8 +167,12 @@
 		"Onex",
 		"Versoix"
 	],
-
 	"heroPrefix": "à",
-
-	"heroSubline": "création et entretien de jardin"
+	"heroSubline": "création et entretien de jardin",
+	"crm": {
+		"websiteUrl": null,
+		"status": "a_contacter",
+		"tier": null,
+		"notes": ""
+	}
 }

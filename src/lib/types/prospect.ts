@@ -66,6 +66,17 @@ export interface ProspectConfig {
 	communes?: string[];
 	heroPrefix?: string;
 	heroSubline?: string;
+	crm?: CrmMetadata;
+}
+
+export type CrmStatus = 'a_contacter' | 'contacte' | 'repondu' | 'signe' | 'pas_interesse';
+export type CrmTier = 'S' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G';
+
+export interface CrmMetadata {
+	websiteUrl: string | null;
+	status: CrmStatus;
+	tier: CrmTier | null;
+	notes: string;
 }
 
 export interface SalesPageConfig {

@@ -2,7 +2,6 @@
 	"slug": "demo-c",
 	"industry": "paysagiste",
 	"createdAt": "2026-04-28",
-
 	"business": {
 		"name": "Paysages de Genève",
 		"ownerFirstName": "Lucas",
@@ -15,7 +14,6 @@
 		"facebookUrl": null,
 		"instagramUrl": null
 	},
-
 	"credibility": {
 		"yearsExperience": 12,
 		"chantiersCount": 220,
@@ -26,17 +24,14 @@
 		"latitude": 46.2044,
 		"longitude": 6.1432
 	},
-
 	"branding": {
 		"primaryColor": "#1F3A1F",
 		"secondaryColor": "#F1F4EE",
 		"accentColor": "#C7956D",
 		"fontFamily": "Source Serif"
 	},
-
-	"heroImage": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1600&auto=format&fit=crop",
+	"heroImage": "/_fallback/heroes/default.webp",
 	"quizVariant": "C",
-
 	"services": [
 		{
 			"id": "creation",
@@ -66,7 +61,6 @@
 			"pricingCategory": "gazon_rouleau"
 		}
 	],
-
 	"inspirationGallery": [
 		{
 			"id": "minimaliste",
@@ -89,7 +83,6 @@
 			"label": "Jardin anglais"
 		}
 	],
-
 	"realizations": [
 		{
 			"before": null,
@@ -107,7 +100,6 @@
 			"caption": "Restauration classique à Genève"
 		}
 	],
-
 	"testimonials": [
 		{
 			"name": "Marie R.",
@@ -122,7 +114,6 @@
 			"rating": 5
 		}
 	],
-
 	"faq": [
 		{
 			"question": "Faites-vous des plans 3D du projet ?",
@@ -133,10 +124,14 @@
 			"answer": "Comptez 4 à 8 semaines entre signature et fin de pose, selon la saison."
 		}
 	],
-
 	"leadDelivery": {
 		"recipientEmail": "contact@paysages-geneve.ch",
 		"ccEmails": ["leads@jonlabs.ch"],
 		"subjectPrefix": "[DEVIS PAYSAGES GENÈVE]"
+	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/demo-c.png",
+		"subtitleObservation": ""
 	}
 }

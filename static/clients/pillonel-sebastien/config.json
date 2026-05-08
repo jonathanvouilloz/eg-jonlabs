@@ -1,0 +1,106 @@
+{
+	"slug": "pillonel-sebastien",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-08",
+	"business": {
+		"name": "Pillonel Sébastien",
+		"ownerFirstName": "Sébastien",
+		"ownerLastName": "Pillonel",
+		"tagline": "Paysagiste à Yverdon",
+		"phone": "+41794312317",
+		"email": "seb.pillonel@bluewin.ch",
+		"address": "Rue Saint-Georges 27C, 1400 Yverdon-les-Bains",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=Pillonel%20S%C3%A9bastien%20Yverdon-les-Bains&output=embed",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": 8,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Yverdon-les-Bains", "Grandson", "Orbe"],
+		"radiusKm": 25,
+		"latitude": 46.782583,
+		"longitude": 6.628955
+	},
+	"branding": {
+		"primaryColor": "#386641",
+		"secondaryColor": "#F5F7F0",
+		"accentColor": "#A7C957",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/clients/pillonel-sebastien/hero.jpg",
+	"quizVariant": "B",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "seb.pillonel@bluewin.ch",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS PILLONEL SÉBASTIEN]"
+	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/pillonel-sebastien.png",
+		"subtitleObservation": ""
+	},
+	"localMarket": {
+		"monthlySearches": 0,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Yverdon-les-Bains", "Grandson", "Orbe", "Chavornay"],
+	"heroPrefix": "à",
+	"heroSubline": "création et entretien de jardin",
+	"crm": {
+		"websiteUrl": null,
+		"status": "a_contacter",
+		"tier": "S",
+		"notes": "pas de site"
+	}
+}
