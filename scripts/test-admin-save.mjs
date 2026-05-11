@@ -89,44 +89,199 @@ async function postSave(payload) {
 const original = loadConfig();
 
 const tests = [
-	{ label: 'business.name', mutate: (c) => (c.business.name = 'GT Paysages SMOKE'), check: (c) => c.business.name === 'GT Paysages SMOKE' },
-	{ label: 'business.tagline', mutate: (c) => (c.business.tagline = 'tagline smoke 42'), check: (c) => c.business.tagline === 'tagline smoke 42' },
-	{ label: 'business.ownerFirstName', mutate: (c) => (c.business.ownerFirstName = 'Jean-Luc'), check: (c) => c.business.ownerFirstName === 'Jean-Luc' },
-	{ label: 'business.ownerLastName', mutate: (c) => (c.business.ownerLastName = 'Dupond'), check: (c) => c.business.ownerLastName === 'Dupond' },
-	{ label: 'business.phone', mutate: (c) => (c.business.phone = '+41229876543'), check: (c) => c.business.phone === '+41229876543' },
-	{ label: 'business.email', mutate: (c) => (c.business.email = 'smoke@example.ch'), check: (c) => c.business.email === 'smoke@example.ch' },
-	{ label: 'business.address', mutate: (c) => (c.business.address = 'Rue Smoke 12, 1200 Genève'), check: (c) => c.business.address === 'Rue Smoke 12, 1200 Genève' },
-	{ label: 'business.googleProfileUrl', mutate: (c) => (c.business.googleProfileUrl = 'https://share.google/smoke'), check: (c) => c.business.googleProfileUrl === 'https://share.google/smoke' },
-	{ label: 'business.googleMapsEmbedUrl', mutate: (c) => (c.business.googleMapsEmbedUrl = 'https://maps.google.com/smoke'), check: (c) => c.business.googleMapsEmbedUrl === 'https://maps.google.com/smoke' },
-	{ label: 'business.logoUrl', mutate: (c) => (c.business.logoUrl = '/clients/gt-paysages/smoke.png'), check: (c) => c.business.logoUrl === '/clients/gt-paysages/smoke.png' },
-	{ label: 'business.googleReviewUrl', mutate: (c) => (c.business.googleReviewUrl = 'https://g.page/smoke/review'), check: (c) => c.business.googleReviewUrl === 'https://g.page/smoke/review' },
-	{ label: 'business.facebookUrl', mutate: (c) => (c.business.facebookUrl = 'https://fb.com/smoke'), check: (c) => c.business.facebookUrl === 'https://fb.com/smoke' },
-	{ label: 'business.instagramUrl', mutate: (c) => (c.business.instagramUrl = 'https://ig.com/smoke'), check: (c) => c.business.instagramUrl === 'https://ig.com/smoke' },
-	{ label: 'heroImage', mutate: (c) => (c.heroImage = '/clients/gt-paysages/smoke.jpg'), check: (c) => c.heroImage === '/clients/gt-paysages/smoke.jpg' },
-	{ label: 'quizVariant', mutate: (c) => (c.quizVariant = 'C'), check: (c) => c.quizVariant === 'C' },
-	{ label: 'heroPrefix', mutate: (c) => (c.heroPrefix = 'sur'), check: (c) => c.heroPrefix === 'sur' },
-	{ label: 'heroSubline', mutate: (c) => (c.heroSubline = 'subline smoke'), check: (c) => c.heroSubline === 'subline smoke' },
-	{ label: 'credibility.yearsExperience', mutate: (c) => (c.credibility.yearsExperience = 17), check: (c) => c.credibility.yearsExperience === 17 },
-	{ label: 'credibility.chantiersCount', mutate: (c) => (c.credibility.chantiersCount = 234), check: (c) => c.credibility.chantiersCount === 234 },
-	{ label: 'credibility.googleRating', mutate: (c) => (c.credibility.googleRating = 4.7), check: (c) => c.credibility.googleRating === 4.7 },
-	{ label: 'credibility.googleReviewsCount', mutate: (c) => (c.credibility.googleReviewsCount = 89), check: (c) => c.credibility.googleReviewsCount === 89 },
-	{ label: 'credibility.zones', mutate: (c) => (c.credibility.zones = ['Genève', 'Vernier']), check: (c) => Array.isArray(c.credibility.zones) && c.credibility.zones.join('|') === 'Genève|Vernier' },
-	{ label: 'credibility.radiusKm', mutate: (c) => (c.credibility.radiusKm = 33), check: (c) => c.credibility.radiusKm === 33 },
-	{ label: 'credibility.latitude', mutate: (c) => (c.credibility.latitude = 46.5), check: (c) => c.credibility.latitude === 46.5 },
-	{ label: 'credibility.longitude', mutate: (c) => (c.credibility.longitude = 6.5), check: (c) => c.credibility.longitude === 6.5 },
-	{ label: 'leadDelivery.recipientEmail', mutate: (c) => (c.leadDelivery.recipientEmail = 'lead@smoke.ch'), check: (c) => c.leadDelivery.recipientEmail === 'lead@smoke.ch' },
-	{ label: 'leadDelivery.ccEmails', mutate: (c) => (c.leadDelivery.ccEmails = ['cc1@smoke.ch', 'cc2@smoke.ch']), check: (c) => c.leadDelivery.ccEmails.join('|') === 'cc1@smoke.ch|cc2@smoke.ch' },
-	{ label: 'leadDelivery.subjectPrefix', mutate: (c) => (c.leadDelivery.subjectPrefix = '[SMOKE]'), check: (c) => c.leadDelivery.subjectPrefix === '[SMOKE]' },
-	{ label: 'crm.status', mutate: (c) => ((c.crm = c.crm ?? {}).status = 'signe'), check: (c) => c.crm?.status === 'signe' },
-	{ label: 'crm.tier', mutate: (c) => ((c.crm = c.crm ?? {}).tier = 'B'), check: (c) => c.crm?.tier === 'B' },
-	{ label: 'crm.websiteUrl', mutate: (c) => ((c.crm = c.crm ?? {}).websiteUrl = 'https://smoke.example/'), check: (c) => c.crm?.websiteUrl === 'https://smoke.example/' },
-	{ label: 'crm.notes', mutate: (c) => ((c.crm = c.crm ?? {}).notes = 'notes smoke 12345'), check: (c) => c.crm?.notes === 'notes smoke 12345' },
-	{ label: 'branding (color tweak)', mutate: (c) => (c.branding.primaryColor = '#ABCDEF'), check: (c) => c.branding.primaryColor.toUpperCase() === '#ABCDEF' },
-	{ label: 'services (count change)', mutate: (c) => (c.services = c.services.slice(0, 1)), check: (c) => c.services.length === 1 },
-	{ label: 'realizations (push)', mutate: (c) => (c.realizations = [{ before: null, after: 'https://x/y.jpg', caption: 'smoke' }]), check: (c) => c.realizations.length === 1 && c.realizations[0].caption === 'smoke' },
-	{ label: 'testimonials (push)', mutate: (c) => (c.testimonials = [{ name: 'Smoke', location: 'Genève', text: 'top', rating: 5 }]), check: (c) => c.testimonials[0]?.name === 'Smoke' },
-	{ label: 'faq (push)', mutate: (c) => (c.faq = [{ question: 'q smoke ?', answer: 'a smoke.' }]), check: (c) => c.faq[0]?.question === 'q smoke ?' },
-	{ label: 'communes', mutate: (c) => (c.communes = ['SmokeVille']), check: (c) => c.communes?.[0] === 'SmokeVille' }
+	{
+		label: 'business.name',
+		mutate: (c) => (c.business.name = 'GT Paysages SMOKE'),
+		check: (c) => c.business.name === 'GT Paysages SMOKE'
+	},
+	{
+		label: 'business.tagline',
+		mutate: (c) => (c.business.tagline = 'tagline smoke 42'),
+		check: (c) => c.business.tagline === 'tagline smoke 42'
+	},
+	{
+		label: 'business.ownerFirstName',
+		mutate: (c) => (c.business.ownerFirstName = 'Jean-Luc'),
+		check: (c) => c.business.ownerFirstName === 'Jean-Luc'
+	},
+	{
+		label: 'business.ownerLastName',
+		mutate: (c) => (c.business.ownerLastName = 'Dupond'),
+		check: (c) => c.business.ownerLastName === 'Dupond'
+	},
+	{
+		label: 'business.phone',
+		mutate: (c) => (c.business.phone = '+41229876543'),
+		check: (c) => c.business.phone === '+41229876543'
+	},
+	{
+		label: 'business.email',
+		mutate: (c) => (c.business.email = 'smoke@example.ch'),
+		check: (c) => c.business.email === 'smoke@example.ch'
+	},
+	{
+		label: 'business.address',
+		mutate: (c) => (c.business.address = 'Rue Smoke 12, 1200 Genève'),
+		check: (c) => c.business.address === 'Rue Smoke 12, 1200 Genève'
+	},
+	{
+		label: 'business.googleProfileUrl',
+		mutate: (c) => (c.business.googleProfileUrl = 'https://share.google/smoke'),
+		check: (c) => c.business.googleProfileUrl === 'https://share.google/smoke'
+	},
+	{
+		label: 'business.googleMapsEmbedUrl',
+		mutate: (c) => (c.business.googleMapsEmbedUrl = 'https://maps.google.com/smoke'),
+		check: (c) => c.business.googleMapsEmbedUrl === 'https://maps.google.com/smoke'
+	},
+	{
+		label: 'business.logoUrl',
+		mutate: (c) => (c.business.logoUrl = '/clients/gt-paysages/smoke.png'),
+		check: (c) => c.business.logoUrl === '/clients/gt-paysages/smoke.png'
+	},
+	{
+		label: 'business.googleReviewUrl',
+		mutate: (c) => (c.business.googleReviewUrl = 'https://g.page/smoke/review'),
+		check: (c) => c.business.googleReviewUrl === 'https://g.page/smoke/review'
+	},
+	{
+		label: 'business.facebookUrl',
+		mutate: (c) => (c.business.facebookUrl = 'https://fb.com/smoke'),
+		check: (c) => c.business.facebookUrl === 'https://fb.com/smoke'
+	},
+	{
+		label: 'business.instagramUrl',
+		mutate: (c) => (c.business.instagramUrl = 'https://ig.com/smoke'),
+		check: (c) => c.business.instagramUrl === 'https://ig.com/smoke'
+	},
+	{
+		label: 'heroImage',
+		mutate: (c) => (c.heroImage = '/clients/gt-paysages/smoke.jpg'),
+		check: (c) => c.heroImage === '/clients/gt-paysages/smoke.jpg'
+	},
+	{
+		label: 'quizVariant',
+		mutate: (c) => (c.quizVariant = 'C'),
+		check: (c) => c.quizVariant === 'C'
+	},
+	{
+		label: 'heroPrefix',
+		mutate: (c) => (c.heroPrefix = 'sur'),
+		check: (c) => c.heroPrefix === 'sur'
+	},
+	{
+		label: 'heroSubline',
+		mutate: (c) => (c.heroSubline = 'subline smoke'),
+		check: (c) => c.heroSubline === 'subline smoke'
+	},
+	{
+		label: 'credibility.yearsExperience',
+		mutate: (c) => (c.credibility.yearsExperience = 17),
+		check: (c) => c.credibility.yearsExperience === 17
+	},
+	{
+		label: 'credibility.chantiersCount',
+		mutate: (c) => (c.credibility.chantiersCount = 234),
+		check: (c) => c.credibility.chantiersCount === 234
+	},
+	{
+		label: 'credibility.googleRating',
+		mutate: (c) => (c.credibility.googleRating = 4.7),
+		check: (c) => c.credibility.googleRating === 4.7
+	},
+	{
+		label: 'credibility.googleReviewsCount',
+		mutate: (c) => (c.credibility.googleReviewsCount = 89),
+		check: (c) => c.credibility.googleReviewsCount === 89
+	},
+	{
+		label: 'credibility.zones',
+		mutate: (c) => (c.credibility.zones = ['Genève', 'Vernier']),
+		check: (c) =>
+			Array.isArray(c.credibility.zones) && c.credibility.zones.join('|') === 'Genève|Vernier'
+	},
+	{
+		label: 'credibility.radiusKm',
+		mutate: (c) => (c.credibility.radiusKm = 33),
+		check: (c) => c.credibility.radiusKm === 33
+	},
+	{
+		label: 'credibility.latitude',
+		mutate: (c) => (c.credibility.latitude = 46.5),
+		check: (c) => c.credibility.latitude === 46.5
+	},
+	{
+		label: 'credibility.longitude',
+		mutate: (c) => (c.credibility.longitude = 6.5),
+		check: (c) => c.credibility.longitude === 6.5
+	},
+	{
+		label: 'leadDelivery.recipientEmail',
+		mutate: (c) => (c.leadDelivery.recipientEmail = 'lead@smoke.ch'),
+		check: (c) => c.leadDelivery.recipientEmail === 'lead@smoke.ch'
+	},
+	{
+		label: 'leadDelivery.ccEmails',
+		mutate: (c) => (c.leadDelivery.ccEmails = ['cc1@smoke.ch', 'cc2@smoke.ch']),
+		check: (c) => c.leadDelivery.ccEmails.join('|') === 'cc1@smoke.ch|cc2@smoke.ch'
+	},
+	{
+		label: 'leadDelivery.subjectPrefix',
+		mutate: (c) => (c.leadDelivery.subjectPrefix = '[SMOKE]'),
+		check: (c) => c.leadDelivery.subjectPrefix === '[SMOKE]'
+	},
+	{
+		label: 'crm.status',
+		mutate: (c) => ((c.crm = c.crm ?? {}).status = 'signe'),
+		check: (c) => c.crm?.status === 'signe'
+	},
+	{
+		label: 'crm.tier',
+		mutate: (c) => ((c.crm = c.crm ?? {}).tier = 'B'),
+		check: (c) => c.crm?.tier === 'B'
+	},
+	{
+		label: 'crm.websiteUrl',
+		mutate: (c) => ((c.crm = c.crm ?? {}).websiteUrl = 'https://smoke.example/'),
+		check: (c) => c.crm?.websiteUrl === 'https://smoke.example/'
+	},
+	{
+		label: 'crm.notes',
+		mutate: (c) => ((c.crm = c.crm ?? {}).notes = 'notes smoke 12345'),
+		check: (c) => c.crm?.notes === 'notes smoke 12345'
+	},
+	{
+		label: 'branding (color tweak)',
+		mutate: (c) => (c.branding.primaryColor = '#ABCDEF'),
+		check: (c) => c.branding.primaryColor.toUpperCase() === '#ABCDEF'
+	},
+	{
+		label: 'services (count change)',
+		mutate: (c) => (c.services = c.services.slice(0, 1)),
+		check: (c) => c.services.length === 1
+	},
+	{
+		label: 'realizations (push)',
+		mutate: (c) =>
+			(c.realizations = [{ before: null, after: 'https://x/y.jpg', caption: 'smoke' }]),
+		check: (c) => c.realizations.length === 1 && c.realizations[0].caption === 'smoke'
+	},
+	{
+		label: 'testimonials (push)',
+		mutate: (c) =>
+			(c.testimonials = [{ name: 'Smoke', location: 'Genève', text: 'top', rating: 5 }]),
+		check: (c) => c.testimonials[0]?.name === 'Smoke'
+	},
+	{
+		label: 'faq (push)',
+		mutate: (c) => (c.faq = [{ question: 'q smoke ?', answer: 'a smoke.' }]),
+		check: (c) => c.faq[0]?.question === 'q smoke ?'
+	},
+	{
+		label: 'communes',
+		mutate: (c) => (c.communes = ['SmokeVille']),
+		check: (c) => c.communes?.[0] === 'SmokeVille'
+	}
 ];
 
 const results = [];
