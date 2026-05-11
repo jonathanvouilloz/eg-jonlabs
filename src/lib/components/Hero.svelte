@@ -6,6 +6,16 @@
 	let mainZone = $derived(config.credibility.zones[0] ?? 'votre commune');
 	let prefix = $derived(config.heroPrefix ?? 'à');
 	let subline = $derived(config.heroSubline ?? config.business.tagline);
+	let heroH1Lines = $derived.by(() => {
+		const custom = config.heroH1?.trim();
+		if (custom) {
+			return custom
+				.split('\n')
+				.map((s) => s.trim())
+				.filter(Boolean);
+		}
+		return null;
+	});
 </script>
 
 <section
@@ -20,8 +30,15 @@
 			class="max-w-[20ch] text-[clamp(2.75rem,7.5vw,6rem)] font-medium leading-[1.05] text-white"
 			style="text-shadow: 0 2px 32px oklch(0% 0 0 / 0.3);"
 		>
-			Votre paysagiste<br />
-			<span class="italic" style="color: #E8F0CA;">{prefix} {mainZone}</span> - {subline}
+			{#if heroH1Lines}
+				{#each heroH1Lines as line, i (i)}
+					{#if i === 0}{line}{:else}<br /><span class="italic" style="color: #E8F0CA;">{line}</span
+						>{/if}
+				{/each}
+			{:else}
+				Votre paysagiste<br />
+				<span class="italic" style="color: #E8F0CA;">{prefix} {mainZone}</span> - {subline}
+			{/if}
 		</h1>
 
 		<a

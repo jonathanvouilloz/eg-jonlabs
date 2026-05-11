@@ -28,7 +28,7 @@
 					<img
 						src={service.image}
 						alt={service.label}
-						class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-103"
+						class="service-image absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-103"
 						loading="lazy"
 					/>
 				{:else}
@@ -68,3 +68,14 @@
 	</div>
 	<p class="mt-4 text-xs text-text-muted">Sélectionnez pour continuer</p>
 </div>
+
+<style>
+	.service-image {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		max-width: none;
+		object-fit: cover;
+	}
+</style>

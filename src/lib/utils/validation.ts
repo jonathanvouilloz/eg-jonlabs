@@ -133,6 +133,8 @@ export const prospectConfigSchema = z.object({
 
 	heroSubline: z.string().optional(),
 
+	heroH1: z.string().optional(),
+
 	crm: z
 		.object({
 			websiteUrl: z.string().nullable(),

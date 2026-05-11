@@ -15,7 +15,7 @@
 
 	let { config }: { config: ProspectConfig } = $props();
 
-	const quiz = createQuizState(config.quizVariant, config.services);
+	const quiz = createQuizState(config.quizVariant, config.services, config.business.address ?? '');
 
 	function handleUpdate(field: string, value: string | boolean) {
 		if (field === 'consentGdpr') {

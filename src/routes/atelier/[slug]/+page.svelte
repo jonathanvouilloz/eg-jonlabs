@@ -9,6 +9,17 @@
 	let config = $derived(data.config);
 
 	let mainZone = $derived(config.credibility.zones[0] ?? 'votre commune');
+	let heroPrefix = $derived(config.heroPrefix ?? 'à');
+	let heroH1Lines = $derived.by(() => {
+		const custom = config.heroH1?.trim();
+		if (custom) {
+			return custom
+				.split('\n')
+				.map((s) => s.trim())
+				.filter(Boolean);
+		}
+		return ['Votre paysagiste', `${heroPrefix} ${mainZone}.`];
+	});
 	let zonesList = $derived(
 		config.communes && config.communes.length > 0 ? config.communes : config.credibility.zones
 	);
@@ -78,9 +89,9 @@
 	const galleryFilters = ['Tout', 'Création', 'Entretien', 'Aménagement', 'Détail'];
 
 	const palTabs = [
-		'Arbres & structure',
+		'Arbres et structure',
 		'Arbustes',
-		'Vivaces & graminées',
+		'Vivaces et graminées',
 		'Couvre-sol',
 		'Aromatiques'
 	];
@@ -296,7 +307,8 @@
 	<!-- NAV -->
 	<nav class="nav">
 		<div class="brand">
-			{config.business.name} <small>{zonesTrust.slice(0, 2).join(' · ')}</small>
+			{config.business.name}{#if config.business.address}<small>{config.business.address}</small
+				>{/if}
 		</div>
 		<div class="links">
 			<a href="#projets">Projets</a>
@@ -323,7 +335,11 @@
 						<span class="sep"></span>
 						<span>Suisse romande</span>
 					</div>
-					<h1>L'art du<br /><em>jardin vivant.</em></h1>
+					<h1>
+						{#each heroH1Lines as line, i (i)}
+							{#if i === 0}{line}{:else}<br /><em>{line}</em>{/if}
+						{/each}
+					</h1>
 					<div class="actions">
 						<a href="#devis" class="btn">
 							Prendre rendez-vous
@@ -355,7 +371,7 @@
 	<!-- 2. TRUST BAR -->
 	<section class="trust" id="zones">
 		<div class="row">
-			<div class="label">Zones d'intervention &<br />références professionnelles</div>
+			<div class="label">Zones d'intervention et<br />références professionnelles</div>
 			<div class="clients">
 				{#each zonesTrust as zone, i (zone)}
 					<span>{zone}</span>
@@ -615,7 +631,7 @@
 					itérations en moyenne avant validation finale.
 				</p>
 				<div class="deliverables">
-					<span>Plans 1/200 & 1/50</span>
+					<span>Plans 1/200 et 1/50</span>
 					<span>Échantillons matériaux</span>
 					<span>Liste botanique</span>
 				</div>
@@ -729,10 +745,10 @@
 				<div class="mt fill">
 					<div>
 						<div class="v">
-							{config.credibility.chantiersCount ?? realizations.length}<sup>+</sup>
+							{config.credibility.chantiersCount ?? (realizations.length || 15)}<sup>+</sup>
 						</div>
 					</div>
-					<div class="lbl">jardins privés réalisés</div>
+					<div class="lbl">projets réalisés</div>
 				</div>
 				<div class="mt">
 					<div>

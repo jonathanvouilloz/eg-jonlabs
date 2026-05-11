@@ -41,6 +41,7 @@
 	let quizVariant = $state(c.quizVariant);
 	let heroPrefix = $state(c.heroPrefix ?? 'à');
 	let heroSubline = $state(c.heroSubline ?? '');
+	let heroH1 = $state(c.heroH1 ?? '');
 	let createdAt = $state(c.createdAt);
 
 	let recipientEmail = $state(c.leadDelivery.recipientEmail);
@@ -270,6 +271,26 @@
 							required
 							class="mt-1 w-full rounded border border-slate-300 px-3 py-2 text-sm"
 						/>
+					</label>
+
+					<label class="block sm:col-span-2">
+						<span class="text-xs font-medium text-slate-700">
+							Hero H1 personnalisé
+							<span class="font-normal text-slate-500"
+								>— override complet du H1 (laisser vide pour le default)</span
+							>
+						</span>
+						<textarea
+							name="heroH1"
+							bind:value={heroH1}
+							rows="2"
+							placeholder={`Votre paysagiste\n${heroPrefix} ${(zones.split(',')[0] ?? '').trim() || 'votre commune'}.`}
+							class="mt-1 w-full rounded border border-slate-300 px-3 py-2 font-mono text-sm"
+						></textarea>
+						<span class="mt-1 block text-[11px] text-slate-500">
+							Ligne 1 = top (normal). Ligne 2+ = italique accent. Saut de ligne = nouvelle ligne du
+							H1.
+						</span>
 					</label>
 
 					<label class="block">

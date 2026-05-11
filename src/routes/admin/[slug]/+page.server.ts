@@ -162,6 +162,7 @@ function buildConfigFromForm(
 		},
 		heroPrefix: String(data.get('heroPrefix') ?? '').trim() || undefined,
 		heroSubline: String(data.get('heroSubline') ?? '').trim() || undefined,
+		heroH1: String(data.get('heroH1') ?? '').trim() || undefined,
 		crm: {
 			websiteUrl: nullableStr('crmWebsiteUrl'),
 			status: (() => {

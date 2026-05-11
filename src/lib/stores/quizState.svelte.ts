@@ -75,7 +75,11 @@ function canProceedForStep(step: StepKey, answers: QuizAnswers): boolean {
 	}
 }
 
-export function createQuizState(variant: QuizVariant, _services: ProspectService[]) {
+export function createQuizState(
+	variant: QuizVariant,
+	_services: ProspectService[],
+	initialCommune: string = ''
+) {
 	let currentStep = $state(0);
 	let direction = $state<1 | -1>(1);
 	let answers = $state<QuizAnswers>({
@@ -84,7 +88,7 @@ export function createQuizState(variant: QuizVariant, _services: ProspectService
 		inspirationIds: [],
 		timing: '',
 		timingLabel: '',
-		commune: '',
+		commune: initialCommune,
 		surface: '',
 		surfaceLabel: '',
 		contact: {
@@ -136,7 +140,7 @@ export function createQuizState(variant: QuizVariant, _services: ProspectService
 			inspirationIds: [],
 			timing: '',
 			timingLabel: '',
-			commune: '',
+			commune: initialCommune,
 			surface: '',
 			surfaceLabel: '',
 			contact: {

@@ -66,6 +66,7 @@ export interface ProspectConfig {
 	communes?: string[];
 	heroPrefix?: string;
 	heroSubline?: string;
+	heroH1?: string;
 	crm?: CrmMetadata;
 }
 
