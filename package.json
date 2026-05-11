@@ -14,7 +14,8 @@
 		"format": "prettier --write .",
 		"test": "vitest run",
 		"test:watch": "vitest",
-		"check-client": "node scripts/check-client.js"
+		"check-client": "node scripts/check-client.js",
+		"screenshots": "node scripts/generate-screenshots.mjs"
 	},
 	"lint-staged": {
 		"*.{js,ts,svelte}": [
@@ -39,6 +40,7 @@
 		"globals": "^17.5.0",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.4.0",
+		"playwright": "^1.59.1",
 		"prettier": "^3.8.3",
 		"prettier-plugin-svelte": "^3.5.1",
 		"svelte": "^5.55.2",
