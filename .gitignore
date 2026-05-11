@@ -11,6 +11,9 @@ node_modules
 # paysagiste-audit workspace (local)
 .audits/
 
+# Claude Design handoff bundles (local)
+.design-imports/
+
 # Claude Code local settings
 .claude/
 
