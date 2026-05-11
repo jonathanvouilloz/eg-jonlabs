@@ -86,7 +86,7 @@
 		"subjectPrefix": "[DEVIS MARTIN ET MARTIN]"
 	},
 	"localMarket": {
-		"monthlySearches": 0,
+		"monthlySearches": 500,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Collonge-Bellerive"],

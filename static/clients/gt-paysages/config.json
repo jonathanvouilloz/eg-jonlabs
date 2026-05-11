@@ -154,7 +154,7 @@
 		"subtitleObservation": ""
 	},
 	"localMarket": {
-		"monthlySearches": 320,
+		"monthlySearches": 1000,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": [

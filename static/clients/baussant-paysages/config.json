@@ -86,7 +86,7 @@
 		"subjectPrefix": "[DEVIS BAUSSANT PAYSAGES]"
 	},
 	"localMarket": {
-		"monthlySearches": 0,
+		"monthlySearches": 500,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Thonex"],

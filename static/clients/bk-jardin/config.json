@@ -86,7 +86,7 @@
 		"subjectPrefix": "[DEVIS BK JARDIN]"
 	},
 	"localMarket": {
-		"monthlySearches": 0,
+		"monthlySearches": 1000,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Genève"],

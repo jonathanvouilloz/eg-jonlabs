@@ -86,7 +86,7 @@
 		"subjectPrefix": "[DEVIS SITEL]"
 	},
 	"localMarket": {
-		"monthlySearches": 0,
+		"monthlySearches": 500,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Puplinge et Bernex"],

@@ -91,12 +91,13 @@
 		"subtitleObservation": ""
 	},
 	"localMarket": {
-		"monthlySearches": 0,
+		"monthlySearches": 500,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Neuchâtel", "Hauterive", "Peseux", "Auvernier"],
 	"heroPrefix": "à",
 	"heroSubline": "création et entretien de jardin",
+	"heroH1": "Auberson Jardins\nPaysagiste à Neuchâtel",
 	"crm": {
 		"websiteUrl": "http://www.arnaudaubersonjardins.ch/",
 		"status": "a_contacter",
