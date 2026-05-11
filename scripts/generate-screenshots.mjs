@@ -52,7 +52,7 @@ function log(icon, msg) {
 	console.log(`${icon} ${msg}`);
 }
 
-function listProspects() {
+function listProspects({ requireSalesPage = true } = {}) {
 	const slugs = [];
 	for (const entry of readdirSync(CLIENTS_DIR, { withFileTypes: true })) {
 		if (!entry.isDirectory()) continue;
@@ -68,8 +68,10 @@ function listProspects() {
 			continue;
 		}
 
-		const screenshotUrl = config?.salesPage?.screenshotUrl;
-		if (!screenshotUrl) continue;
+		if (requireSalesPage) {
+			const screenshotUrl = config?.salesPage?.screenshotUrl;
+			if (!screenshotUrl) continue;
+		}
 
 		slugs.push(entry.name);
 	}
@@ -171,11 +173,14 @@ async function main() {
 		log('📁', `Création de static/screenshots/`);
 	}
 
-	let prospects = listProspects();
-	if (onlySlug && onlySlug !== true) {
-		prospects = prospects.filter((s) => s === onlySlug);
+	// Si --slug est passé, on accepte les slugs explicitement même sans salesPage
+	const explicit = onlySlug && onlySlug !== true;
+	let prospects = listProspects({ requireSalesPage: !explicit });
+	if (explicit) {
+		const targets = new Set(String(onlySlug).split(',').map((s) => s.trim()).filter(Boolean));
+		prospects = prospects.filter((s) => targets.has(s));
 		if (prospects.length === 0) {
-			log('❌', `Aucun prospect "${onlySlug}" avec salesPage.screenshotUrl trouvé`);
+			log('❌', `Aucun prospect ne matche "${onlySlug}"`);
 			process.exit(1);
 		}
 	}

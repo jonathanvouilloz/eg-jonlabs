@@ -10,7 +10,7 @@
 	let observation = $derived(salesPage?.subtitleObservation ?? '');
 	let screenshotUrl = $derived(salesPage?.screenshotUrl ?? '');
 	let loomVideoId = $derived(salesPage?.loomVideoId ?? '');
-	let siteUrl = $derived(`/site/${config.slug}`);
+	let siteUrl = $derived(`/atelier/${config.slug}`);
 </script>
 
 <svelte:head>

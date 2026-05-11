@@ -88,12 +88,12 @@
 			</div>
 			<div class="flex gap-2">
 				<a
-					href="/site/{data.slug}"
+					href="/atelier/{data.slug}"
 					target="_blank"
 					rel="noopener"
 					class="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-600 hover:bg-slate-100"
 				>
-					↗ Voir le site
+					↗ Voir l'atelier
 				</a>
 				<a
 					href="/landing/{data.slug}"

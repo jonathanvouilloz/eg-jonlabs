@@ -219,11 +219,11 @@
 							<td class="px-4 py-3 text-right">
 								<div class="flex justify-end gap-2">
 									<a
-										href="/site/{p.slug}"
+										href="/atelier/{p.slug}"
 										target="_blank"
 										rel="noopener"
 										class="rounded border border-slate-300 px-2 py-1 text-xs text-slate-600 hover:bg-slate-100"
-										title="Voir le mock site"
+										title="Voir l'atelier"
 									>
 										↗
 									</a>
