@@ -20,8 +20,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const CLIENTS_DIR = join(__dirname, '..', 'static', 'clients');
 const dryRun = process.argv.includes('--dry-run');
 
-const GENEVE_VALUE = 1000;
-const DEFAULT_VALUE = 500;
+const GENEVE_VALUE = 500;
+const DEFAULT_VALUE = 200;
 const SKIP = new Set(['_template', 'demo', 'demo-c', 'demo-d']);
 
 function normalize(s) {

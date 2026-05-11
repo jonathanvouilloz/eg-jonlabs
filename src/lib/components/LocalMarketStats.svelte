@@ -1,7 +1,12 @@
 <script lang="ts">
 	import type { LocalMarketConfig } from '$types/prospect';
 
-	let { localMarket, mainZone }: { localMarket: LocalMarketConfig; mainZone: string } = $props();
+	const DEFAULT_MARKET: LocalMarketConfig = { monthlySearches: 200, topThreeCaptureRate: 0.5 };
+
+	let {
+		localMarket = DEFAULT_MARKET,
+		mainZone
+	}: { localMarket?: LocalMarketConfig; mainZone: string } = $props();
 
 	let captureRatePct = $derived(Math.round(localMarket.topThreeCaptureRate * 100));
 </script>

@@ -72,11 +72,9 @@
 	</main>
 	<Footer {config} />
 
-	{#if config.localMarket}
-		<MetaAnnotation anchorSelector="#zones" label="Le marché local en chiffres">
-			<LocalMarketStats localMarket={config.localMarket} {mainZone} />
-		</MetaAnnotation>
-	{/if}
+	<MetaAnnotation anchorSelector="#zones" label="Le marché local en chiffres">
+		<LocalMarketStats localMarket={config.localMarket} {mainZone} />
+	</MetaAnnotation>
 
 	<MetaAnnotation anchorSelector="#cta-final" label="Comment ça te fait monter sur Google">
 		<SeoEducation communes={communesForSeo} />
