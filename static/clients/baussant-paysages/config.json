@@ -11,7 +11,7 @@
 		"email": "christian.schnegg@baussant.ch",
 		"address": "Thonex, Suisse",
 		"googleProfileUrl": null,
-		"googleMapsEmbedUrl": "https://maps.app.goo.gl/ZDuJ8nRe8CQRx5kJ6",
+		"googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.4405429193703!2d6.184761076637341!3d46.181791385274316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c700eb98f5615%3A0x4991b2f2df4a94e1!2sBaussant%20Paysages%20SA!5e0!3m2!1sfr!2sch!4v1778503603339!5m2!1sfr!2sch",
 		"logoUrl": null,
 		"googleReviewUrl": null,
 		"facebookUrl": null,
@@ -92,6 +92,7 @@
 	"communes": ["Thonex"],
 	"heroPrefix": "à",
 	"heroSubline": "création et entretien de jardin",
+	"heroH1": "Baussant Paysages\nJardin à Thônex",
 	"crm": {
 		"websiteUrl": null,
 		"status": "a_contacter",

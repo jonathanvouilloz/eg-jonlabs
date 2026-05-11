@@ -3,7 +3,7 @@
 	"industry": "paysagiste",
 	"createdAt": "2026-05-08",
 	"business": {
-		"name": "Aux jardin d'éloise",
+		"name": "Aux jardins d'Eloïse",
 		"ownerFirstName": "",
 		"ownerLastName": "",
 		"tagline": "Paysagiste à Bernex",
@@ -11,7 +11,7 @@
 		"email": "contact@auxjardinsdeloise.ch",
 		"address": "Bernex, Suisse",
 		"googleProfileUrl": null,
-		"googleMapsEmbedUrl": "https://maps.app.goo.gl/GsGiFmv5ZXdfuhT77",
+		"googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.2751434294137!2d6.053497276636622!3d46.1651783863956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c7cf7bf94f9a1%3A0x3f95526d7891e5d6!2sAux%20Jardins%20d%20Elo%C3%AFse%20S%C3%A0rl!5e0!3m2!1sfr!2sch!4v1778503520218!5m2!1sfr!2sch",
 		"logoUrl": null,
 		"googleReviewUrl": null,
 		"facebookUrl": null,
@@ -92,6 +92,7 @@
 	"communes": ["Bernex"],
 	"heroPrefix": "à",
 	"heroSubline": "création et entretien de jardin",
+	"heroH1": "Aux jardins d'Eloïse",
 	"crm": {
 		"websiteUrl": "http://www.auxjardinsdeloise.ch/contact.html",
 		"status": "a_contacter",

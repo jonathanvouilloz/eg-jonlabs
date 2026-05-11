@@ -9,7 +9,7 @@
 		"tagline": "Paysagiste à genève",
 		"phone": "+41227948066",
 		"email": "administration@leonelli.ch",
-		"address": "genève, Suisse",
+		"address": "Confignon, Suisse",
 		"googleProfileUrl": null,
 		"googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11045.229363644989!2d6.19709645!3d46.20434074999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c7b0d52f357cb%3A0xf8d34215d1266abc!2sLeonelli%20%26%20Fils!5e0!3m2!1sfr!2sch!4v1778249230525!5m2!1sfr!2sch",
 		"logoUrl": null,
@@ -92,10 +92,11 @@
 	"communes": ["genève"],
 	"heroPrefix": "à",
 	"heroSubline": "création et entretien de jardin",
+	"heroH1": "Paysagiste Leonelli\nJardins à Confignon",
 	"crm": {
 		"websiteUrl": null,
 		"status": "a_contacter",
-		"tier": "S",
+		"tier": "D",
 		"notes": ""
 	}
 }

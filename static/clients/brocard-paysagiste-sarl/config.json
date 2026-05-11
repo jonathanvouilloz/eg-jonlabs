@@ -9,7 +9,7 @@
 		"tagline": "Paysagiste à Rueyres",
 		"phone": "+41794292671",
 		"email": "brocardpaysagiste@outlook.com",
-		"address": "Rueyres, Suisse",
+		"address": "Route de l'Eglise 15, 1046 Rueyres",
 		"googleProfileUrl": null,
 		"googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208904.60743978832!2d6.393413211669389!3d46.53187928214808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478dd23a1ec4e3ed%3A0x639ae176e805a594!2sBrocard%20Paysagiste%20S%C3%A0rl!5e0!3m2!1sfr!2sch!4v1778250523811!5m2!1sfr!2sch",
 		"logoUrl": null,
@@ -92,10 +92,11 @@
 	"communes": ["Rueyres"],
 	"heroPrefix": "à",
 	"heroSubline": "création et entretien de jardin",
+	"heroH1": "Votre paysagiste\nà Rueyres",
 	"crm": {
 		"websiteUrl": null,
 		"status": "a_contacter",
 		"tier": "S",
-		"notes": ""
+		"notes": "pas à genève"
 	}
 }
