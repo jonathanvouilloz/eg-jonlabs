@@ -154,7 +154,7 @@
 		"subtitleObservation": ""
 	},
 	"localMarket": {
-		"monthlySearches": 1000,
+		"monthlySearches": 500,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": [
@@ -172,7 +172,7 @@
 	"crm": {
 		"websiteUrl": null,
 		"status": "a_contacter",
-		"tier": null,
+		"tier": "S",
 		"notes": ""
 	}
 }

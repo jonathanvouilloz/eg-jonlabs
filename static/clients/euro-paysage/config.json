@@ -1,0 +1,101 @@
+{
+	"slug": "euro-paysage",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-11",
+	"business": {
+		"name": "EuroPaysage",
+		"ownerFirstName": "",
+		"ownerLastName": "",
+		"tagline": "Paysagiste à Genève",
+		"phone": "+41223440934",
+		"email": "info@europaysage.ch",
+		"address": "Avenue d'Aïre 95, 1203 Genève",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=EuroPaysage%20Gen%C3%A8ve&output=embed",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": 15,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Genève", "Meyrin", "Vernier", "Lancy"],
+		"radiusKm": 20,
+		"latitude": 46.196,
+		"longitude": 6.115
+	},
+	"branding": {
+		"primaryColor": "#1B4332",
+		"secondaryColor": "#F0F4F0",
+		"accentColor": "#52B788",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/_fallback/heroes/default.webp",
+	"quizVariant": "B",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "info@europaysage.ch",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS EUROPAYSAGE]"
+	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/euro-paysage.png",
+		"subtitleObservation": ""
+	},
+	"localMarket": {
+		"monthlySearches": 200,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Genève", "Meyrin", "Vernier", "Lancy", "Carouge", "Onex"],
+	"transparencyNote": true,
+	"heroPrefix": "à",
+	"heroSubline": "création et entretien de jardin"
+}

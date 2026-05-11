@@ -86,7 +86,7 @@
 		"subjectPrefix": "[DEVIS JARDIN ESSENTIEL]"
 	},
 	"localMarket": {
-		"monthlySearches": 500,
+		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Choulex"],

@@ -1,0 +1,101 @@
+{
+	"slug": "iuncker-paysage",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-11",
+	"business": {
+		"name": "Iuncker Paysage",
+		"ownerFirstName": "Johan",
+		"ownerLastName": "Iuncker",
+		"tagline": "Paysagiste à Bernex",
+		"phone": "+41791764975",
+		"email": "johan@iuncker.ch",
+		"address": "1233 Bernex",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=Iuncker%20Paysage%20Bernex&output=embed",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": null,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Bernex", "Onex", "Confignon", "Plan-les-Ouates"],
+		"radiusKm": 20,
+		"latitude": 46.17,
+		"longitude": 6.0897
+	},
+	"branding": {
+		"primaryColor": "#1B4332",
+		"secondaryColor": "#F0F4F0",
+		"accentColor": "#52B788",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/_fallback/heroes/default.webp",
+	"quizVariant": "A",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "johan@iuncker.ch",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS IUNCKER PAYSAGE]"
+	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/iuncker-paysage.png",
+		"subtitleObservation": ""
+	},
+	"localMarket": {
+		"monthlySearches": 150,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Bernex", "Onex", "Confignon", "Plan-les-Ouates", "Lancy", "Carouge"],
+	"transparencyNote": true,
+	"heroPrefix": "à",
+	"heroSubline": "création et entretien de jardin"
+}

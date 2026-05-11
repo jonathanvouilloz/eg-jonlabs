@@ -1,0 +1,101 @@
+{
+	"slug": "vincent-ecopaysage",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-11",
+	"business": {
+		"name": "Vincent ecopaysage",
+		"ownerFirstName": "Vincent",
+		"ownerLastName": "Frei",
+		"tagline": "Paysagiste à Troinex",
+		"phone": "+41792852697",
+		"email": null,
+		"address": "Chemin de Roday 52, 1256 Troinex",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=Vincent%20ecopaysage%20Troinex&output=embed",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": 6,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Troinex", "Plan-les-Ouates", "Carouge", "Lancy"],
+		"radiusKm": 20,
+		"latitude": 46.1575,
+		"longitude": 6.1676
+	},
+	"branding": {
+		"primaryColor": "#1B4332",
+		"secondaryColor": "#F0F4F0",
+		"accentColor": "#52B788",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/_fallback/heroes/default.webp",
+	"quizVariant": "A",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "leads@jonlabs.ch",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS VINCENT ECOPAYSAGE]"
+	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/vincent-ecopaysage.png",
+		"subtitleObservation": ""
+	},
+	"localMarket": {
+		"monthlySearches": 150,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Troinex", "Plan-les-Ouates", "Carouge", "Lancy", "Onex", "Bernex"],
+	"transparencyNote": true,
+	"heroPrefix": "à",
+	"heroSubline": "création et entretien de jardin"
+}

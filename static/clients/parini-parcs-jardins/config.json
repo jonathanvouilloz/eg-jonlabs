@@ -1,0 +1,101 @@
+{
+	"slug": "parini-parcs-jardins",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-11",
+	"business": {
+		"name": "Entreprise S.Parini Parcs & Jardins SA",
+		"ownerFirstName": "Giorgio",
+		"ownerLastName": "Parini",
+		"tagline": "Paysagiste à Corsier",
+		"phone": "+41227512934",
+		"email": "entreparis@bluewin.ch",
+		"address": "Route de Thonon 232, 1246 Corsier",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=Parini%20Parcs%20Jardins%20Corsier&output=embed",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": 60,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Corsier", "Hermance", "Anières", "Collonge-Bellerive"],
+		"radiusKm": 20,
+		"latitude": 46.308,
+		"longitude": 6.35
+	},
+	"branding": {
+		"primaryColor": "#1A1A2E",
+		"secondaryColor": "#F5F5F7",
+		"accentColor": "#7B9E87",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/_fallback/heroes/default.webp",
+	"quizVariant": "B",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "entreparis@bluewin.ch",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS PARINI PARCS & JARDINS]"
+	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/parini-parcs-jardins.png",
+		"subtitleObservation": ""
+	},
+	"localMarket": {
+		"monthlySearches": 150,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Corsier", "Hermance", "Anières", "Collonge-Bellerive", "Vandoeuvres"],
+	"transparencyNote": true,
+	"heroPrefix": "à",
+	"heroSubline": "création et entretien de jardin"
+}

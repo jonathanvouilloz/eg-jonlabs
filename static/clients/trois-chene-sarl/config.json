@@ -86,7 +86,7 @@
 		"subjectPrefix": "[DEVIS TROIS CHÊNERL]"
 	},
 	"localMarket": {
-		"monthlySearches": 500,
+		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Chêne-Bourg"],
@@ -95,7 +95,7 @@
 	"crm": {
 		"websiteUrl": null,
 		"status": "a_contacter",
-		"tier": null,
+		"tier": "S",
 		"notes": ""
 	}
 }

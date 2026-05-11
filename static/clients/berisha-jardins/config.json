@@ -91,11 +91,17 @@
 		"subtitleObservation": ""
 	},
 	"localMarket": {
-		"monthlySearches": 500,
+		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Plan-les-Ouates", "Lancy", "Carouge", "Bernex"],
-	"transparencyNote": true,
 	"heroPrefix": "à",
-	"heroSubline": "création et entretien de jardin"
+	"heroSubline": "création et entretien de jardin",
+	"heroH1": "Berisha Jardins\nà Plan-les-Ouates",
+	"crm": {
+		"websiteUrl": null,
+		"status": "a_contacter",
+		"tier": "S",
+		"notes": ""
+	}
 }

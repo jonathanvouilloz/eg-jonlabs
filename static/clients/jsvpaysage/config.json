@@ -1,0 +1,101 @@
+{
+	"slug": "jsvpaysage",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-11",
+	"business": {
+		"name": "JSVPAYSAGE",
+		"ownerFirstName": "Paolo",
+		"ownerLastName": "Vuotto",
+		"tagline": "Paysagiste à Jussy",
+		"phone": "+41793379300",
+		"email": "jsvpaysage@gmail.com",
+		"address": "Route du Château-L'Evêque 19, 1254 Jussy",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=JSVPAYSAGE%20Jussy&output=embed",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": 23,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Jussy", "Meinier", "Choulex", "Vandoeuvres"],
+		"radiusKm": 20,
+		"latitude": 46.23,
+		"longitude": 6.245
+	},
+	"branding": {
+		"primaryColor": "#2D4A3E",
+		"secondaryColor": "#F2F5F0",
+		"accentColor": "#6B9E7A",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/_fallback/heroes/default.webp",
+	"quizVariant": "A",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "jsvpaysage@gmail.com",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS JSVPAYSAGE]"
+	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/jsvpaysage.png",
+		"subtitleObservation": ""
+	},
+	"localMarket": {
+		"monthlySearches": 100,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Jussy", "Meinier", "Choulex", "Vandoeuvres", "Thônex"],
+	"transparencyNote": true,
+	"heroPrefix": "à",
+	"heroSubline": "création et entretien de jardin"
+}

@@ -86,7 +86,7 @@
 		"subjectPrefix": "[DEVIS BROCARD PAYSAGISTE]"
 	},
 	"localMarket": {
-		"monthlySearches": 500,
+		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Rueyres"],

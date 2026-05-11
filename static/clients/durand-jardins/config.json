@@ -91,7 +91,7 @@
 		"subtitleObservation": ""
 	},
 	"localMarket": {
-		"monthlySearches": 500,
+		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Troinex", "Carouge", "Bardonnex", "Plan-les-Ouates"],

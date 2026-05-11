@@ -33,7 +33,7 @@
 		"accentColor": "#52B788",
 		"fontFamily": "Inter"
 	},
-	"heroImage": "/_fallback/heroes/default.webp",
+	"heroImage": "/clients/marechal-paysage/hero.jpg",
 	"quizVariant": "B",
 	"services": [
 		{
@@ -86,12 +86,13 @@
 		"subjectPrefix": "[DEVIS MARÉCHAL PAYSAGE]"
 	},
 	"localMarket": {
-		"monthlySearches": 500,
+		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Versoix"],
 	"heroPrefix": "à",
 	"heroSubline": "création et entretien de jardin",
+	"heroH1": "Vente de Sapins\nde Noël",
 	"crm": {
 		"websiteUrl": "https://www.marechal-paysagiste.ch/",
 		"status": "a_contacter",

@@ -1,0 +1,101 @@
+{
+	"slug": "balland-paysages",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-11",
+	"business": {
+		"name": "Balland Paysages",
+		"ownerFirstName": "",
+		"ownerLastName": "Balland",
+		"tagline": "Paysagiste en Ain / Haute-Savoie",
+		"phone": null,
+		"email": null,
+		"address": "813 Avenue Léon Blum, 01500 Ambérieu-en-Bugey",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=Balland%20Paysages%20Ambérieu-en-Bugey&output=embed",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": null,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Ambérieu-en-Bugey", "Bourg-en-Bresse", "Oyonnax"],
+		"radiusKm": 40,
+		"latitude": 45.956,
+		"longitude": 5.351
+	},
+	"branding": {
+		"primaryColor": "#1B2A1E",
+		"secondaryColor": "#F5F5EF",
+		"accentColor": "#4A7C59",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/_fallback/heroes/default.webp",
+	"quizVariant": "A",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "leads@jonlabs.ch",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS BALLAND PAYSAGES]"
+	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/balland-paysages.png",
+		"subtitleObservation": ""
+	},
+	"localMarket": {
+		"monthlySearches": 100,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Ambérieu-en-Bugey", "Bourg-en-Bresse", "Oyonnax", "Belley"],
+	"transparencyNote": true,
+	"heroPrefix": "en",
+	"heroSubline": "création et entretien de jardin"
+}

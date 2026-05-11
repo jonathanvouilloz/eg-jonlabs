@@ -91,7 +91,7 @@
 		"subtitleObservation": ""
 	},
 	"localMarket": {
-		"monthlySearches": 500,
+		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["La Chaux-de-Fonds", "Le Locle", "La Sagne", "Les Brenets"],

@@ -86,7 +86,7 @@
 		"subjectPrefix": "[DEVIS AUX JARDIN D'ÉLOISE]"
 	},
 	"localMarket": {
-		"monthlySearches": 500,
+		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Bernex"],

@@ -1,0 +1,107 @@
+{
+	"slug": "clean-ecolo",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-11",
+	"business": {
+		"name": "Clean Ecolo Jardinage",
+		"ownerFirstName": "Eugen",
+		"ownerLastName": "Hasani",
+		"tagline": "Paysagiste à Troinex",
+		"phone": "+41783071040",
+		"email": "contact@clean-ecolo.ch",
+		"address": "Route de Pierre Grande 61, 1256 Troinex",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=Clean%20Ecolo%20Jardinage%20Troinex&output=embed",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": 10,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Troinex", "Plan-les-Ouates", "Carouge", "Lancy"],
+		"radiusKm": 20,
+		"latitude": 46.1575,
+		"longitude": 6.1676
+	},
+	"branding": {
+		"primaryColor": "#2D4A3E",
+		"secondaryColor": "#F2F5F0",
+		"accentColor": "#6B9E7A",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/_fallback/heroes/default.webp",
+	"quizVariant": "B",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "contact@clean-ecolo.ch",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS CLEAN ECOLO]"
+	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/clean-ecolo.png",
+		"subtitleObservation": ""
+	},
+	"localMarket": {
+		"monthlySearches": 150,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Troinex", "Plan-les-Ouates", "Carouge", "Lancy", "Onex", "Bernex"],
+	"heroPrefix": "à",
+	"heroSubline": "création et entretien de jardin",
+	"heroH1": "Paysagiste à Troinex\nAménagement et entretien",
+	"crm": {
+		"websiteUrl": null,
+		"status": "a_contacter",
+		"tier": "S",
+		"notes": ""
+	}
+}

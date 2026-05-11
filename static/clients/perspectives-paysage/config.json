@@ -9,7 +9,7 @@
 		"tagline": "Paysagiste à Genève",
 		"phone": "+41225660744",
 		"email": "b.garboli@perspectivespaysage.com",
-		"address": "Châtelaine, Suisse",
+		"address": "Vernier, Suisse",
 		"googleProfileUrl": null,
 		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=Perspectives%20Paysage%20S%C3%A0rl%20Ch%C3%A2telaine&output=embed",
 		"logoUrl": null,
@@ -91,11 +91,17 @@
 		"subtitleObservation": ""
 	},
 	"localMarket": {
-		"monthlySearches": 500,
+		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Châtelaine", "Meyrin", "Vernier", "Satigny"],
-	"transparencyNote": true,
 	"heroPrefix": "à",
-	"heroSubline": "création et entretien de jardin"
+	"heroSubline": "création et entretien de jardin",
+	"heroH1": "Perspectives Paysage\nPaysagiste à Vernier",
+	"crm": {
+		"websiteUrl": null,
+		"status": "a_contacter",
+		"tier": "S",
+		"notes": ""
+	}
 }

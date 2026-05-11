@@ -91,7 +91,7 @@
 		"subtitleObservation": ""
 	},
 	"localMarket": {
-		"monthlySearches": 1000,
+		"monthlySearches": 500,
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Genève", "Thônex", "Chêne-Bougeries", "Cologny"],

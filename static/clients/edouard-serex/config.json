@@ -1,0 +1,101 @@
+{
+	"slug": "edouard-serex",
+	"industry": "paysagiste",
+	"createdAt": "2026-05-11",
+	"business": {
+		"name": "Pépinières & Entretien Jardin Edouard Serex",
+		"ownerFirstName": "Edouard",
+		"ownerLastName": "Serex",
+		"tagline": "Paysagiste à Corsier",
+		"phone": "+41774360337",
+		"email": "eserex@yahoo.com",
+		"address": "Chemin des Foulis 15, 1246 Corsier",
+		"googleProfileUrl": null,
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=P%C3%A9pini%C3%A8res%20Edouard%20Serex%20Corsier&output=embed",
+		"logoUrl": null,
+		"googleReviewUrl": null,
+		"facebookUrl": null,
+		"instagramUrl": null
+	},
+	"credibility": {
+		"yearsExperience": null,
+		"chantiersCount": null,
+		"googleRating": null,
+		"googleReviewsCount": 0,
+		"zones": ["Corsier", "Hermance", "Anières", "Collonge-Bellerive"],
+		"radiusKm": 20,
+		"latitude": 46.308,
+		"longitude": 6.35
+	},
+	"branding": {
+		"primaryColor": "#1B4332",
+		"secondaryColor": "#F0F4F0",
+		"accentColor": "#52B788",
+		"fontFamily": "Inter"
+	},
+	"heroImage": "/_fallback/heroes/default.webp",
+	"quizVariant": "A",
+	"services": [
+		{
+			"id": "entretien",
+			"label": "Entretien & tonte",
+			"description": "Tonte régulière, désherbage, bordures nettes — votre jardin impeccable toute l'année.",
+			"icon": "🌿",
+			"iconName": "leaf",
+			"image": null,
+			"active": true,
+			"pricingCategory": "tonte"
+		},
+		{
+			"id": "taille-haies",
+			"label": "Taille de haies",
+			"description": "Haies et arbustes taillés avec précision, pour un rendu propre et structuré.",
+			"icon": "✂️",
+			"iconName": "scissors",
+			"image": null,
+			"active": true,
+			"pricingCategory": "taille_haies"
+		},
+		{
+			"id": "creation-jardin",
+			"label": "Création & aménagement",
+			"description": "Conception et réalisation de jardins sur mesure — massifs, pelouses, allées, terrasses.",
+			"icon": "🌱",
+			"iconName": "seedling",
+			"image": null,
+			"active": true,
+			"pricingCategory": "creation_jardin"
+		},
+		{
+			"id": "contrat-annuel",
+			"label": "Contrat d'entretien annuel",
+			"description": "Tranquillité toute l'année : une équipe dédiée, des passages réguliers, rien à gérer.",
+			"icon": "📅",
+			"iconName": "watering-can",
+			"image": null,
+			"active": true,
+			"pricingCategory": "entretien_annuel"
+		}
+	],
+	"realizations": [],
+	"testimonials": [],
+	"faq": [],
+	"leadDelivery": {
+		"recipientEmail": "eserex@yahoo.com",
+		"ccEmails": ["leads@jonlabs.ch"],
+		"subjectPrefix": "[DEVIS EDOUARD SEREX]"
+	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/edouard-serex.png",
+		"subtitleObservation": ""
+	},
+	"localMarket": {
+		"monthlySearches": 150,
+		"topThreeCaptureRate": 0.5
+	},
+	"communes": ["Corsier", "Hermance", "Anières", "Collonge-Bellerive", "Vandoeuvres"],
+	"transparencyNote": true,
+	"heroPrefix": "à",
+	"heroSubline": "création et entretien de jardin"
+}
