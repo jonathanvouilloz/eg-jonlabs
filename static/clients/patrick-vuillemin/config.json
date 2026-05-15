@@ -85,6 +85,11 @@
 		"ccEmails": ["leads@jonlabs.ch"],
 		"subjectPrefix": "[DEVIS PATRICK VUILLEMIN]"
 	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/patrick-vuillemin.png",
+		"subtitleObservation": ""
+	},
 	"localMarket": {
 		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
