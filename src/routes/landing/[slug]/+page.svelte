@@ -93,7 +93,7 @@
 
 	<footer class="footer">
 		<p>
-			Une question : <a href="mailto:jonathan@jonlabs.ch">jonathan@jonlabs.ch</a>
+			Une question : <a href="mailto:jonathan.vouilloz@gmail.com">jonathan.vouilloz@gmail.com</a>
 		</p>
 		<p class="footer-brand">Jon Labs Local</p>
 	</footer>
