@@ -1,25 +1,32 @@
 <script lang="ts">
 	import type { LocalMarketConfig } from '$types/prospect';
 
-	const DEFAULT_MARKET: LocalMarketConfig = { monthlySearches: 200, topThreeCaptureRate: 0.5 };
+	const MIN_MONTHLY_SEARCHES = 200;
+	const DEFAULT_MARKET: LocalMarketConfig = {
+		monthlySearches: MIN_MONTHLY_SEARCHES,
+		topThreeCaptureRate: 0.5
+	};
 
 	let {
 		localMarket = DEFAULT_MARKET,
 		mainZone
 	}: { localMarket?: LocalMarketConfig; mainZone: string } = $props();
 
+	let displaySearches = $derived(
+		Math.max(localMarket.monthlySearches ?? MIN_MONTHLY_SEARCHES, MIN_MONTHLY_SEARCHES)
+	);
 	let captureRatePct = $derived(Math.round(localMarket.topThreeCaptureRate * 100));
 </script>
 
 <div class="annotation-content">
 	<p class="lead">
 		Sur <strong>{mainZone}</strong>, environ
-		<strong>{localMarket.monthlySearches}</strong> personnes par mois cherchent un paysagiste sur Google.
+		<strong>{displaySearches}</strong> personnes par mois cherchent un paysagiste sur Google.
 	</p>
 
 	<div class="kpi-grid">
 		<div class="kpi">
-			<span class="kpi-value">{localMarket.monthlySearches}</span>
+			<span class="kpi-value">{displaySearches}</span>
 			<span class="kpi-label">recherches / mois</span>
 		</div>
 		<div class="kpi">
