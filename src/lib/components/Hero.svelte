@@ -22,7 +22,7 @@
 	class="relative flex min-h-[92vh] flex-col justify-end pb-20 pt-32"
 	style="background-image: url('{config.heroImage}'); background-size: cover; background-position: center;"
 >
-	<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/15"></div>
+	<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30"></div>
 	<div class="absolute inset-0 -z-10 bg-primary"></div>
 
 	<div class="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-12">

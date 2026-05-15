@@ -9,7 +9,7 @@
 		"tagline": "Paysagiste à Présinge",
 		"phone": "+41799004593",
 		"email": "sb@serge-broquard.ch",
-		"address": "Présinge, Suisse",
+		"address": "Presinge, Suisse",
 		"googleProfileUrl": null,
 		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=Jonathan%20Vouilloz%20Pr%C3%A9singe&output=embed",
 		"logoUrl": null,
@@ -85,6 +85,11 @@
 		"ccEmails": ["leads@jonlabs.ch"],
 		"subjectPrefix": "[DEVIS JONATHAN VOUILLOZ]"
 	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/serge-brocard.png",
+		"subtitleObservation": ""
+	},
 	"localMarket": {
 		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
@@ -92,10 +97,10 @@
 	"communes": ["Présinge"],
 	"heroPrefix": "à",
 	"heroSubline": "création et entretien de jardin",
-	"heroH1": "Votre paysagiste\nà Présinge",
+	"heroH1": "Serge Broquard\nPaysagiste à Presinge",
 	"crm": {
 		"websiteUrl": null,
-		"status": "a_contacter",
+		"status": "contacte",
 		"tier": "S",
 		"notes": ""
 	}

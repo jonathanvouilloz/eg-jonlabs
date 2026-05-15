@@ -95,7 +95,12 @@
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Chêne-Bourg", "Chêne-Bougeries", "Cologny", "Vandoeuvres"],
-	"transparencyNote": true,
 	"heroPrefix": "à",
-	"heroSubline": "création et entretien de jardin"
+	"heroSubline": "création et entretien de jardin",
+	"crm": {
+		"websiteUrl": null,
+		"status": "a_contacter",
+		"tier": "D",
+		"notes": ""
+	}
 }

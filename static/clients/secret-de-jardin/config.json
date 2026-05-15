@@ -1,39 +1,39 @@
 {
-	"slug": "perspectives-paysage",
+	"slug": "secret-de-jardin",
 	"industry": "paysagiste",
-	"createdAt": "2026-05-08",
+	"createdAt": "2026-05-14",
 	"business": {
-		"name": "Perspectives Paysage Sàrl",
-		"ownerFirstName": "Baptiste",
-		"ownerLastName": "Garboli",
-		"tagline": "Paysagiste à Genève",
-		"phone": "+41225660744",
-		"email": "b.garboli@perspectivespaysage.com",
-		"address": "Vernier, Suisse",
+		"name": "Secret de Jardin",
+		"ownerFirstName": "",
+		"ownerLastName": "",
+		"tagline": "Paysagiste à Carrouge, Vaud",
+		"phone": "+41787857390",
+		"email": "secretdejardin@bluewin.ch",
+		"address": "Carrouge, Vaud, Suisse",
 		"googleProfileUrl": null,
-		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=Perspectives%20Paysage%20S%C3%A0rl%20Ch%C3%A2telaine&output=embed",
+		"googleMapsEmbedUrl": "https://maps.google.com/maps?q=Secret%20de%20Jardin%20Carrouge%2C%20Vaud&output=embed",
 		"logoUrl": null,
 		"googleReviewUrl": null,
 		"facebookUrl": null,
 		"instagramUrl": null
 	},
 	"credibility": {
-		"yearsExperience": 12,
+		"yearsExperience": 8,
 		"chantiersCount": null,
 		"googleRating": null,
 		"googleReviewsCount": 0,
-		"zones": ["Châtelaine", "Meyrin", "Vernier"],
+		"zones": ["Carrouge", "Vaud"],
 		"radiusKm": 20,
-		"latitude": 46.2079,
-		"longitude": 6.113
+		"latitude": 46.2,
+		"longitude": 6.15
 	},
 	"branding": {
-		"primaryColor": "#2D6A4F",
-		"secondaryColor": "#F4F8F4",
-		"accentColor": "#74C69D",
+		"primaryColor": "#1B4332",
+		"secondaryColor": "#F0F4F0",
+		"accentColor": "#52B788",
 		"fontFamily": "Inter"
 	},
-	"heroImage": "/clients/perspectives-paysage/hero.jpg",
+	"heroImage": "/_fallback/heroes/default.webp",
 	"quizVariant": "B",
 	"services": [
 		{
@@ -81,27 +81,21 @@
 	"testimonials": [],
 	"faq": [],
 	"leadDelivery": {
-		"recipientEmail": "b.garboli@perspectivespaysage.com",
+		"recipientEmail": "secretdejardin@bluewin.ch",
 		"ccEmails": ["leads@jonlabs.ch"],
-		"subjectPrefix": "[DEVIS PERSPECTIVES PAYSAGE]"
-	},
-	"salesPage": {
-		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
-		"screenshotUrl": "/screenshots/perspectives-paysage.png",
-		"subtitleObservation": ""
+		"subjectPrefix": "[DEVIS SECRET DE JARDIN]"
 	},
 	"localMarket": {
-		"monthlySearches": 200,
+		"monthlySearches": 0,
 		"topThreeCaptureRate": 0.5
 	},
-	"communes": ["Châtelaine", "Meyrin", "Vernier", "Satigny"],
+	"communes": ["Carrouge, Vaud"],
 	"heroPrefix": "à",
 	"heroSubline": "création et entretien de jardin",
-	"heroH1": "Perspectives Paysage\nPaysagiste à Vernier",
 	"crm": {
 		"websiteUrl": null,
-		"status": "contacte",
-		"tier": "S",
+		"status": "a_contacter",
+		"tier": "D",
 		"notes": ""
 	}
 }

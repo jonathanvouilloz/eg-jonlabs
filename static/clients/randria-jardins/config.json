@@ -97,9 +97,10 @@
 	"communes": ["Choulex", "Vandoeuvres", "Meinier", "Presinge"],
 	"heroPrefix": "à",
 	"heroSubline": "création et entretien de jardin",
+	"heroH1": "Randria Jardins\nPaysagiste à Choulex",
 	"crm": {
 		"websiteUrl": null,
-		"status": "a_contacter",
+		"status": "contacte",
 		"tier": "S",
 		"notes": ""
 	}

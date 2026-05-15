@@ -97,9 +97,10 @@
 	"communes": ["Genève", "Thônex", "Chêne-Bougeries", "Cologny"],
 	"heroPrefix": "à",
 	"heroSubline": "création et entretien de jardin",
+	"heroH1": "M.E.J Paysagiste\nà Genève",
 	"crm": {
 		"websiteUrl": null,
-		"status": "a_contacter",
+		"status": "contacte",
 		"tier": "S",
 		"notes": ""
 	}

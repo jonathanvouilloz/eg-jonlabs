@@ -85,6 +85,11 @@
 		"ccEmails": ["leads@jonlabs.ch"],
 		"subjectPrefix": "[DEVIS PRESTIGE PAYSAGE]"
 	},
+	"salesPage": {
+		"loomVideoId": "31b3248e75ae4d5cad12a67b4ff4954c",
+		"screenshotUrl": "/screenshots/prestige-paysage.png",
+		"subtitleObservation": ""
+	},
 	"localMarket": {
 		"monthlySearches": 200,
 		"topThreeCaptureRate": 0.5
@@ -95,7 +100,7 @@
 	"heroH1": "Aménagement prestigieux \nPaysagiste à Thônex",
 	"crm": {
 		"websiteUrl": null,
-		"status": "a_contacter",
+		"status": "contacte",
 		"tier": "S",
 		"notes": ""
 	}

@@ -95,7 +95,13 @@
 		"topThreeCaptureRate": 0.5
 	},
 	"communes": ["Corsier", "Hermance", "Anières", "Collonge-Bellerive", "Vandoeuvres"],
-	"transparencyNote": true,
 	"heroPrefix": "à",
-	"heroSubline": "création et entretien de jardin"
+	"heroSubline": "création et entretien de jardin",
+	"heroH1": "S.Parini Parcs et\nJardins à Corsier",
+	"crm": {
+		"websiteUrl": null,
+		"status": "contacte",
+		"tier": "S",
+		"notes": ""
+	}
 }

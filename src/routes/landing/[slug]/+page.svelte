@@ -58,10 +58,17 @@
 			Voir ton site
 			<span class="cta-arrow">→</span>
 		</a>
+
+		{#if loomVideoId}
+			<a href="#video-section" class="scroll-hint">
+				<span>2 min de contexte sur la démarche</span>
+				<span class="scroll-hint-arrow" aria-hidden="true">↓</span>
+			</a>
+		{/if}
 	</section>
 
 	{#if loomVideoId}
-		<section class="video-section">
+		<section id="video-section" class="video-section">
 			<p class="video-intro">
 				Avant de cliquer, regarde 2 minutes ce que j'ai fait pour Léo, avocat à Genève. Ça te
 				montrera ce qu'il y a derrière le site.
@@ -121,11 +128,11 @@
 	.page {
 		max-width: var(--landing-max-width);
 		margin: 0 auto;
-		padding: 6rem 1.5rem 4rem;
+		padding: 3rem 1.5rem 4rem;
 	}
 
 	.hero {
-		margin-bottom: 4rem;
+		margin-bottom: 2.25rem;
 		animation: fadeInUp 0.6s ease-out;
 	}
 
@@ -153,13 +160,13 @@
 	}
 
 	.preview {
-		margin-bottom: 6rem;
+		margin-bottom: 4rem;
 		animation: fadeInUp 0.6s ease-out 0.15s backwards;
 	}
 
 	.screenshot-link {
 		display: block;
-		margin-bottom: 2.5rem;
+		margin-bottom: 1.75rem;
 		border-radius: 12px;
 		overflow: hidden;
 		border: 1px solid var(--landing-border);
@@ -237,6 +244,43 @@
 		transform: translateX(4px);
 	}
 
+	.scroll-hint {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-left: 1rem;
+		color: var(--landing-text-muted);
+		text-decoration: none;
+		font-size: 0.875rem;
+		font-weight: 400;
+		transition: color 0.2s ease;
+	}
+
+	.scroll-hint:hover {
+		color: var(--landing-text);
+	}
+
+	.scroll-hint-arrow {
+		display: inline-block;
+		animation: bounceDown 1.8s ease-in-out infinite;
+	}
+
+	@keyframes bounceDown {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(4px);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.scroll-hint-arrow {
+			animation: none;
+		}
+	}
+
 	.video-section {
 		margin-bottom: 6rem;
 		animation: fadeInUp 0.6s ease-out 0.3s backwards;
@@ -308,11 +352,18 @@
 
 	@media (max-width: 640px) {
 		.page {
-			padding: 4rem 1.5rem 2.5rem;
+			padding: 2.5rem 1.5rem 2.5rem;
 		}
 
 		.cta {
 			width: 100%;
+			justify-content: center;
+		}
+
+		.scroll-hint {
+			display: flex;
+			margin-left: 0;
+			margin-top: 1rem;
 			justify-content: center;
 		}
 	}
