@@ -534,9 +534,9 @@
 					ligne. La géométrie naît du site.
 				</p>
 				<p>
-					Notre vocabulaire végétal est ancré dans le climat franco-suisse : chênes, érables,
-					oliviers résistants au gel, graminées de prairie, vivaces de longue saison. Nous évitons
-					les plantes sous tension qui exigent des soins permanents.
+					Notre vocabulaire végétal est adapté au climat suisse : chênes, érables, oliviers
+					résistants au gel, graminées de prairie, vivaces de longue saison. Nous évitons les
+					plantes sous tension qui exigent des soins permanents.
 				</p>
 
 				<ul class="principles">
@@ -812,7 +812,7 @@
 		<div class="head">
 			<div>
 				<span class="eyebrow">Notre vocabulaire végétal</span>
-				<h2>Un vocabulaire<br />de <em>climat franco-suisse.</em></h2>
+				<h2>Un vocabulaire<br />adapté au <em>climat suisse.</em></h2>
 			</div>
 			<p>
 				Nous travaillons depuis trente ans le même corpus d'essences et de matériaux, choisis pour
